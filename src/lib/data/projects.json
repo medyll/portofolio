@@ -1,0 +1,332 @@
+{
+  "generatedAt": "2026-06-22",
+  "projects": [
+    {
+      "slug": "idae",
+      "name": "Idae",
+      "tier": "A",
+      "tagline": "SvelteKit framework for AI-powered apps",
+      "description": "Monorepo of the modules behind idae-machine: a SvelteKit framework for building AI-powered applications. Covers data management, real-time sync and multi-database support.",
+      "accent": "@medyll/idae-machine",
+      "tech": [
+        "TypeScript",
+        "Svelte 5",
+        "SvelteKit",
+        "pnpm"
+      ],
+      "repo": "https://github.com/medyll/idae",
+      "homepage": null,
+      "lastCommit": "2026-06-22",
+      "metrics": {
+        "files": 2783,
+        "sizeMB": 69.9
+      },
+      "highlights": [
+        "idae-machine — AI app framework (v0.136)",
+        "idae-query — MongoDB-like queries",
+        "idae-socket / idae-stator — sync & state"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "css-base",
+      "name": "@medyll/css-base",
+      "tier": "A",
+      "tagline": "Modern CSS design system, no build",
+      "description": "Modern CSS design system library using cutting-edge CSS features",
+      "accent": null,
+      "tech": [
+        "CSS",
+        "OKLCH",
+        "@function",
+        "attr()"
+      ],
+      "repo": "https://github.com/medyll/css-base",
+      "homepage": "https://github.com/medyll/css-base#readme",
+      "lastCommit": "2026-06-13",
+      "metrics": {
+        "files": 92,
+        "sizeMB": 5.6
+      },
+      "highlights": [
+        "Zero build, zero preprocessor",
+        "Native light-dark()",
+        "Published on npm"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "sive",
+      "name": "sive",
+      "tier": "A",
+      "tagline": "AI-assisted writing — v1.0 production",
+      "description": "Release: v1.0.0 (2026-03-29) Status: ✅ Production Ready",
+      "accent": null,
+      "tech": [
+        "SvelteKit",
+        "Svelte 5",
+        "Tailwind v4"
+      ],
+      "repo": "https://github.com/medyll/sive",
+      "homepage": null,
+      "lastCommit": "2026-05-25",
+      "metrics": {
+        "files": 1181,
+        "sizeMB": 10
+      },
+      "highlights": [
+        "Real-time AI suggestions",
+        "Narrative coherence checks",
+        "Mobile-ready"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "humemory",
+      "name": "humemory",
+      "tier": "A",
+      "tagline": "Memory for AI agents that forgets like a human",
+      "description": "Human-like memory system with progressive degradation and inverse search",
+      "accent": null,
+      "tech": [
+        "TypeScript"
+      ],
+      "repo": "https://github.com/medyll/humemory",
+      "homepage": null,
+      "lastCommit": "2026-06-22",
+      "metrics": {
+        "files": 47,
+        "sizeMB": 0.3
+      },
+      "highlights": [
+        "5-level decay",
+        "Recall reinforces traces",
+        "Resurfaces before you ask"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "latent-line",
+      "name": "latent-line",
+      "tier": "A",
+      "tagline": "AI-driven scene & story production",
+      "description": "Latent-line is a SvelteKit 5 + Vite SPA for orchestrating AI-driven story/scene production with interactive timeline editing, asset management, and real-time model inspection.",
+      "accent": null,
+      "tech": [
+        "SvelteKit",
+        "Svelte 5",
+        "Vite"
+      ],
+      "repo": "https://github.com/medyll/latent-line",
+      "homepage": null,
+      "lastCommit": "2026-06-07",
+      "metrics": {
+        "files": 583,
+        "sizeMB": 12.5
+      },
+      "highlights": [
+        "Interactive timeline",
+        "Asset management",
+        "CI on GitHub Actions"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "domus",
+      "name": "domus",
+      "tier": "A",
+      "tagline": "Reactive UI framework in Rust (web + desktop)",
+      "description": "Reactive UI framework for Rust — Web & Desktop",
+      "accent": null,
+      "tech": [
+        "Rust"
+      ],
+      "repo": "https://github.com/medyll/domus",
+      "homepage": null,
+      "lastCommit": "2026-05-25",
+      "metrics": {
+        "files": 189,
+        "sizeMB": 1
+      },
+      "highlights": [
+        "Zero JavaScript",
+        "Web + desktop",
+        "Alpha v0.1.0"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "plugable",
+      "name": "plugable",
+      "tier": "A",
+      "tagline": "Go microservices platform — delivery dispatch",
+      "description": "Go microservices platform for delivery/courier dispatch — order creation, real-time tracking, ETA, notifications, wallet, and GDPR compliance.",
+      "accent": null,
+      "tech": [
+        "Go"
+      ],
+      "repo": "https://github.com/medyll/plugable",
+      "homepage": null,
+      "lastCommit": "2026-05-25",
+      "metrics": {
+        "files": 351,
+        "sizeMB": 49.7
+      },
+      "highlights": [
+        "Real-time tracking & ETA",
+        "Wallet & notifications",
+        "GDPR, CI"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "jobber",
+      "name": "jobber",
+      "tier": "B",
+      "tagline": "Tailor a resume to a job, fully local",
+      "description": "``` resume.pdf + job URL ↓ [1] Parse resume     → structured JSON [2] Scrape JD        → title, company, skills [3] Match            → fit score 0-100, skill gaps [4] Tailor           → Ollama rewrites summary + bullets [5] Generate PDF     → ATS-friendly PDF [6] Apply            → Playwright fills the form (dry-run safe) [7] Track            → logged to jobber.db ```",
+      "accent": null,
+      "tech": [
+        "Python"
+      ],
+      "repo": null,
+      "homepage": null,
+      "lastCommit": "2026-06-15",
+      "metrics": {
+        "files": 68,
+        "sizeMB": 0.3
+      },
+      "highlights": [
+        "Local-first, no cloud",
+        "resume + job-URL pipeline",
+        "No subscription"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "proton-mail-bridge",
+      "name": "Protonesk",
+      "tier": "B",
+      "tagline": "MCP IMAP/SMTP server over hydroxide",
+      "description": "MCP server exposing IMAP/SMTP mail operations via the local hydroxide bridge",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "MCP"
+      ],
+      "repo": "https://github.com/medyll/proton-mail-bridge",
+      "homepage": null,
+      "lastCommit": "2026-06-11",
+      "metrics": {
+        "files": 70,
+        "sizeMB": 0.3
+      },
+      "highlights": [
+        "ProtonMail in any mail client",
+        "IMAP/SMTP/CardDAV",
+        "Windows auto-start"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "pseudo-html-stack",
+      "name": "pseudo-stack",
+      "tier": "B",
+      "tagline": "Vanilla HTML component system, no build",
+      "description": "Vanilla HTML component system for pseudo-HTML layout descriptors. No build step. No framework.",
+      "accent": null,
+      "tech": [
+        "HTML",
+        "JavaScript"
+      ],
+      "repo": "https://github.com/medyll/pseudo-html-stack",
+      "homepage": null,
+      "lastCommit": "2026-05-25",
+      "metrics": {
+        "files": 351,
+        "sizeMB": 3.3
+      },
+      "highlights": [
+        "WCAG 2.2 AA",
+        "7.7 KB gzip",
+        "Zero dependencies"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "singleton-notepad",
+      "name": "SingletonNotepad",
+      "tier": "B",
+      "tagline": "Windows 11 notes on a single file",
+      "description": "One place for all notes.",
+      "accent": null,
+      "tech": [
+        "C#",
+        "WinUI 3"
+      ],
+      "repo": "https://github.com/medyll/singleton-notepad",
+      "homepage": null,
+      "lastCommit": "2026-05-25",
+      "metrics": {
+        "files": 201,
+        "sizeMB": 7
+      },
+      "highlights": [
+        "One Markdown file",
+        "2s auto-save",
+        "LLM normalization"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "registry-mind",
+      "name": "Registry Mind",
+      "tier": "B",
+      "tagline": "Android on-device OCR sensor",
+      "description": "Android screen-capture sensor for Oppo Find X9. Captures via Snap Key → on-device OCR (ML Kit) → syncs to OpenClaw desktop over Tailscale. Replaces Oppo's proprietary AI Mind Space with a self-hosted pipeline.",
+      "accent": null,
+      "tech": [
+        "Kotlin",
+        "Android",
+        "ML Kit"
+      ],
+      "repo": "https://github.com/medyll/registry-mind",
+      "homepage": null,
+      "lastCommit": "2026-05-25",
+      "metrics": {
+        "files": 134,
+        "sizeMB": 1293.4
+      },
+      "highlights": [
+        "On-device OCR, no cloud",
+        "Sync over Tailscale",
+        "MediaProjection capture"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "svelte-5-documentor",
+      "name": "@medyll/svelte-5-documentor",
+      "tier": "B",
+      "tagline": "Metadata extractor for Svelte 5 components",
+      "description": "A Svelte 5 component/documentation generator that extracts JSDoc comments and component metadata to create comprehensive documentation for Svelte components.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "Svelte 5"
+      ],
+      "repo": "https://github.com/medyll/svelte-5-documentor",
+      "homepage": null,
+      "lastCommit": "2026-03-14",
+      "metrics": {
+        "files": 173,
+        "sizeMB": 0.8
+      },
+      "highlights": [
+        "AST analysis",
+        "Props, exports, generics, comments"
+      ],
+      "featured": false
+    }
+  ]
+}

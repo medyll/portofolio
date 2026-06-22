@@ -1,0 +1,93 @@
+{
+  "_comment": "Curated whitelist. Generator emits ONLY these slugs. Set include:false to drop. Fields here override scanned values; omit a field to let the generator fill it from the repo.",
+  "projects": {
+    "idae": {
+      "tier": "A",
+      "featured": true,
+      "name": "Idae",
+      "accent": "@medyll/idae-machine",
+      "tagline": "SvelteKit framework for AI-powered apps",
+      "description": "Monorepo of the modules behind idae-machine: a SvelteKit framework for building AI-powered applications. Covers data management, real-time sync and multi-database support.",
+      "tech": ["TypeScript", "Svelte 5", "SvelteKit", "pnpm"],
+      "highlights": ["idae-machine — AI app framework (v0.136)", "idae-query — MongoDB-like queries", "idae-socket / idae-stator — sync & state"]
+    },
+    "css-base": {
+      "tier": "A",
+      "featured": true,
+      "tagline": "Modern CSS design system, no build",
+      "tech": ["CSS", "OKLCH", "@function", "attr()"],
+      "highlights": ["Zero build, zero preprocessor", "Native light-dark()", "Published on npm"]
+    },
+    "sive": {
+      "tier": "A",
+      "featured": true,
+      "tagline": "AI-assisted writing — v1.0 production",
+      "tech": ["SvelteKit", "Svelte 5", "Tailwind v4"],
+      "highlights": ["Real-time AI suggestions", "Narrative coherence checks", "Mobile-ready"]
+    },
+    "latent-line": {
+      "tier": "A",
+      "tagline": "AI-driven scene & story production",
+      "tech": ["SvelteKit", "Svelte 5", "Vite"],
+      "highlights": ["Interactive timeline", "Asset management", "CI on GitHub Actions"]
+    },
+    "humemory": {
+      "tier": "A",
+      "tagline": "Memory for AI agents that forgets like a human",
+      "tech": ["TypeScript"],
+      "highlights": ["5-level decay", "Recall reinforces traces", "Resurfaces before you ask"]
+    },
+    "domus": {
+      "tier": "A",
+      "tagline": "Reactive UI framework in Rust (web + desktop)",
+      "tech": ["Rust"],
+      "highlights": ["Zero JavaScript", "Web + desktop", "Alpha v0.1.0"]
+    },
+    "plugable": {
+      "tier": "A",
+      "tagline": "Go microservices platform — delivery dispatch",
+      "tech": ["Go"],
+      "highlights": ["Real-time tracking & ETA", "Wallet & notifications", "GDPR, CI"]
+    },
+    "svelte-5-documentor": {
+      "tier": "B",
+      "tagline": "Metadata extractor for Svelte 5 components",
+      "tech": ["TypeScript", "Svelte 5"],
+      "highlights": ["AST analysis", "Props, exports, generics, comments"]
+    },
+    "pseudo-html-stack": {
+      "tier": "B",
+      "name": "pseudo-stack",
+      "tagline": "Vanilla HTML component system, no build",
+      "tech": ["HTML", "JavaScript"],
+      "highlights": ["WCAG 2.2 AA", "7.7 KB gzip", "Zero dependencies"]
+    },
+    "proton-mail-bridge": {
+      "tier": "B",
+      "name": "Protonesk",
+      "tagline": "MCP IMAP/SMTP server over hydroxide",
+      "tech": ["TypeScript", "MCP"],
+      "highlights": ["ProtonMail in any mail client", "IMAP/SMTP/CardDAV", "Windows auto-start"]
+    },
+    "jobber": {
+      "tier": "B",
+      "tagline": "Tailor a resume to a job, fully local",
+      "tech": ["Python"],
+      "highlights": ["Local-first, no cloud", "resume + job-URL pipeline", "No subscription"]
+    },
+    "singleton-notepad": {
+      "tier": "B",
+      "name": "SingletonNotepad",
+      "tagline": "Windows 11 notes on a single file",
+      "tech": ["C#", "WinUI 3"],
+      "highlights": ["One Markdown file", "2s auto-save", "LLM normalization"]
+    },
+    "registry-mind": {
+      "tier": "B",
+      "name": "Registry Mind",
+      "tagline": "Android on-device OCR sensor",
+      "tech": ["Kotlin", "Android", "ML Kit"],
+      "highlights": ["On-device OCR, no cloud", "Sync over Tailscale", "MediaProjection capture"]
+    }
+  }
+}

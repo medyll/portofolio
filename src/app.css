@@ -1,0 +1,82 @@
+@import '@medyll/css-base';
+
+/* Skin: seed tokens only (never override computed --color-surface-*). */
+:root {
+  --color-primary: oklch(0.62 0.19 264);
+  --default-font-size: 0.9375rem;
+  --default-color-surface-light: oklch(0.985 0.004 264);
+  --default-color-surface-dark: oklch(0.16 0.012 264);
+}
+
+@layer components {
+  /* Page shell */
+  .page {
+    max-width: 1080px;
+    margin-inline: auto;
+    padding: var(--pad-lg);
+  }
+
+  /* Hero */
+  .hero {
+    padding-block: var(--pad-3xl) var(--pad-2xl);
+  }
+  .hero h1 {
+    font-size: var(--text-3xl);
+    line-height: 1.1;
+  }
+  .hero .lead {
+    max-width: 60ch;
+  }
+
+  /* Tier section heading accent */
+  .tier-rule {
+    height: var(--border-width);
+    background: var(--color-border);
+    border: 0;
+    margin-block: var(--marg-sm) var(--marg-lg);
+  }
+
+  /* Project card */
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-sm);
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-normal);
+    &:hover {
+      border-color: --border-from(var(--color-primary));
+      transform: translateY(-2px);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
+  .project[data-featured='true'] {
+    border-color: --alpha(var(--color-primary), 0.5);
+  }
+  .project-accent {
+    color: var(--color-primary);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+  .project-title-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--gutter-sm);
+  }
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter-xs);
+    margin-top: auto;
+  }
+
+  /* Theme toggle */
+  .theme-toggle {
+    margin-left: auto;
+  }
+}
