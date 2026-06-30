@@ -1,4 +1,4 @@
-# portofolio
+# portofolio readme
 
 Static portfolio site (SvelteKit + vanilla CSS), deployable to GitHub Pages.
 Content is **generated**, not hand-written — see [AUTOMATION.md](./AUTOMATION.md).
