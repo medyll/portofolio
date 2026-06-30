@@ -31,5 +31,8 @@
 
   {@render children()}
 
-  <footer class="footer">Statically generated · SvelteKit</footer>
+  <footer class="footer">
+    <a href="https://github.com/medyll" target="_blank" rel="noreferrer">github.com/medyll</a>
+    · lebrun.meddy@proton.me
+  </footer>
 </div>

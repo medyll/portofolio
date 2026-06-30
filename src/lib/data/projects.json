@@ -5,8 +5,8 @@
       "slug": "idae",
       "name": "Idae",
       "tier": "A",
-      "tagline": "SvelteKit framework for AI-powered apps",
-      "description": "Monorepo of the modules behind idae-machine: a SvelteKit framework for building AI-powered applications. Covers data management, real-time sync and multi-database support.",
+      "tagline": "Monorepo layer for idae-machine · DDD multi-tenant platform",
+      "description": "Monorepo couche infrastructure pour idae-machine : applicatif DDD multi-tenant en SvelteKit. Modules : query engine (MongoDB-like), real-time sync, state management, routing et couche API/backend.",
       "accent": "@medyll/idae-machine",
       "tech": [
         "TypeScript",
@@ -16,15 +16,15 @@
       ],
       "repo": "https://github.com/medyll/idae",
       "homepage": null,
-      "lastCommit": "2026-06-29",
+      "lastCommit": "2026-06-30",
       "metrics": {
         "files": 2845,
         "sizeMB": 70.7
       },
       "highlights": [
-        "idae-machine — AI app framework (v0.136)",
-        "idae-query — MongoDB-like queries",
-        "idae-socket / idae-stator — sync & state"
+        "idae-machine · DDD multi-tenant app (v0.136)",
+        "idae-query · MongoDB-like query engine",
+        "idae-socket / idae-stator · sync & state"
       ],
       "featured": true
     },
@@ -59,7 +59,7 @@
       "slug": "sive",
       "name": "sive",
       "tier": "A",
-      "tagline": "AI-assisted writing — v1.0 production",
+      "tagline": "AI-assisted writing · v1.0 production",
       "description": "Full-featured writing application powered by AI. Real-time suggestions, narrative coherence analysis, and mobile-first design. Production-ready since v1.0.",
       "accent": null,
       "tech": [
@@ -159,7 +159,7 @@
       "slug": "plugable",
       "name": "plugable",
       "tier": "A",
-      "tagline": "Go microservices platform — delivery dispatch",
+      "tagline": "Go microservices platform · delivery dispatch",
       "description": "Go microservices platform for delivery/courier dispatch — order creation, real-time tracking, ETA, notifications, wallet, and GDPR compliance.",
       "accent": null,
       "tech": [

@@ -16,15 +16,15 @@
 </script>
 
 <svelte:head>
-  <title>medyll — portfolio</title>
+  <title>medyll · portfolio</title>
 </svelte:head>
 
 <section class="hero">
-  <h1>Full-stack developer</h1>
+  <h1>Lead Developer Fullstack</h1>
   <p class="lead">
-    I build frameworks. That's almost work.
+    I build frameworks and use others.
     <br />
-    AI tooling and apps across TypeScript / Svelte 5, Rust and Go. Selected projects below.
+    Case studies across TypeScript, Svelte 5, Rust, Go, Python and AI tooling — exploration over finished product.
   </p>
 </section>
 
@@ -61,7 +61,7 @@
               {#if p.highlights.length}
                 <ul class="highlights">
                   {#each p.highlights as h}
-                    <li>— {h}</li>
+                    <li>· {h}</li>
                   {/each}
                 </ul>
               {/if}
