@@ -22,6 +22,7 @@
       "tier": "A",
       "featured": true,
       "tagline": "AI-assisted writing — v1.0 production",
+      "description": "Full-featured writing application powered by AI. Real-time suggestions, narrative coherence analysis, and mobile-first design. Production-ready since v1.0.",
       "tech": ["SvelteKit", "Svelte 5", "Tailwind v4"],
       "highlights": ["Real-time AI suggestions", "Narrative coherence checks", "Mobile-ready"]
     },
@@ -40,6 +41,7 @@
     "domus": {
       "tier": "A",
       "tagline": "Reactive UI framework in Rust (web + desktop)",
+      "description": "Reactive UI framework written entirely in Rust. Targets both web (WASM) and desktop with zero JavaScript overhead. Alpha stage (v0.1.0) with growing documentation.",
       "tech": ["Rust"],
       "highlights": ["Zero JavaScript", "Web + desktop", "Alpha v0.1.0"]
     },
@@ -62,9 +64,10 @@
       "tech": ["HTML", "JavaScript"],
       "highlights": ["WCAG 2.2 AA", "7.7 KB gzip", "Zero dependencies"]
     },
-    "proton-mail-bridge": {
+    "protonesk": {
       "tier": "B",
       "name": "Protonesk",
+      "repo": "https://github.com/medyll/protonesk",
       "tagline": "MCP IMAP/SMTP server over hydroxide",
       "tech": ["TypeScript", "MCP"],
       "highlights": ["ProtonMail in any mail client", "IMAP/SMTP/CardDAV", "Windows auto-start"]
@@ -72,6 +75,7 @@
     "jobber": {
       "tier": "B",
       "tagline": "Tailor a resume to a job, fully local",
+      "description": "Local-first tool that matches your resume to a job description, rewrites sections with Ollama, generates ATS-friendly PDFs, and auto-fills applications via Playwright. No cloud, no subscription.",
       "tech": ["Python"],
       "highlights": ["Local-first, no cloud", "resume + job-URL pipeline", "No subscription"]
     },

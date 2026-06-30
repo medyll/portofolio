@@ -1,12 +1,12 @@
 # portofolio
 
-Static portfolio site (SvelteKit + `@medyll/css-base`), deployable to GitHub Pages.
+Static portfolio site (SvelteKit + vanilla CSS), deployable to GitHub Pages.
 Content is **generated**, not hand-written — see [AUTOMATION.md](./AUTOMATION.md).
 
 ## Stack
 - SvelteKit (Svelte 5 runes) + Vite
 - `@sveltejs/adapter-static` → fully prerendered, no server
-- `@medyll/css-base` design system
+- Vanilla CSS (custom properties, `prefers-color-scheme`, cross-browser)
 
 ## Develop
 ```bash

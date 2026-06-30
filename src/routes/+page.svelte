@@ -21,7 +21,7 @@
 
 <section class="hero">
   <h1>Full-stack developer</h1>
-  <p class="lead text-muted" data-text="lg">
+  <p class="lead">
     I build frameworks. That's almost work.
     <br />
     AI tooling and apps across TypeScript / Svelte 5, Rust and Go. Selected projects below.
@@ -31,49 +31,45 @@
 {#each tiers as tier}
   {@const items = byTier(tier.key)}
   {#if items.length}
-    <section>
-      <div class="section-header">
-        <h2 class="text-xl font-semibold">{tier.label}</h2>
-      </div>
-      <hr class="tier-rule" />
+    <section class="section">
+      <h2>{tier.label}</h2>
+      <hr class="rule" />
 
-      <ul class="list list-grid" role="list" style="--list-grid-min: 280px;">
+      <ul class="grid" role="list">
         {#each items as p}
           <li>
             <a
-              class="card project"
+              class="card"
               href={p.repo ?? '#'}
               target="_blank"
               rel="noreferrer"
-              data-pad="lg"
-              data-radius="lg"
               data-featured={p.featured}
             >
               {#if p.accent}
-                <span class="project-accent">{p.accent}</span>
+                <span class="accent">{p.accent}</span>
               {/if}
 
-              <div class="project-title-row">
-                <h3 class="text-lg font-semibold">{p.name}</h3>
+              <div class="title-row">
+                <h3>{p.name}</h3>
                 {#if p.lastCommit}
-                  <span class="text-muted text-xs tabular-nums">{p.lastCommit}</span>
+                  <span class="date">{p.lastCommit}</span>
                 {/if}
               </div>
 
-              <p class="text-muted text-sm">{p.tagline}</p>
+              <p class="tagline">{p.tagline}</p>
 
               {#if p.highlights.length}
-                <ul class="list" role="list" style="margin: var(--marg-xs) 0 0; padding: 0;">
+                <ul class="highlights">
                   {#each p.highlights as h}
-                    <li class="text-sm" style="list-style: none;">— {h}</li>
+                    <li>— {h}</li>
                   {/each}
                 </ul>
               {/if}
 
               {#if p.tech.length}
-                <div class="tech-tags">
+                <div class="tags">
                   {#each p.tech as t}
-                    <span class="badge badge-primary">{t}</span>
+                    <span class="tag">{t}</span>
                   {/each}
                 </div>
               {/if}

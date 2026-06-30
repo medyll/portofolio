@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22",
+  "generatedAt": "2026-06-30",
   "projects": [
     {
       "slug": "idae",
@@ -16,10 +16,10 @@
       ],
       "repo": "https://github.com/medyll/idae",
       "homepage": null,
-      "lastCommit": "2026-06-22",
+      "lastCommit": "2026-06-29",
       "metrics": {
-        "files": 2783,
-        "sizeMB": 69.9
+        "files": 2845,
+        "sizeMB": 70.7
       },
       "highlights": [
         "idae-machine — AI app framework (v0.136)",
@@ -60,7 +60,7 @@
       "name": "sive",
       "tier": "A",
       "tagline": "AI-assisted writing — v1.0 production",
-      "description": "Release: v1.0.0 (2026-03-29) Status: ✅ Production Ready",
+      "description": "Full-featured writing application powered by AI. Real-time suggestions, narrative coherence analysis, and mobile-first design. Production-ready since v1.0.",
       "accent": null,
       "tech": [
         "SvelteKit",
@@ -93,10 +93,10 @@
       ],
       "repo": "https://github.com/medyll/humemory",
       "homepage": null,
-      "lastCommit": "2026-06-22",
+      "lastCommit": "2026-06-24",
       "metrics": {
-        "files": 47,
-        "sizeMB": 0.3
+        "files": 52,
+        "sizeMB": 0.4
       },
       "highlights": [
         "5-level decay",
@@ -136,7 +136,7 @@
       "name": "domus",
       "tier": "A",
       "tagline": "Reactive UI framework in Rust (web + desktop)",
-      "description": "Reactive UI framework for Rust — Web & Desktop",
+      "description": "Reactive UI framework written entirely in Rust. Targets both web (WASM) and desktop with zero JavaScript overhead. Alpha stage (v0.1.0) with growing documentation.",
       "accent": null,
       "tech": [
         "Rust"
@@ -184,12 +184,12 @@
       "name": "jobber",
       "tier": "B",
       "tagline": "Tailor a resume to a job, fully local",
-      "description": "``` resume.pdf + job URL ↓ [1] Parse resume     → structured JSON [2] Scrape JD        → title, company, skills [3] Match            → fit score 0-100, skill gaps [4] Tailor           → Ollama rewrites summary + bullets [5] Generate PDF     → ATS-friendly PDF [6] Apply            → Playwright fills the form (dry-run safe) [7] Track            → logged to jobber.db ```",
+      "description": "Local-first tool that matches your resume to a job description, rewrites sections with Ollama, generates ATS-friendly PDFs, and auto-fills applications via Playwright. No cloud, no subscription.",
       "accent": null,
       "tech": [
         "Python"
       ],
-      "repo": null,
+      "repo": "https://github.com/medyll/jobber",
       "homepage": null,
       "lastCommit": "2026-06-15",
       "metrics": {
@@ -204,7 +204,7 @@
       "featured": false
     },
     {
-      "slug": "proton-mail-bridge",
+      "slug": "protonesk",
       "name": "Protonesk",
       "tier": "B",
       "tagline": "MCP IMAP/SMTP server over hydroxide",
@@ -214,11 +214,11 @@
         "TypeScript",
         "MCP"
       ],
-      "repo": "https://github.com/medyll/proton-mail-bridge",
+      "repo": "https://github.com/medyll/protonesk",
       "homepage": null,
       "lastCommit": "2026-06-11",
       "metrics": {
-        "files": 70,
+        "files": 71,
         "sizeMB": 0.3
       },
       "highlights": [

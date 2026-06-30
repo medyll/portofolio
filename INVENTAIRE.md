@@ -9,7 +9,7 @@ Légende tier : **A** vitrine · **B** lib/outil solide · **C** niche/proto/arc
 | Projet | Tech | Taille | Dernier commit | Pitch |
 |---|---|---|---|---|
 | **idae** ⭐ | TS, Svelte 5 (monorepo pnpm) | 2954 f / 72 MB | 2026-06-22 | **Accent `@medyll/idae-machine`** : framework SvelteKit pour apps IA (v0.136.0). Monorepo des modules : idae-machine, idae-query, idae-router, idae-socket, idae-stator, idae-api/be/csss. Branche `dev`. **Pièce maîtresse.** |
-| **css-base** | CSS (`@medyll/css-base`) | 92 f / 5.6 MB | 2026-06-13 | Design system CSS moderne, sans build, features de pointe. Publié. Socle visuel du portfolio. |
+| **css-base** | CSS (`@medyll/css-base`) | 92 f / 5.6 MB | 2026-06-13 | Design system CSS moderne, sans build, features de pointe. Publié. (Chrome/Edge-only — pas utilisé pour le portfolio.) |
 | **sive** | SvelteKit 5, Tailwind v4 | 1181 f / 10 MB | 2026-05-25 | Écriture assistée IA, **v1.0 production**. |
 | **latent-line** | SvelteKit 5, Vite (monorepo) | 619 f / 13 MB | 2026-06-07 | Production scènes/récits IA, timeline interactive. CI. |
 | **humemory** | TS | 47 f / 0.3 MB | 2026-06-22 | Mémoire pour agents IA à dégradation progressive. Actif. |

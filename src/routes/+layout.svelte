@@ -21,17 +21,15 @@
 </script>
 
 <div class="page">
-  <header class="toolbar toolbar-stretch" data-pad="none">
-    <strong class="text-base">medyll</strong>
-    <div class="toolbar-spacer"></div>
-    <button class="btn-icon theme-toggle" aria-label="Basculer le thème" onclick={toggle}>
+  <header class="topbar">
+    <span class="brand">medyll</span>
+    <div class="spacer"></div>
+    <button class="theme-toggle" aria-label="Toggle theme" onclick={toggle}>
       {theme === 'dark' ? '☀' : '☾'}
     </button>
   </header>
 
   {@render children()}
 
-  <footer class="text-muted text-sm" style="margin-top: var(--marg-3xl); padding-block: var(--pad-lg);">
-    Généré statiquement · SvelteKit + @medyll/css-base
-  </footer>
+  <footer class="footer">Statically generated · SvelteKit</footer>
 </div>

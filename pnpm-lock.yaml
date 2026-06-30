@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@medyll/css-base':
-        specifier: ^0.7.10
-        version: 0.7.10
     devDependencies:
       '@sveltejs/adapter-static':
         specifier: ^3.0.6
@@ -207,9 +203,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@medyll/css-base@0.7.10':
-    resolution: {integrity: sha512-hjaMp7RfMiOao71HJEfYnZnRIisv7XRbzqR70P0seo+LsFkwrjrLEcBafbVNXaWzVnEGTdW5HpyDCGOEYl0dhg==}
 
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
@@ -718,8 +711,6 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
-
-  '@medyll/css-base@0.7.10': {}
 
   '@polka/url@1.0.0-next.29': {}
 
