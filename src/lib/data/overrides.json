@@ -6,92 +6,94 @@
       "featured": true,
       "name": "Idae",
       "accent": "@medyll/idae-machine",
-      "tagline": "Monorepo layer for idae-machine · DDD multi-tenant platform",
-      "description": "Monorepo couche infrastructure pour idae-machine : applicatif DDD multi-tenant en SvelteKit. Modules : query engine (MongoDB-like), real-time sync, state management, routing et couche API/backend.",
+      "tagline": "DDD multi-tenant platform with MongoDB-like query engine",
+      "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend — all typed end-to-end in TypeScript.",
       "tech": ["TypeScript", "Svelte 5", "SvelteKit", "pnpm"],
       "highlights": ["idae-machine · DDD multi-tenant app (v0.136)", "idae-query · MongoDB-like query engine", "idae-socket / idae-stator · sync & state"]
     },
     "css-base": {
       "tier": "A",
       "featured": true,
-      "tagline": "Modern CSS design system, no build",
+      "tagline": "Native CSS design system — zero build, zero preprocessor",
+      "description": "Pure CSS design system built on cutting-edge native features: OKLCH color space, CSS @function, and attr() type coercion. No preprocessor, no build step, no runtime. Published on npm and production-ready.",
       "tech": ["CSS", "OKLCH", "@function", "attr()"],
       "highlights": ["Zero build, zero preprocessor", "Native light-dark()", "Published on npm"]
     },
     "sive": {
       "tier": "A",
       "featured": true,
-      "tagline": "AI-assisted writing · v1.0 production",
-      "description": "Full-featured writing application powered by AI. Real-time suggestions, narrative coherence analysis, and mobile-first design. Production-ready since v1.0.",
+      "tagline": "AI writing assistant — production since v1.0",
+      "description": "Full-featured writing application with real-time AI suggestions, narrative coherence analysis, and mobile-first design. Built on SvelteKit 5 and Tailwind v4. Production-ready since v1.0 with a clean, distraction-free editor.",
       "tech": ["SvelteKit", "Svelte 5", "Tailwind v4"],
       "highlights": ["Real-time AI suggestions", "Narrative coherence checks", "Mobile-ready"]
     },
     "latent-line": {
       "tier": "A",
-      "tagline": "AI-driven scene & story production",
+      "tagline": "AI-driven scene & story production pipeline",
+      "description": "SvelteKit SPA for orchestrating AI-driven story and scene production. Combines an interactive timeline editor with asset management, real-time model inspection, and a CI pipeline on GitHub Actions.",
       "tech": ["SvelteKit", "Svelte 5", "Vite"],
-      "highlights": ["Interactive timeline", "Asset management", "CI on GitHub Actions"]
+      "highlights": ["Interactive timeline editor", "Real-time model inspection", "CI on GitHub Actions"]
     },
     "humemory": {
       "tier": "A",
-      "tagline": "Memory for AI agents that forgets like a human",
+      "tagline": "Human-like memory with progressive decay for AI agents",
+      "description": "Memory system for AI agents modeled on human forgetting curves. Implements 5-level trace decay where recall events reinforce memory strength. The system resurfaces relevant context proactively, before you think to ask. Zero runtime dependencies.",
       "tech": ["TypeScript"],
-      "highlights": ["5-level decay", "Recall reinforces traces", "Resurfaces before you ask"]
+      "highlights": ["5-level decay model", "Recall reinforces traces", "Resurfaces before you ask"]
     },
     "domus": {
       "tier": "A",
-      "tagline": "Reactive UI framework in Rust (web + desktop)",
-      "description": "Reactive UI framework written entirely in Rust. Targets both web (WASM) and desktop with zero JavaScript overhead. Alpha stage (v0.1.0) with growing documentation.",
+      "tagline": "Reactive UI framework in Rust — web + desktop, zero JS",
+      "description": "Reactive UI framework written entirely in Rust, targeting both web (WASM) and native desktop with zero JavaScript overhead. Alpha stage (v0.1.0) — a bet on Rust as the future of cross-platform UI.",
       "tech": ["Rust"],
-      "highlights": ["Zero JavaScript", "Web + desktop", "Alpha v0.1.0"]
-    },
-    "plugable": {
-      "tier": "A",
-      "tagline": "Go microservices platform · delivery dispatch",
-      "tech": ["Go"],
-      "highlights": ["Real-time tracking & ETA", "Wallet & notifications", "GDPR, CI"]
+      "highlights": ["Zero JavaScript overhead", "Web (WASM) + desktop", "Alpha v0.1.0"]
     },
     "svelte-5-documentor": {
       "tier": "B",
-      "tagline": "Metadata extractor for Svelte 5 components",
+      "tagline": "AST-based metadata extractor for Svelte 5 components",
+      "description": "Parses Svelte 5 component source via AST to extract props, exports, generics, and JSDoc comments — generating structured documentation without invoking the compiler. Drop-in for any TypeScript toolchain.",
       "tech": ["TypeScript", "Svelte 5"],
-      "highlights": ["AST analysis", "Props, exports, generics, comments"]
+      "highlights": ["AST analysis, no compiler", "Props, exports, generics, JSDoc", "TypeScript toolchain integration"]
     },
     "pseudo-html-stack": {
       "tier": "B",
       "name": "pseudo-stack",
-      "tagline": "Vanilla HTML component system, no build",
+      "tagline": "Vanilla HTML component system — 7.7 KB, zero dependencies",
+      "description": "Zero-dependency vanilla HTML component system at 7.7 KB gzip. Provides a structured tag taxonomy, display-hint suffixes, and WCAG 2.2 AA accessibility out of the box — no build step, no framework, no lock-in.",
       "tech": ["HTML", "JavaScript"],
-      "highlights": ["WCAG 2.2 AA", "7.7 KB gzip", "Zero dependencies"]
+      "highlights": ["WCAG 2.2 AA out of the box", "7.7 KB gzip total", "Zero dependencies, zero build"]
     },
     "protonesk": {
       "tier": "B",
       "name": "Protonesk",
       "repo": "https://github.com/medyll/protonesk",
-      "tagline": "MCP IMAP/SMTP server over hydroxide",
+      "tagline": "ProtonMail via IMAP/SMTP/CardDAV — MCP bridge over hydroxide",
+      "description": "MCP server that bridges ProtonMail's encrypted ecosystem to any standard mail client. Built on top of hydroxide, it exposes IMAP, SMTP, and CardDAV endpoints. Ships with Windows auto-start and zero-config setup.",
       "tech": ["TypeScript", "MCP"],
-      "highlights": ["ProtonMail in any mail client", "IMAP/SMTP/CardDAV", "Windows auto-start"]
+      "highlights": ["ProtonMail in any mail client", "IMAP / SMTP / CardDAV", "Windows auto-start"]
     },
     "jobber": {
       "tier": "B",
-      "tagline": "Tailor a resume to a job, fully local",
-      "description": "Local-first tool that matches your resume to a job description, rewrites sections with Ollama, generates ATS-friendly PDFs, and auto-fills applications via Playwright. No cloud, no subscription.",
+      "tagline": "Local resume tailor — Ollama rewrite, ATS PDF, Playwright autofill",
+      "description": "Local-first tool that matches your resume to a job description, rewrites targeted sections with Ollama, generates ATS-friendly PDFs, and auto-fills job applications via Playwright. No cloud, no subscription, no data sent externally.",
       "tech": ["Python"],
-      "highlights": ["Local-first, no cloud", "resume + job-URL pipeline", "No subscription"]
+      "highlights": ["Fully local — no cloud, no API key", "Resume + job-URL pipeline", "ATS PDF + Playwright autofill"]
     },
     "singleton-notepad": {
       "tier": "B",
       "name": "SingletonNotepad",
-      "tagline": "Windows 11 notes on a single file",
+      "tagline": "Windows 11 notepad backed by a single Markdown file",
+      "description": "Minimal WinUI 3 notepad that persists everything in one Markdown file. Auto-saves every 2 seconds with optional LLM normalization to keep notes structured. Single binary, no sync service, no account.",
       "tech": ["C#", "WinUI 3"],
-      "highlights": ["One Markdown file", "2s auto-save", "LLM normalization"]
+      "highlights": ["One Markdown file, no database", "2-second auto-save", "Optional LLM normalization"]
     },
     "registry-mind": {
       "tier": "B",
       "name": "Registry Mind",
-      "tagline": "Android on-device OCR sensor",
+      "tagline": "Android on-device OCR sensor synced over Tailscale",
+      "description": "Android screen-capture sensor for Oppo Find X9. Triggers via Snap Key, runs on-device OCR with ML Kit, and syncs results to an OpenClaw desktop instance over Tailscale — replacing Oppo's proprietary AI Mind Space with a fully self-hosted pipeline.",
       "tech": ["Kotlin", "Android", "ML Kit"],
-      "highlights": ["On-device OCR, no cloud", "Sync over Tailscale", "MediaProjection capture"]
+      "highlights": ["On-device OCR via ML Kit, no cloud", "Sync to desktop over Tailscale", "Replaces proprietary AI Mind Space"]
     }
   }
 }
