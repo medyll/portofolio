@@ -43,10 +43,19 @@
     },
     "domus": {
       "tier": "A",
+      "featured": true,
       "tagline": "Reactive UI framework in Rust — web + desktop, zero JS",
       "description": "Reactive UI framework written entirely in Rust, targeting both web (WASM) and native desktop with zero JavaScript overhead. Alpha stage (v0.1.0) — a bet on Rust as the future of cross-platform UI.",
-      "tech": ["Rust"],
-      "highlights": ["Zero JavaScript overhead", "Web (WASM) + desktop", "Alpha v0.1.0"]
+      "tech": ["Rust", "WASM"],
+      "highlights": ["Zero JavaScript overhead", "Web (WASM) + native desktop", "Alpha v0.1.0"]
+    },
+    "wollama": {
+      "tier": "A",
+      "featured": true,
+      "tagline": "Local-first AI chat — web, desktop & mobile with Ollama",
+      "description": "Cross-platform AI chat application powered by Ollama for fully local, private inference. Supports text and voice (STT/TTS), real-time RxDB↔PouchDB sync, an extensible hooks system, and web agents. Runs in-browser, as an Electron desktop app, and on mobile via Capacitor.",
+      "tech": ["Svelte 5", "Electron", "Capacitor", "Node.js", "RxDB"],
+      "highlights": ["Local inference — no cloud, no telemetry", "Web + desktop (Electron) + mobile (Capacitor)", "Voice I/O · hooks · web-search agents"]
     },
     "svelte-5-documentor": {
       "tier": "B",

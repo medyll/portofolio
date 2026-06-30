@@ -56,6 +56,34 @@
       "featured": true
     },
     {
+      "slug": "wollama",
+      "name": "wollama-monorepo",
+      "tier": "A",
+      "tagline": "Local-first AI chat — web, desktop & mobile with Ollama",
+      "description": "Cross-platform AI chat application powered by Ollama for fully local, private inference. Supports text and voice (STT/TTS), real-time RxDB↔PouchDB sync, an extensible hooks system, and web agents. Runs in-browser, as an Electron desktop app, and on mobile via Capacitor.",
+      "accent": null,
+      "tech": [
+        "Svelte 5",
+        "Electron",
+        "Capacitor",
+        "Node.js",
+        "RxDB"
+      ],
+      "repo": "https://github.com/medyll/wollama",
+      "homepage": null,
+      "lastCommit": "2026-06-07",
+      "metrics": {
+        "files": 720,
+        "sizeMB": 11.7
+      },
+      "highlights": [
+        "Local inference — no cloud, no telemetry",
+        "Web + desktop (Electron) + mobile (Capacitor)",
+        "Voice I/O · hooks · web-search agents"
+      ],
+      "featured": true
+    },
+    {
       "slug": "sive",
       "name": "sive",
       "tier": "A",
@@ -78,6 +106,31 @@
         "Real-time AI suggestions",
         "Narrative coherence checks",
         "Mobile-ready"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "domus",
+      "name": "domus",
+      "tier": "A",
+      "tagline": "Reactive UI framework in Rust — web + desktop, zero JS",
+      "description": "Reactive UI framework written entirely in Rust, targeting both web (WASM) and native desktop with zero JavaScript overhead. Alpha stage (v0.1.0) — a bet on Rust as the future of cross-platform UI.",
+      "accent": null,
+      "tech": [
+        "Rust",
+        "WASM"
+      ],
+      "repo": "https://github.com/medyll/domus",
+      "homepage": null,
+      "lastCommit": "2026-05-25",
+      "metrics": {
+        "files": 189,
+        "sizeMB": 1
+      },
+      "highlights": [
+        "Zero JavaScript overhead",
+        "Web (WASM) + native desktop",
+        "Alpha v0.1.0"
       ],
       "featured": true
     },
@@ -128,30 +181,6 @@
         "Interactive timeline editor",
         "Real-time model inspection",
         "CI on GitHub Actions"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "domus",
-      "name": "domus",
-      "tier": "A",
-      "tagline": "Reactive UI framework in Rust — web + desktop, zero JS",
-      "description": "Reactive UI framework written entirely in Rust, targeting both web (WASM) and native desktop with zero JavaScript overhead. Alpha stage (v0.1.0) — a bet on Rust as the future of cross-platform UI.",
-      "accent": null,
-      "tech": [
-        "Rust"
-      ],
-      "repo": "https://github.com/medyll/domus",
-      "homepage": null,
-      "lastCommit": "2026-05-25",
-      "metrics": {
-        "files": 189,
-        "sizeMB": 1
-      },
-      "highlights": [
-        "Zero JavaScript overhead",
-        "Web (WASM) + desktop",
-        "Alpha v0.1.0"
       ],
       "featured": false
     },
