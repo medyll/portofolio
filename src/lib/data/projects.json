@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-30",
+  "generatedAt": "2026-07-01",
   "projects": [
     {
       "slug": "idae",
       "name": "Idae",
       "tier": "A",
       "tagline": "DDD multi-tenant platform with MongoDB-like query engine",
-      "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend — all typed end-to-end in TypeScript.",
+      "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend, all typed end-to-end in TypeScript.",
       "accent": "@medyll/idae-machine",
       "tech": [
         "TypeScript",
@@ -24,7 +24,7 @@
       "highlights": [
         "idae-machine · DDD multi-tenant app (v0.136)",
         "idae-query · MongoDB-like query engine",
-        "idae-socket / idae-stator · sync & state"
+        "idae-socket / idae-stator · sync and state"
       ],
       "featured": true
     },
@@ -32,7 +32,7 @@
       "slug": "css-base",
       "name": "@medyll/css-base",
       "tier": "A",
-      "tagline": "Native CSS design system — zero build, zero preprocessor",
+      "tagline": "Native CSS design system: zero build, zero preprocessor",
       "description": "Pure CSS design system built on cutting-edge native features: OKLCH color space, CSS @function, and attr() type coercion. No preprocessor, no build step, no runtime. Published on npm and production-ready.",
       "accent": null,
       "tech": [
@@ -59,7 +59,7 @@
       "slug": "wollama",
       "name": "wollama-monorepo",
       "tier": "A",
-      "tagline": "Local-first AI chat — web, desktop & mobile with Ollama",
+      "tagline": "Local-first AI chat: web, desktop and mobile with Ollama",
       "description": "Cross-platform AI chat application powered by Ollama for fully local, private inference. Supports text and voice (STT/TTS), real-time RxDB↔PouchDB sync, an extensible hooks system, and web agents. Runs in-browser, as an Electron desktop app, and on mobile via Capacitor.",
       "accent": null,
       "tech": [
@@ -77,7 +77,7 @@
         "sizeMB": 11.7
       },
       "highlights": [
-        "Local inference — no cloud, no telemetry",
+        "Local inference: no cloud, no telemetry",
         "Web + desktop (Electron) + mobile (Capacitor)",
         "Voice I/O · hooks · web-search agents"
       ],
@@ -87,7 +87,7 @@
       "slug": "sive",
       "name": "sive",
       "tier": "A",
-      "tagline": "AI writing assistant — production since v1.0",
+      "tagline": "AI writing assistant: production since v1.0",
       "description": "Full-featured writing application with real-time AI suggestions, narrative coherence analysis, and mobile-first design. Built on SvelteKit 5 and Tailwind v4. Production-ready since v1.0 with a clean, distraction-free editor.",
       "accent": null,
       "tech": [
@@ -113,8 +113,8 @@
       "slug": "domus",
       "name": "domus",
       "tier": "A",
-      "tagline": "Reactive UI framework in Rust — web + desktop, zero JS",
-      "description": "Reactive UI framework written entirely in Rust, targeting both web (WASM) and native desktop with zero JavaScript overhead. Alpha stage (v0.1.0) — a bet on Rust as the future of cross-platform UI.",
+      "tagline": "Reactive UI framework in Rust: web + desktop, zero JS",
+      "description": "Reactive UI framework written entirely in Rust, targeting both web (WASM) and native desktop with zero JavaScript overhead. Alpha stage (v0.1.0), a bet on Rust as the future of cross-platform UI.",
       "accent": null,
       "tech": [
         "Rust",
@@ -162,7 +162,7 @@
       "slug": "latent-line",
       "name": "latent-line",
       "tier": "A",
-      "tagline": "AI-driven scene & story production pipeline",
+      "tagline": "AI-driven scene and story production pipeline",
       "description": "SvelteKit SPA for orchestrating AI-driven story and scene production. Combines an interactive timeline editor with asset management, real-time model inspection, and a CI pipeline on GitHub Actions.",
       "accent": null,
       "tech": [
@@ -188,7 +188,7 @@
       "slug": "jobber",
       "name": "jobber",
       "tier": "B",
-      "tagline": "Local resume tailor — Ollama rewrite, ATS PDF, Playwright autofill",
+      "tagline": "Local resume tailor: Ollama rewrite, ATS PDF, Playwright autofill",
       "description": "Local-first tool that matches your resume to a job description, rewrites targeted sections with Ollama, generates ATS-friendly PDFs, and auto-fills job applications via Playwright. No cloud, no subscription, no data sent externally.",
       "accent": null,
       "tech": [
@@ -202,7 +202,7 @@
         "sizeMB": 0.3
       },
       "highlights": [
-        "Fully local — no cloud, no API key",
+        "Fully local: no cloud, no API key",
         "Resume + job-URL pipeline",
         "ATS PDF + Playwright autofill"
       ],
@@ -212,7 +212,7 @@
       "slug": "protonesk",
       "name": "Protonesk",
       "tier": "B",
-      "tagline": "ProtonMail via IMAP/SMTP/CardDAV — MCP bridge over hydroxide",
+      "tagline": "ProtonMail via IMAP/SMTP/CardDAV: MCP bridge over hydroxide",
       "description": "MCP server that bridges ProtonMail's encrypted ecosystem to any standard mail client. Built on top of hydroxide, it exposes IMAP, SMTP, and CardDAV endpoints. Ships with Windows auto-start and zero-config setup.",
       "accent": null,
       "tech": [
@@ -237,8 +237,8 @@
       "slug": "pseudo-html-stack",
       "name": "pseudo-stack",
       "tier": "B",
-      "tagline": "Vanilla HTML component system — 7.7 KB, zero dependencies",
-      "description": "Zero-dependency vanilla HTML component system at 7.7 KB gzip. Provides a structured tag taxonomy, display-hint suffixes, and WCAG 2.2 AA accessibility out of the box — no build step, no framework, no lock-in.",
+      "tagline": "Vanilla HTML component system: 7.7 KB, zero dependencies",
+      "description": "Zero-dependency vanilla HTML component system at 7.7 KB gzip. Provides a structured tag taxonomy, display-hint suffixes, and WCAG 2.2 AA accessibility out of the box, no build step, no framework, no lock-in.",
       "accent": null,
       "tech": [
         "HTML",
@@ -288,7 +288,7 @@
       "name": "Registry Mind",
       "tier": "B",
       "tagline": "Android on-device OCR sensor synced over Tailscale",
-      "description": "Android screen-capture sensor for Oppo Find X9. Triggers via Snap Key, runs on-device OCR with ML Kit, and syncs results to an OpenClaw desktop instance over Tailscale — replacing Oppo's proprietary AI Mind Space with a fully self-hosted pipeline.",
+      "description": "Android screen-capture sensor for Oppo Find X9. Triggers via Snap Key, runs on-device OCR with ML Kit, and syncs results to an OpenClaw desktop instance over Tailscale, replacing Oppo's proprietary AI Mind Space with a fully self-hosted pipeline.",
       "accent": null,
       "tech": [
         "Kotlin",
@@ -314,7 +314,7 @@
       "name": "@medyll/svelte-5-documentor",
       "tier": "B",
       "tagline": "AST-based metadata extractor for Svelte 5 components",
-      "description": "Parses Svelte 5 component source via AST to extract props, exports, generics, and JSDoc comments — generating structured documentation without invoking the compiler. Drop-in for any TypeScript toolchain.",
+      "description": "Parses Svelte 5 component source via AST to extract props, exports, generics, and JSDoc comments, generating structured documentation without invoking the compiler. Drop-in for any TypeScript toolchain.",
       "accent": null,
       "tech": [
         "TypeScript",
@@ -331,6 +331,33 @@
         "AST analysis, no compiler",
         "Props, exports, generics, JSDoc",
         "TypeScript toolchain integration"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae-legacy",
+      "name": "Idae Legacy",
+      "tier": "C",
+      "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
+      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a modern MongoDB driver and a Dockerized environment, keeping the original UI and behavior intact while modernizing the internals underneath.",
+      "accent": null,
+      "tech": [
+        "PHP",
+        "Node.js",
+        "MongoDB",
+        "Docker"
+      ],
+      "repo": "https://github.com/medyll/idae-legacy",
+      "homepage": null,
+      "lastCommit": "2026-05-25",
+      "metrics": {
+        "files": 4828,
+        "sizeMB": 662.8
+      },
+      "highlights": [
+        "12-year-old codebase, still in production",
+        "Backward-compatible UI during rewrite",
+        "Dockerized dev environment, PHP 5.6 to 8.2"
       ],
       "featured": false
     }

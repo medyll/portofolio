@@ -154,6 +154,7 @@ h3 {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--gap-sm);
@@ -162,21 +163,61 @@ h3 {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--primary);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.25s ease;
 }
 .card:hover {
-  transform: translateY(-2px);
   border-color: var(--primary);
   box-shadow: var(--shadow);
 }
-.card:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
+.card:hover::before {
+  transform: scaleY(1);
 }
 .card[data-featured='true'] {
   border-color: color-mix(in srgb, var(--primary) 45%, var(--border));
+}
+
+/* Stretched link: only the title is a real <a>, rest of the card is plain
+   text so it stays selectable. The pseudo-element extends its hit area to
+   the whole card while staying below the text in stacking order. */
+.title-link {
+  color: inherit;
+  text-decoration: none;
+}
+.title-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.title-link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+.card:hover .title-row h3 {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.accent,
+.title-row,
+.tagline,
+.description,
+.highlights,
+.tags {
+  position: relative;
+  z-index: 2;
 }
 
 .accent {
@@ -205,6 +246,13 @@ h3 {
 .tagline {
   color: var(--text-muted);
   font-size: 0.9rem;
+  margin: 0;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
   margin: 0;
 }
 

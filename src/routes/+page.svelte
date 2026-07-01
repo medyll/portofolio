@@ -6,7 +6,7 @@
 
   const tiers: { key: Tier; label: string }[] = [
     { key: 'A', label: 'Featured' },
-    { key: 'B', label: 'Libraries & tools' },
+    { key: 'B', label: 'Libraries and tools' },
     { key: 'C', label: 'Other work' }
   ];
 
@@ -24,7 +24,7 @@
   <p class="lead">
     I build frameworks and use others.
     <br />
-    Case studies across TypeScript, Svelte 5, Rust, Go, Python and AI tooling — exploration over finished product.
+    Case studies across TypeScript, Svelte 5, Rust, Go, Python and AI tooling, exploration over finished product.
   </p>
 </section>
 
@@ -37,43 +37,39 @@
 
       <ul class="grid" role="list">
         {#each items as p}
-          <li>
-            <a
-              class="card"
-              href={p.repo ?? '#'}
-              target="_blank"
-              rel="noreferrer"
-              data-featured={p.featured}
-            >
-              {#if p.accent}
-                <span class="accent">{p.accent}</span>
-              {/if}
+          <li class="card" data-featured={p.featured}>
+            {#if p.accent}
+              <span class="accent">{p.accent}</span>
+            {/if}
 
-              <div class="title-row">
-                <h3>{p.name}</h3>
-                {#if p.lastCommit}
-                  <span class="date">{p.lastCommit}</span>
-                {/if}
+            <div class="title-row">
+              <h3><a class="title-link" href={p.repo ?? '#'} target="_blank" rel="noreferrer">{p.name}</a></h3>
+              {#if p.lastCommit}
+                <span class="date">{p.lastCommit}</span>
+              {/if}
+            </div>
+
+            <p class="tagline">{p.tagline}</p>
+
+            {#if p.description}
+              <p class="description">{p.description}</p>
+            {/if}
+
+            {#if p.highlights.length}
+              <ul class="highlights">
+                {#each p.highlights as h}
+                  <li>· {h}</li>
+                {/each}
+              </ul>
+            {/if}
+
+            {#if p.tech.length}
+              <div class="tags">
+                {#each p.tech as t}
+                  <span class="tag">{t}</span>
+                {/each}
               </div>
-
-              <p class="tagline">{p.tagline}</p>
-
-              {#if p.highlights.length}
-                <ul class="highlights">
-                  {#each p.highlights as h}
-                    <li>· {h}</li>
-                  {/each}
-                </ul>
-              {/if}
-
-              {#if p.tech.length}
-                <div class="tags">
-                  {#each p.tech as t}
-                    <span class="tag">{t}</span>
-                  {/each}
-                </div>
-              {/if}
-            </a>
+            {/if}
           </li>
         {/each}
       </ul>
