@@ -104,6 +104,15 @@
       "tech": ["Kotlin", "Android", "ML Kit"],
       "highlights": ["On-device OCR via ML Kit, no cloud", "Sync to desktop over Tailscale", "Replaces proprietary AI Mind Space"]
     },
+    "idae.api.lan": {
+      "tier": "C",
+      "name": "idae.api",
+      "repo": "https://github.com/medyll/idae.api",
+      "tagline": "PHP/MongoDB REST + IDQL API for the Idae platform",
+      "description": "Lightweight PHP REST API backed by MongoDB, built around a router → API parser → query layer pattern. Exposes a custom IDQL query language for find/group/distinct/parallel operations alongside generic REST endpoints, plus a small Node helper process for sockets and crons. Dockerized with a PHPUnit test suite.",
+      "tech": ["PHP", "MongoDB", "Docker", "Node.js"],
+      "highlights": ["IDQL query language: find, group, distinct, parallel", "Router → API parser → query layer architecture", "Dockerized with PHPUnit tests"]
+    },
     "idae-legacy": {
       "tier": "C",
       "name": "Idae Legacy",
