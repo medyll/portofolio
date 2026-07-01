@@ -335,6 +335,32 @@
       "featured": false
     },
     {
+      "slug": "ferule-core",
+      "name": "Ferule-Core",
+      "tier": "C",
+      "tagline": "Research space for formal languages of cognition and org structure",
+      "description": "Exploratory research project defining two formal languages, a matrix topology language and a dynamic structural mapping model, to express cognition and organizational structure. Includes an LLM engine for generating context-aware indicators across 9 domains and an interactive 3D visualization built with Three.js.",
+      "accent": null,
+      "tech": [
+        "Python",
+        "Three.js",
+        "LLM"
+      ],
+      "repo": "https://github.com/medyll/ferule-core",
+      "homepage": null,
+      "lastCommit": "2026-07-01",
+      "metrics": {
+        "files": 241,
+        "sizeMB": 5.4
+      },
+      "highlights": [
+        "Two formal languages: matrix topology + structural mapping",
+        "LLM-driven indicator generation across 9 domains",
+        "Interactive 3D semantic cloud visualization"
+      ],
+      "featured": false
+    },
+    {
       "slug": "idae.api.lan",
       "name": "idae.api",
       "tier": "C",

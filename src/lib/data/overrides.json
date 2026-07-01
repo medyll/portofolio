@@ -113,6 +113,14 @@
       "tech": ["PHP", "MongoDB", "Docker", "Node.js"],
       "highlights": ["IDQL query language: find, group, distinct, parallel", "Router → API parser → query layer architecture", "Dockerized with PHPUnit tests"]
     },
+    "ferule-core": {
+      "tier": "C",
+      "name": "Ferule-Core",
+      "tagline": "Research space for formal languages of cognition and org structure",
+      "description": "Exploratory research project defining two formal languages, a matrix topology language and a dynamic structural mapping model, to express cognition and organizational structure. Includes an LLM engine for generating context-aware indicators across 9 domains and an interactive 3D visualization built with Three.js.",
+      "tech": ["Python", "Three.js", "LLM"],
+      "highlights": ["Two formal languages: matrix topology + structural mapping", "LLM-driven indicator generation across 9 domains", "Interactive 3D semantic cloud visualization"]
+    },
     "idae-legacy": {
       "tier": "C",
       "name": "Idae Legacy",
