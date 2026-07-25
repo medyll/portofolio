@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01",
+  "generatedAt": "2026-07-25",
   "projects": [
     {
       "slug": "idae",
@@ -16,15 +16,43 @@
       ],
       "repo": "https://github.com/medyll/idae",
       "homepage": null,
-      "lastCommit": "2026-06-30",
+      "lastCommit": "2026-07-25",
       "metrics": {
-        "files": 2845,
-        "sizeMB": 70.7
+        "files": 2838,
+        "sizeMB": 58.5
       },
       "highlights": [
         "idae-machine · DDD multi-tenant app (v0.136)",
         "idae-query · MongoDB-like query engine",
         "idae-socket / idae-stator · sync and state"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "wollama",
+      "name": "wollama-monorepo",
+      "tier": "A",
+      "tagline": "Local-first AI chat: web, desktop and mobile with Ollama",
+      "description": "Cross-platform AI chat application powered by Ollama for fully local, private inference. Supports text and voice (STT/TTS), real-time RxDB↔PouchDB sync, an extensible hooks system, and web agents. Runs in-browser, as an Electron desktop app, and on mobile via Capacitor.",
+      "accent": null,
+      "tech": [
+        "Svelte 5",
+        "Electron",
+        "Capacitor",
+        "Node.js",
+        "RxDB"
+      ],
+      "repo": "https://github.com/medyll/wollama",
+      "homepage": null,
+      "lastCommit": "2026-07-22",
+      "metrics": {
+        "files": 3455,
+        "sizeMB": 1087.6
+      },
+      "highlights": [
+        "Local inference: no cloud, no telemetry",
+        "Web + desktop (Electron) + mobile (Capacitor)",
+        "Voice I/O · hooks · web-search agents"
       ],
       "featured": true
     },
@@ -52,34 +80,6 @@
         "Zero build, zero preprocessor",
         "Native light-dark()",
         "Published on npm"
-      ],
-      "featured": true
-    },
-    {
-      "slug": "wollama",
-      "name": "wollama-monorepo",
-      "tier": "A",
-      "tagline": "Local-first AI chat: web, desktop and mobile with Ollama",
-      "description": "Cross-platform AI chat application powered by Ollama for fully local, private inference. Supports text and voice (STT/TTS), real-time RxDB↔PouchDB sync, an extensible hooks system, and web agents. Runs in-browser, as an Electron desktop app, and on mobile via Capacitor.",
-      "accent": null,
-      "tech": [
-        "Svelte 5",
-        "Electron",
-        "Capacitor",
-        "Node.js",
-        "RxDB"
-      ],
-      "repo": "https://github.com/medyll/wollama",
-      "homepage": null,
-      "lastCommit": "2026-06-07",
-      "metrics": {
-        "files": 720,
-        "sizeMB": 11.7
-      },
-      "highlights": [
-        "Local inference: no cloud, no telemetry",
-        "Web + desktop (Electron) + mobile (Capacitor)",
-        "Voice I/O · hooks · web-search agents"
       ],
       "featured": true
     },
@@ -135,6 +135,32 @@
       "featured": true
     },
     {
+      "slug": "latent-line",
+      "name": "latent-line",
+      "tier": "A",
+      "tagline": "AI-driven scene and story production pipeline",
+      "description": "SvelteKit SPA for orchestrating AI-driven story and scene production. Combines an interactive timeline editor with asset management, real-time model inspection, and a CI pipeline on GitHub Actions.",
+      "accent": null,
+      "tech": [
+        "SvelteKit",
+        "Svelte 5",
+        "Vite"
+      ],
+      "repo": "https://github.com/medyll/latent-line",
+      "homepage": null,
+      "lastCommit": "2026-07-25",
+      "metrics": {
+        "files": 581,
+        "sizeMB": 5.4
+      },
+      "highlights": [
+        "Interactive timeline editor",
+        "Real-time model inspection",
+        "CI on GitHub Actions"
+      ],
+      "featured": false
+    },
+    {
       "slug": "humemory",
       "name": "humemory",
       "tier": "A",
@@ -155,32 +181,6 @@
         "5-level decay model",
         "Recall reinforces traces",
         "Resurfaces before you ask"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "latent-line",
-      "name": "latent-line",
-      "tier": "A",
-      "tagline": "AI-driven scene and story production pipeline",
-      "description": "SvelteKit SPA for orchestrating AI-driven story and scene production. Combines an interactive timeline editor with asset management, real-time model inspection, and a CI pipeline on GitHub Actions.",
-      "accent": null,
-      "tech": [
-        "SvelteKit",
-        "Svelte 5",
-        "Vite"
-      ],
-      "repo": "https://github.com/medyll/latent-line",
-      "homepage": null,
-      "lastCommit": "2026-06-07",
-      "metrics": {
-        "files": 583,
-        "sizeMB": 12.5
-      },
-      "highlights": [
-        "Interactive timeline editor",
-        "Real-time model inspection",
-        "CI on GitHub Actions"
       ],
       "featured": false
     },
@@ -335,6 +335,61 @@
       "featured": false
     },
     {
+      "slug": "qoolie",
+      "name": "Qoolie",
+      "tier": "C",
+      "tagline": "Client-side IndexedDB the easy way, with server sync",
+      "description": "Client database IndexedDB the easy way, add server sync",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "IndexedDB",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "repo": "https://github.com/medyll/idae/tree/main/packages/qoolie",
+      "homepage": null,
+      "lastCommit": "2026-07-25",
+      "metrics": {
+        "files": 135,
+        "sizeMB": 0.4
+      },
+      "highlights": [
+        "React, Vue and Svelte adapters + devtools",
+        "CLI and benchmark suite",
+        "Sync via idae-socket, offline-first by default"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae-legacy",
+      "name": "Idae Legacy",
+      "tier": "C",
+      "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
+      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a modern MongoDB driver and a Dockerized environment, keeping the original UI and behavior intact while modernizing the internals underneath.",
+      "accent": null,
+      "tech": [
+        "PHP",
+        "Node.js",
+        "MongoDB",
+        "Docker"
+      ],
+      "repo": "https://github.com/medyll/idae-legacy",
+      "homepage": null,
+      "lastCommit": "2026-07-18",
+      "metrics": {
+        "files": 4830,
+        "sizeMB": 674.9
+      },
+      "highlights": [
+        "12-year-old codebase, still in production",
+        "Backward-compatible UI during rewrite",
+        "Dockerized dev environment, PHP 5.6 to 8.2"
+      ],
+      "featured": false
+    },
+    {
       "slug": "ferule-core",
       "name": "Ferule-Core",
       "tier": "C",
@@ -350,8 +405,8 @@
       "homepage": null,
       "lastCommit": "2026-07-01",
       "metrics": {
-        "files": 241,
-        "sizeMB": 5.4
+        "files": 231,
+        "sizeMB": 2.2
       },
       "highlights": [
         "Two formal languages: matrix topology + structural mapping",
@@ -384,33 +439,6 @@
         "IDQL query language: find, group, distinct, parallel",
         "Router → API parser → query layer architecture",
         "Dockerized with PHPUnit tests"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae-legacy",
-      "name": "Idae Legacy",
-      "tier": "C",
-      "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
-      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a modern MongoDB driver and a Dockerized environment, keeping the original UI and behavior intact while modernizing the internals underneath.",
-      "accent": null,
-      "tech": [
-        "PHP",
-        "Node.js",
-        "MongoDB",
-        "Docker"
-      ],
-      "repo": "https://github.com/medyll/idae-legacy",
-      "homepage": null,
-      "lastCommit": "2026-05-25",
-      "metrics": {
-        "files": 4828,
-        "sizeMB": 662.8
-      },
-      "highlights": [
-        "12-year-old codebase, still in production",
-        "Backward-compatible UI during rewrite",
-        "Dockerized dev environment, PHP 5.6 to 8.2"
       ],
       "featured": false
     }

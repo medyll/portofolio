@@ -93,7 +93,7 @@ function metrics(dir) {
 const projects = [];
 for (const [slug, ov] of Object.entries(overrides)) {
   if (slug.startsWith('_') || ov.include === false) continue;
-  const dir = join(DEV_ROOT, slug);
+  const dir = ov.dir ? resolve(DEV_ROOT, ov.dir) : join(DEV_ROOT, slug);
   if (!existsSync(dir)) {
     console.warn(`! skip ${slug} — not found at ${dir}`);
     continue;

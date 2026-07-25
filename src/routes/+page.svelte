@@ -1,6 +1,7 @@
 <script lang="ts">
   import data from '$lib/data/projects.json';
   import type { ProjectsData, Tier } from '$lib/types';
+  import { base } from '$app/paths';
 
   const { projects } = data as ProjectsData;
 
@@ -43,7 +44,7 @@
             {/if}
 
             <div class="title-row">
-              <h3><a class="title-link" href={p.repo ?? '#'} target="_blank" rel="noreferrer">{p.name}</a></h3>
+              <h3><a class="title-link" href="{base}/projects/{p.slug}">{p.name}</a></h3>
               {#if p.lastCommit}
                 <span class="date">{p.lastCommit}</span>
               {/if}
