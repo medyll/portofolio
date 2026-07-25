@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { tick } from 'svelte';
+
   let { code }: { code: string } = $props();
 
   let el: HTMLDivElement;
@@ -12,7 +14,22 @@
       const id = 'm-' + Math.random().toString(36).slice(2);
       try {
         const result = await mermaid.render(id, code);
-        if (!cancelled) svg = result.svg;
+        if (cancelled) return;
+        svg = result.svg;
+        await tick();
+        // mermaid sets width="100%" on the svg, which shrinks wide diagrams
+        // to the container width and makes node labels unreadable. Force the
+        // svg back to its natural viewBox pixel size so it scrolls instead.
+        const node = el?.querySelector('svg');
+        const viewBox = node?.getAttribute('viewBox');
+        if (node && viewBox) {
+          const [, , w, h] = viewBox.split(/\s+/).map(Number);
+          if (w && h) {
+            node.setAttribute('width', `${w}`);
+            node.setAttribute('height', `${h}`);
+            node.style.maxWidth = 'none';
+          }
+        }
       } catch {
         if (!cancelled) svg = '';
       }
@@ -41,8 +58,7 @@
     overflow-x: auto;
   }
   .mermaid-wrap :global(svg) {
-    max-width: 100%;
-    height: auto;
+    display: block;
   }
   .mermaid-fallback {
     margin: 0;

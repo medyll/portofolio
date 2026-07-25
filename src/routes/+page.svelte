@@ -33,7 +33,7 @@
   <h2>Profile</h2>
   <hr class="rule" />
   <p class="profile-teaser">
-    Who I am, what I do, and a full experience timeline (anonymized).
+    Who I am, what I do, and a full experience timeline.
     <a class="profile-link" href="{base}/profile">View profile &rarr;</a>
   </p>
 </section>
