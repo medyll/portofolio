@@ -104,6 +104,15 @@
       "tech": ["Kotlin", "Android", "ML Kit"],
       "highlights": ["On-device OCR via ML Kit, no cloud", "Sync to desktop over Tailscale", "Replaces proprietary AI Mind Space"]
     },
+    "qoolie": {
+      "tier": "C",
+      "name": "Qoolie",
+      "dir": "idae/packages/qoolie",
+      "repo": "https://github.com/medyll/idae/tree/main/packages/qoolie",
+      "tagline": "Client-side IndexedDB the easy way, with server sync",
+      "tech": ["TypeScript", "IndexedDB", "React", "Vue", "Svelte"],
+      "highlights": ["React, Vue and Svelte adapters + devtools", "CLI and benchmark suite", "Sync via idae-socket, offline-first by default"]
+    },
     "idae.api.lan": {
       "tier": "C",
       "name": "idae.api",
