@@ -1,5 +1,6 @@
 <script lang="ts">
   import '../app.css';
+  import { base } from '$app/paths';
 
   let { children } = $props();
 
@@ -24,6 +25,7 @@
   <header class="topbar">
     <span class="brand">medyll</span>
     <div class="spacer"></div>
+    <a class="nav-link" href="{base}/profile">Profile</a>
     <button class="theme-toggle" aria-label="Toggle theme" onclick={toggle}>
       {theme === 'dark' ? '☀' : '☾'}
     </button>
