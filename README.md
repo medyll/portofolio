@@ -1,5 +1,7 @@
 # portofolio readme
 
+Live: https://medyll.github.io/portofolio/
+
 Static portfolio site (SvelteKit + vanilla CSS), deployable to GitHub Pages.
 Content is **generated**, not hand-written — see [AUTOMATION.md](./AUTOMATION.md).
 
