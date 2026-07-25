@@ -100,6 +100,16 @@ h3 {
   flex: 1;
 }
 
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+
 .theme-toggle {
   cursor: pointer;
   width: 2.25rem;
