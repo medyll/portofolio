@@ -14,7 +14,7 @@ export interface ProjectDetail {
 export const projectDetails: Record<string, ProjectDetail> = {
   idae: {
     children: ['qoolie', 'idae.api.lan', 'idae-be', 'idae-dom-events', 'idae-router', 'idae-stator', 'idae-sync'],
-    mermaid: `flowchart TD
+    mermaid: `flowchart LR
   P["idea / needs"] --> S["Idae — DDD monorepo"]
   S --> Q["idae-machine · multi-tenant app"]
   S --> R["idae-query · MongoDB-like engine"]

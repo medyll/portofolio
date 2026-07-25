@@ -312,6 +312,24 @@ h3 {
   color: var(--primary);
 }
 
+.details-btn {
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  margin-top: var(--gap-sm);
+  padding: 0.4rem 0.875rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.details-btn:hover {
+  background: var(--primary);
+  color: var(--surface);
+}
+
 .footer {
   margin-top: var(--gap-xl);
   padding-block: var(--gap-lg);

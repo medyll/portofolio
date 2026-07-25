@@ -80,6 +80,8 @@
                 {/each}
               </div>
             {/if}
+
+            <a class="details-btn" href="{base}/projects/{p.slug}">View details &rarr;</a>
           </li>
         {/each}
       </ul>

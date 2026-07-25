@@ -17,9 +17,12 @@
         if (cancelled) return;
         svg = result.svg;
         await tick();
-        // mermaid sets width="100%" on the svg, which shrinks wide diagrams
-        // to the container width and makes node labels unreadable. Force the
-        // svg back to its natural viewBox pixel size so it scrolls instead.
+        // mermaid sets width="100%" on the svg, which always scales the
+        // diagram to fill the container — fine when narrow, but it shrinks
+        // wide diagrams until labels are unreadable. Give the svg its
+        // natural viewBox pixel size instead; CSS below still caps it at
+        // 100% of the wrapper so it scales down (never scrolls) if a
+        // diagram somehow ends up wider than the page.
         const node = el?.querySelector('svg');
         const viewBox = node?.getAttribute('viewBox');
         if (node && viewBox) {
@@ -27,7 +30,6 @@
           if (w && h) {
             node.setAttribute('width', `${w}`);
             node.setAttribute('height', `${h}`);
-            node.style.maxWidth = 'none';
           }
         }
       } catch {
@@ -55,10 +57,13 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: var(--gap-lg);
-    overflow-x: auto;
+    display: flex;
+    justify-content: center;
   }
   .mermaid-wrap :global(svg) {
     display: block;
+    max-width: 100%;
+    height: auto;
   }
   .mermaid-fallback {
     margin: 0;
