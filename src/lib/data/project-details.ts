@@ -15,7 +15,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   idae: {
     children: ['qoolie', 'idae.api.lan'],
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["Idae — DDD monorepo"]
+  P["idea / needs"] --> S["Idae — DDD monorepo"]
   S --> Q["idae-machine · multi-tenant app"]
   S --> R["idae-query · MongoDB-like engine"]
   S --> T["idae-socket / idae-stator · sync + state"]
@@ -43,7 +43,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   'css-base': {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["@medyll/css-base"]
+  P["idea / needs"] --> S["@medyll/css-base"]
   S --> A["OKLCH color space"]
   S --> B["CSS @function + attr() coercion"]
   S --> C["published on npm, zero build"]`,
@@ -51,7 +51,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   sive: {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["sive"]
+  P["idea / needs"] --> S["sive"]
   S --> A["real-time AI suggestions"]
   S --> B["narrative coherence analysis"]
   S --> C["mobile-first editor, SvelteKit 5"]`,
@@ -59,7 +59,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   'latent-line': {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["latent-line"]
+  P["idea / needs"] --> S["latent-line"]
   S --> A["interactive timeline editor"]
   S --> B["asset management"]
   S --> C["real-time model inspection"]
@@ -68,7 +68,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   humemory: {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["humemory"]
+  P["idea / needs"] --> S["humemory"]
   S --> A["5-level trace decay"]
   S --> B["recall reinforces memory strength"]
   S --> C["zero runtime dependencies"]`,
@@ -76,7 +76,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   domus: {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["domus"]
+  P["idea / needs"] --> S["domus"]
   S --> A["reactive UI framework, Rust"]
   S --> B["web target: WASM"]
   S --> C["native desktop target"]`,
@@ -84,7 +84,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   wollama: {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["wollama"]
+  P["idea / needs"] --> S["wollama"]
   S --> A["Ollama: local inference, no cloud"]
   S --> B["web + Electron + Capacitor"]
   S --> C["voice I/O, RxDB<->PouchDB sync"]
@@ -93,7 +93,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   'svelte-5-documentor': {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["svelte-5-documentor"]
+  P["idea / needs"] --> S["svelte-5-documentor"]
   S --> A["AST parse, no compiler invocation"]
   S --> B["props, exports, generics, JSDoc"]
   S --> C["drop-in for TS toolchains"]`,
@@ -101,7 +101,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   'pseudo-html-stack': {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["pseudo-stack"]
+  P["idea / needs"] --> S["pseudo-stack"]
   S --> A["tag taxonomy + display-hint suffixes"]
   S --> B["WCAG 2.2 AA by default"]
   S --> C["7.7 KB gzip, zero dependencies"]`,
@@ -109,7 +109,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   protonesk: {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["Protonesk"]
+  P["idea / needs"] --> S["Protonesk"]
   S --> A["hydroxide bridge"]
   S --> B["IMAP / SMTP / CardDAV"]
   S --> C["Windows auto-start, zero-config"]`,
@@ -117,7 +117,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   jobber: {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["jobber"]
+  P["idea / needs"] --> S["jobber"]
   S --> A["Ollama: local resume rewrite"]
   S --> B["ATS-friendly PDF output"]
   S --> C["Playwright autofill"]`,
@@ -125,7 +125,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   'singleton-notepad': {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["SingletonNotepad"]
+  P["idea / needs"] --> S["SingletonNotepad"]
   S --> A["single Markdown file, no database"]
   S --> B["2-second auto-save"]
   S --> C["optional LLM normalization"]`,
@@ -133,7 +133,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   'registry-mind': {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["Registry Mind"]
+  P["idea / needs"] --> S["Registry Mind"]
   S --> A["on-device OCR, ML Kit"]
   S --> B["sync over Tailscale"]
   S --> C["OpenClaw desktop instance"]`,
@@ -141,7 +141,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   'idae-legacy': {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["Idae Legacy"]
+  P["idea / needs"] --> S["Idae Legacy"]
   S --> A["PHP 5.6 -> PHP 8.2"]
   S --> B["modern MongoDB driver"]
   S --> C["Dockerized dev env, original UI intact"]`,
@@ -149,7 +149,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   'ferule-core': {
     mermaid: `flowchart TD
-  P["medyll portfolio"] --> S["Ferule-Core"]
+  P["idea / needs"] --> S["Ferule-Core"]
   S --> A["matrix topology language"]
   S --> B["dynamic structural mapping model"]
   S --> C["LLM indicators across 9 domains"]
@@ -163,5 +163,5 @@ export function defaultMermaid(name: string, highlights: string[]): string {
     .slice(0, 3)
     .map((h, i) => `  S --> H${i}["${h.replace(/"/g, "'")}"]`)
     .join('\n');
-  return `flowchart TD\n  P["medyll portfolio"] --> S["${name.replace(/"/g, "'")}"]\n${nodes}`;
+  return `flowchart TD\n  P["idea / needs"] --> S["${name.replace(/"/g, "'")}"]\n${nodes}`;
 }
