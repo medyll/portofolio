@@ -23,7 +23,7 @@
 
 <div class="page">
   <header class="topbar">
-    <span class="brand">medyll</span>
+    <a class="brand" href="{base}/">medyll</a>
     <div class="spacer"></div>
     <a class="nav-link" href="{base}/profile">Profile</a>
     <button class="theme-toggle" aria-label="Toggle theme" onclick={toggle}>

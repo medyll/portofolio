@@ -29,6 +29,15 @@
   </p>
 </section>
 
+<section class="section">
+  <h2>Profile</h2>
+  <hr class="rule" />
+  <p class="profile-teaser">
+    Who I am, what I do, and a full experience timeline (anonymized).
+    <a class="profile-link" href="{base}/profile">View profile &rarr;</a>
+  </p>
+</section>
+
 {#each tiers as tier}
   {@const items = byTier(tier.key)}
   {#if items.length}
