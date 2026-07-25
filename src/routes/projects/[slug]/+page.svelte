@@ -46,7 +46,7 @@
 {/if}
 
 <section class="section">
-  <h2>Architecture</h2>
+  <h2>Where it sits</h2>
   <hr class="rule" />
   <Mermaid code={mermaid} />
 </section>
