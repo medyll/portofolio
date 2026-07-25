@@ -1,5 +1,11 @@
 <script lang="ts">
   import { summary, skills, techSkills, recentActivities, timeline, languages, interests } from './data';
+
+  function splitDate(date: string) {
+    const [range] = date.split('·');
+    const [start, end] = range.split('–').map((s) => s.trim());
+    return { start, end };
+  }
 </script>
 
 <svelte:head>
@@ -68,25 +74,32 @@
   </p>
 
   <ol class="timeline">
-    {#each timeline as t}
-      <li class="entry">
-        <div class="entry-header">
-          <div>
+    {#each timeline as t, i}
+      {@const d = splitDate(t.date)}
+      <li class="entry" class:left={i % 2 === 1} class:right={i % 2 === 0}>
+        <span class="entry-date" title={t.date}>
+          <span class="entry-date-start">{d.start}</span>
+          {#if d.end && d.end !== d.start}
+            <span class="entry-date-end">{d.end}</span>
+          {/if}
+        </span>
+        <div class="card">
+          <div class="meta">
             <h3>{t.role}</h3>
             <div class="entry-company">{t.company}</div>
             {#if t.sector}<div class="entry-sector">{t.sector}</div>{/if}
+            <div class="entry-domain">{t.domain}</div>
+            <div class="entry-period">{t.date}</div>
           </div>
-          <div class="entry-side">
-            <span class="entry-date">{t.date}</span>
-            <span class="entry-domain">{t.domain}</span>
+          <div class="details">
+            <ul class="entry-points">
+              {#each t.points as p}
+                <li>{p}</li>
+              {/each}
+            </ul>
+            <div class="entry-env"><strong>Env:</strong> {t.env.join(', ')}</div>
           </div>
         </div>
-        <ul class="entry-points">
-          {#each t.points as p}
-            <li>{p}</li>
-          {/each}
-        </ul>
-        <div class="entry-env"><strong>Env:</strong> {t.env.join(', ')}</div>
       </li>
     {/each}
   </ol>
@@ -226,25 +239,96 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary);
+    transform: translateX(-50%);
+  }
+
+  .entry {
+    position: relative;
+    display: flex;
+    padding-block: var(--gap-lg);
+  }
+  .entry.right {
+    justify-content: flex-end;
+  }
+  .entry.left {
+    justify-content: flex-start;
+  }
+
+  .entry-date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: var(--gap-lg);
+    align-items: center;
+    justify-content: center;
+    width: 4.25rem;
+    height: 4.25rem;
+    flex: 0 0 4.25rem;
+    box-sizing: border-box;
+    background: var(--bg);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    padding: 0.25rem;
+    color: var(--primary);
+    text-align: center;
+    line-height: 1.15;
   }
-  .entry {
-    padding-block-start: var(--gap-sm);
-    border-top: 1px solid var(--border);
+  .entry-date-start,
+  .entry-date-end {
+    font-size: 0.6875rem;
+    font-weight: 700;
   }
-  .entry:first-child {
-    border-top: none;
-    padding-block-start: 0;
+  .entry-date-end {
+    color: var(--text-muted);
   }
-  .entry-header {
+  .entry-date-end::before {
+    content: '';
+    display: block;
+    width: 0.875rem;
+    height: 1px;
+    background: var(--border);
+    margin: 0.15rem auto;
+  }
+
+  .entry-period {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 4px;
+  }
+
+  .card {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    width: calc(50% - 2.5rem);
     gap: var(--gap-md);
   }
-  .entry-header h3 {
+  .entry.right .card {
+    flex-direction: row;
+  }
+  .entry.left .card {
+    flex-direction: row-reverse;
+  }
+
+  .meta {
+    flex: 0 0 38%;
+    min-width: 0;
+  }
+  .entry.left .meta {
+    text-align: right;
+  }
+  .meta h3 {
     font-size: 1.0625rem;
   }
   .entry-company {
@@ -258,26 +342,27 @@
     font-size: 0.8125rem;
     margin-top: 1px;
   }
-  .entry-side {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    white-space: nowrap;
-  }
-  .entry-date {
-    color: var(--text-muted);
-    font-size: 0.8125rem;
-  }
   .entry-domain {
-    color: var(--primary);
-    font-size: 0.8125rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .details {
+    flex: 1;
+    min-width: 0;
   }
   .entry-points {
-    margin: var(--gap-xs) 0 var(--gap-xs);
+    margin: 0 0 var(--gap-xs);
     padding-left: 1.125rem;
     font-size: 0.9375rem;
     color: var(--text);
+  }
+  .entry.left .entry-points {
+    padding-left: 0;
+    padding-right: 1.125rem;
   }
   .entry-points li {
     margin-bottom: 2px;
@@ -288,6 +373,40 @@
   }
   .entry-env strong {
     color: var(--text);
+  }
+
+  @media (max-width: 760px) {
+    .timeline::before {
+      left: 1rem;
+    }
+    .entry,
+    .entry.right,
+    .entry.left {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-inline-start: 2.5rem;
+    }
+    .entry-date {
+      position: static;
+      transform: none;
+      align-self: flex-start;
+      margin-bottom: var(--gap-xs);
+    }
+    .card,
+    .entry.right .card,
+    .entry.left .card {
+      width: 100%;
+      flex-direction: column;
+    }
+    .meta,
+    .entry.left .meta {
+      text-align: left;
+    }
+    .entry.left .entry-points {
+      padding-left: 1.125rem;
+      padding-right: 0;
+    }
   }
 
   .meta-row {
