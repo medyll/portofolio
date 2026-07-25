@@ -13,15 +13,20 @@ export interface ProjectDetail {
 
 export const projectDetails: Record<string, ProjectDetail> = {
   idae: {
-    children: ['qoolie', 'idae.api.lan'],
+    children: ['qoolie', 'idae.api.lan', 'idae-be', 'idae-dom-events', 'idae-router', 'idae-stator', 'idae-sync'],
     mermaid: `flowchart TD
   P["idea / needs"] --> S["Idae — DDD monorepo"]
   S --> Q["idae-machine · multi-tenant app"]
   S --> R["idae-query · MongoDB-like engine"]
   S --> T["idae-socket / idae-stator · sync + state"]
   S -. sub-repo .-> C1["qoolie · client IndexedDB + sync"]
-  S -. sub-repo .-> C2["idae.api · PHP/MongoDB REST + IDQL"]`,
-    seo: 'Idae is a domain-driven, multi-tenant monorepo built around a MongoDB-like query engine (idae-query), a real-time sync layer (idae-socket, idae-stator), and a SvelteKit front end (idae-machine). Two of its packages, qoolie and idae.api, ship as standalone projects below.'
+  S -. sub-repo .-> C2["idae.api · PHP/MongoDB REST + IDQL"]
+  S -. sub-repo .-> C3["idae-be · DOM manipulation"]
+  S -. sub-repo .-> C4["idae-dom-events · CSS/DOM observers"]
+  S -. sub-repo .-> C5["idae-router · SPA router + SWR cache"]
+  S -. sub-repo .-> C6["idae-stator · reactive Proxy state"]
+  S -. sub-repo .-> C7["idae-sync · offline outbox sync"]`,
+    seo: 'Idae is a domain-driven, multi-tenant monorepo built around a MongoDB-like query engine (idae-query), a real-time sync layer (idae-socket, idae-stator), and a SvelteKit front end (idae-machine). Seven of its packages — qoolie, idae.api, idae-be, idae-dom-events, idae-router, idae-stator and idae-sync — ship as standalone projects below.'
   },
   qoolie: {
     parent: 'idae',
@@ -146,6 +151,60 @@ export const projectDetails: Record<string, ProjectDetail> = {
   S --> B["modern MongoDB driver"]
   S --> C["Dockerized dev env, original UI intact"]`,
     seo: 'Idae Legacy is a live migration of a 2014 PHP/Node.js/MongoDB CMS onto PHP 8.2 and a current MongoDB driver, kept running in production with its original UI and behavior unchanged during the rewrite.'
+  },
+  'idae-be': {
+    parent: 'idae',
+    mermaid: `flowchart TD
+  P["Idae monorepo"] --> S["idae-be · DOM manipulation"]
+  S --> A["be() always returns root object"]
+  S --> B["callback-based targeting of nested matches"]
+  S --> C["traversal, styles, attrs, events, timers, HTTP"]`,
+    seo: 'idae-be is a callback-based DOM manipulation library for the Idae ecosystem. Unlike jQuery-style chaining, every call returns the root Be instance, and callbacks reach into nested targets for precise, composable DOM operations.'
+  },
+  'idae-dom-events': {
+    parent: 'idae',
+    mermaid: `flowchart TD
+  P["Idae monorepo"] --> S["idae-dom-events"]
+  S --> A["cssDom · animation/style/resize tracking"]
+  S --> B["htmlDom.track · MutationObserver wrapper"]
+  S --> C["callback-based change reporting"]`,
+    seo: 'idae-dom-events observes CSS and DOM changes for the Idae stack: cssDom tracks style, animation and resize events on selected elements, while htmlDom.track wraps MutationObserver for attribute, child-list and character-data changes.'
+  },
+  'idae-router': {
+    parent: 'idae',
+    mermaid: `flowchart TD
+  P["Idae monorepo"] --> S["idae-router"]
+  S --> A["path params, query parsing, nested outlets"]
+  S --> B["declarative http/http_source fetching"]
+  S --> C["in-memory SWR cache + hover prefetch"]`,
+    seo: 'idae-router is a framework-agnostic SPA router used across Idae projects: path parameters, lifecycle hooks, declarative HTTP data fetching into route context, and an in-memory stale-while-revalidate cache with hover-triggered prefetching.'
+  },
+  'idae-stator': {
+    parent: 'idae',
+    mermaid: `flowchart TD
+  P["Idae monorepo"] --> S["idae-stator"]
+  S --> A["native Proxy, tracks any-depth mutations"]
+  S --> B["onchange callback + EventTarget API"]
+  S --> C["isomorphic: browser, Node.js, SSR"]`,
+    seo: 'idae-stator is the reactive state layer shared across Idae projects: a recursive Proxy tracks mutations at any depth in objects and arrays, exposing both a plain onchange callback and a standard EventTarget API, with zero dependencies.'
+  },
+  'idae-sync': {
+    parent: 'idae',
+    mermaid: `flowchart TD
+  P["Idae monorepo"] --> S["idae-sync"]
+  S --> A["IndexedDB outbox · retries + backoff"]
+  S --> B["circuit breaker + dead letter queue"]
+  S --> C["mobile-first / server-first per collection"]
+  S --> D["SSE/WebSocket push + conflict resolution"]`,
+    seo: 'idae-sync syncs local IndexedDB data to a server in the background, even offline. Writes queue in a persistent outbox with exponential backoff, per-collection circuit breakers, a dead letter queue, and pluggable conflict resolution, plus SSE/WebSocket listeners for server push.'
+  },
+  'infra-ansible-legacy': {
+    mermaid: `flowchart TD
+  P["idea / needs"] --> S["infra-ansible-legacy"]
+  S --> A["common role: PHP7, Nginx, MySQL, Redis"]
+  S --> B["group_vars / host_vars per environment"]
+  S --> C["dev / preprod / prod, same role unmodified"]`,
+    seo: 'infra-ansible-legacy is a 2019 Ansible playbook that provisioned a telco API platform (PHP7, Nginx, MySQL, Redis) across dev, preprod and prod. Environment identity lives entirely in group_vars/host_vars, keeping the common role environment-agnostic. Archived as a portfolio reference with credentials stripped to vault placeholders.'
   },
   'ferule-core': {
     mermaid: `flowchart TD

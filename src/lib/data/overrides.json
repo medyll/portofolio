@@ -137,6 +137,64 @@
       "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a modern MongoDB driver and a Dockerized environment, keeping the original UI and behavior intact while modernizing the internals underneath.",
       "tech": ["PHP", "Node.js", "MongoDB", "Docker"],
       "highlights": ["12-year-old codebase, still in production", "Backward-compatible UI during rewrite", "Dockerized dev environment, PHP 5.6 to 8.2"]
+    },
+    "idae-be": {
+      "tier": "C",
+      "name": "@medyll/idae-be",
+      "dir": "idae/packages/idae-be",
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-be",
+      "tagline": "Callback-based DOM manipulation library, always returns the root",
+      "description": "A DOM walk and manipulation library with a callback-based approach for precise element targeting. Unlike jQuery-style chaining, idae-be always returns the root object, using callbacks to reach into nested matches while keeping the chain consistent.",
+      "tech": ["TypeScript", "DOM"],
+      "highlights": ["Callback-based targeting, root object always returned", "Traversal, styling, attributes, events in one API", "Timer integration + HTTP content loading"]
+    },
+    "idae-dom-events": {
+      "tier": "C",
+      "name": "@medyll/idae-dom-events",
+      "dir": "idae/packages/idae-dom-events",
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-dom-events",
+      "tagline": "CSS and DOM mutation observers for reactive UI code",
+      "description": "Library for observing and reacting to DOM changes: cssDom tracks animations, style changes and resize events, htmlDom.track observes attribute, child-list and character-data mutations. Built for dynamic web applications that need fine-grained change detection.",
+      "tech": ["TypeScript", "DOM", "MutationObserver"],
+      "highlights": ["cssDom: animation/style/resize tracking", "htmlDom.track: attribute/child-list/character-data mutations", "Flexible callback-based event management"]
+    },
+    "idae-router": {
+      "tier": "C",
+      "name": "idae-router",
+      "dir": "idae/packages/idae-router",
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-router",
+      "tagline": "Framework-agnostic SPA router with SWR cache and typed HTTP fetching",
+      "description": "Lightweight, framework-agnostic client-side router: path parameters, query parsing, lifecycle hooks, declarative HTTP data fetching, an in-memory SWR cache, and full TypeScript generics. Supports nested routes and outlets.",
+      "tech": ["TypeScript", "Svelte", "Vitest", "Playwright"],
+      "highlights": ["Declarative http/http_source fetching into ctx.data", "In-memory SWR cache with hover prefetching", "Nested routes with data-idae-outlet mounting"]
+    },
+    "idae-stator": {
+      "tier": "C",
+      "name": "@medyll/idae-stator",
+      "dir": "idae/packages/idae-stator",
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-stator",
+      "tagline": "Universal deep-reactive state via native Proxy, zero dependencies",
+      "description": "Lightweight, universal, deeply reactive state management library. Uses native Proxy to track mutations at any depth in objects and arrays, and exposes both onchange callbacks and a standard EventTarget API, isomorphic across Browser, Node.js and SSR.",
+      "tech": ["TypeScript", "Proxy"],
+      "highlights": ["Deep reactivity via recursive Proxy + WeakMap cache", "Zero dependencies, isomorphic (browser/Node/SSR)", "onchange callback + addEventListener dual API"]
+    },
+    "idae-sync": {
+      "tier": "C",
+      "name": "@medyll/idae-sync",
+      "dir": "idae/packages/idae-sync",
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-sync",
+      "tagline": "Offline-first sync engine: outbox, retries, conflict resolution",
+      "description": "Syncs local IndexedDB data to a server automatically, in the background, even offline. Writes are intercepted into an IndexedDB-backed outbox with exponential backoff, circuit breakers, a dead letter queue, and pluggable conflict resolution (last-write-wins, shallow or field-level merge).",
+      "tech": ["TypeScript", "IndexedDB"],
+      "highlights": ["Outbox + circuit breaker + dead letter queue", "mobile-first / server-first sync modes per collection", "SSE/WebSocket push listeners, pluggable conflict resolution"]
+    },
+    "infra-ansible-legacy": {
+      "tier": "C",
+      "name": "infra-ansible-legacy",
+      "tagline": "2019 Ansible playbook provisioning a telco API stack",
+      "description": "Legacy Ansible playbook provisioning a telco API platform (PHP7, Nginx, MySQL, Redis) across dev/preprod/prod. Environment identity and per-host config live in group_vars/host_vars, keeping the common role environment-agnostic. Archived as a portfolio reference with credentials stripped to ansible-vault placeholders.",
+      "tech": ["Ansible", "PHP7", "Nginx", "MySQL", "Redis"],
+      "highlights": ["Same role runs unmodified across dev/preprod/prod", "group_vars/host_vars scoping, no hardcoded env in tasks", "Credentials stripped to ansible-vault placeholders"]
     }
   }
 }
