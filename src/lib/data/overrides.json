@@ -14,10 +14,10 @@
     "css-base": {
       "tier": "A",
       "featured": true,
-      "tagline": "Native CSS design system: zero build, zero preprocessor",
-      "description": "Pure CSS design system built on cutting-edge native features: OKLCH color space, CSS @function, and attr() type coercion. No preprocessor, no build step, no runtime. Published on npm and production-ready.",
+      "tagline": "Native CSS design system: modular, themeable, zero build",
+      "description": "Published CSS design system built entirely on native platform features: cascade layers, OKLCH, light-dark(), CSS @function, and typed attr(). Version 0.7.13 ships modular entry points, reusable components and utilities, plus ten token-only demo skins—with no preprocessor, build step, or JavaScript runtime.",
       "tech": ["CSS", "OKLCH", "@function", "attr()"],
-      "highlights": ["Zero build, zero preprocessor", "Native light-dark()", "Published on npm"]
+      "highlights": ["v0.7.13 published on npm", "Modular exports · cascade layers · native dark mode", "10 skins from token overrides only"]
     },
     "sive": {
       "tier": "A",
@@ -36,10 +36,10 @@
     },
     "humemory": {
       "tier": "A",
-      "tagline": "Human-like memory with progressive decay for AI agents",
-      "description": "Memory system for AI agents modeled on human forgetting curves. Implements 5-level trace decay where recall events reinforce memory strength. The system resurfaces relevant context proactively, before you think to ask. Zero runtime dependencies.",
-      "tech": ["TypeScript"],
-      "highlights": ["5-level decay model", "Recall reinforces traces", "Resurfaces before you ask"]
+      "tagline": "Agent memory that forgets, recalls and resurfaces open loops",
+      "description": "Memory engine for AI agents modeled on human recall. Version 0.2.0 combines five-level trace decay and inverse search with prospective intentions triggered by time, files, branches, or errors. Claude Code and git hooks inject relevant context, preserve open loops, and close them explicitly from commits.",
+      "tech": ["TypeScript", "Bun", "SQLite", "Hono", "React"],
+      "highlights": ["5-level decay + inverse search", "Prospective cues and Zeigarnik-style open loops", "Claude Code hooks · CLI/API · visual memory palace"]
     },
     "domus": {
       "tier": "A",

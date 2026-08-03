@@ -23,9 +23,21 @@ const SKIP_DIRS = new Set([
 const overridesPath = join(repoRoot, 'src/lib/data/overrides.json');
 const overrides = JSON.parse(readFileSync(overridesPath, 'utf8')).projects;
 
+function gitRoot(dir) {
+  let current = resolve(dir);
+
+  while (!existsSync(join(current, '.git'))) {
+    const parent = dirname(current);
+    if (parent === current) return resolve(dir);
+    current = parent;
+  }
+
+  return current;
+}
+
 function git(dir, args) {
   try {
-    return execFileSync('git', ['-C', dir, ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+    return execFileSync('git', ['-c', `safe.directory=${gitRoot(dir)}`, '-C', dir, ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
   } catch {
     return '';
   }

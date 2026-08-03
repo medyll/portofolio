@@ -1,33 +1,6 @@
 {
-  "generatedAt": "2026-07-25",
+  "generatedAt": "2026-08-03",
   "projects": [
-    {
-      "slug": "idae",
-      "name": "Idae",
-      "tier": "A",
-      "tagline": "DDD multi-tenant platform with MongoDB-like query engine",
-      "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend, all typed end-to-end in TypeScript.",
-      "accent": "@medyll/idae-machine",
-      "tech": [
-        "TypeScript",
-        "Svelte 5",
-        "SvelteKit",
-        "pnpm"
-      ],
-      "repo": "https://github.com/medyll/idae",
-      "homepage": null,
-      "lastCommit": "2026-07-25",
-      "metrics": {
-        "files": 2801,
-        "sizeMB": 58.4
-      },
-      "highlights": [
-        "idae-machine · DDD multi-tenant app (v0.136)",
-        "idae-query · MongoDB-like query engine",
-        "idae-socket / idae-stator · sync and state"
-      ],
-      "featured": true
-    },
     {
       "slug": "wollama",
       "name": "wollama-monorepo",
@@ -44,9 +17,9 @@
       ],
       "repo": "https://github.com/medyll/wollama",
       "homepage": null,
-      "lastCommit": "2026-07-25",
+      "lastCommit": "2026-08-03",
       "metrics": {
-        "files": 3461,
+        "files": 3460,
         "sizeMB": 1087.6
       },
       "highlights": [
@@ -57,11 +30,38 @@
       "featured": true
     },
     {
+      "slug": "idae",
+      "name": "Idae",
+      "tier": "A",
+      "tagline": "DDD multi-tenant platform with MongoDB-like query engine",
+      "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend, all typed end-to-end in TypeScript.",
+      "accent": "@medyll/idae-machine",
+      "tech": [
+        "TypeScript",
+        "Svelte 5",
+        "SvelteKit",
+        "pnpm"
+      ],
+      "repo": "https://github.com/medyll/idae",
+      "homepage": null,
+      "lastCommit": "2026-08-01",
+      "metrics": {
+        "files": 2818,
+        "sizeMB": 58.8
+      },
+      "highlights": [
+        "idae-machine · DDD multi-tenant app (v0.136)",
+        "idae-query · MongoDB-like query engine",
+        "idae-socket / idae-stator · sync and state"
+      ],
+      "featured": true
+    },
+    {
       "slug": "css-base",
       "name": "@medyll/css-base",
       "tier": "A",
-      "tagline": "Native CSS design system: zero build, zero preprocessor",
-      "description": "Pure CSS design system built on cutting-edge native features: OKLCH color space, CSS @function, and attr() type coercion. No preprocessor, no build step, no runtime. Published on npm and production-ready.",
+      "tagline": "Native CSS design system: modular, themeable, zero build",
+      "description": "Published CSS design system built entirely on native platform features: cascade layers, OKLCH, light-dark(), CSS @function, and typed attr(). Version 0.7.13 ships modular entry points, reusable components and utilities, plus ten token-only demo skins—with no preprocessor, build step, or JavaScript runtime.",
       "accent": null,
       "tech": [
         "CSS",
@@ -71,15 +71,15 @@
       ],
       "repo": "https://github.com/medyll/css-base",
       "homepage": "https://github.com/medyll/css-base#readme",
-      "lastCommit": "2026-06-13",
+      "lastCommit": "2026-08-01",
       "metrics": {
         "files": 92,
         "sizeMB": 5.6
       },
       "highlights": [
-        "Zero build, zero preprocessor",
-        "Native light-dark()",
-        "Published on npm"
+        "v0.7.13 published on npm",
+        "Modular exports · cascade layers · native dark mode",
+        "10 skins from token overrides only"
       ],
       "featured": true
     },
@@ -135,6 +135,34 @@
       "featured": true
     },
     {
+      "slug": "humemory",
+      "name": "humemory",
+      "tier": "A",
+      "tagline": "Agent memory that forgets, recalls and resurfaces open loops",
+      "description": "Memory engine for AI agents modeled on human recall. Version 0.2.0 combines five-level trace decay and inverse search with prospective intentions triggered by time, files, branches, or errors. Claude Code and git hooks inject relevant context, preserve open loops, and close them explicitly from commits.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "Bun",
+        "SQLite",
+        "Hono",
+        "React"
+      ],
+      "repo": "https://github.com/medyll/humemory",
+      "homepage": "https://github.com/medyll/humemory#readme",
+      "lastCommit": "2026-08-01",
+      "metrics": {
+        "files": 108,
+        "sizeMB": 1.6
+      },
+      "highlights": [
+        "5-level decay + inverse search",
+        "Prospective cues and Zeigarnik-style open loops",
+        "Claude Code hooks · CLI/API · visual memory palace"
+      ],
+      "featured": false
+    },
+    {
       "slug": "latent-line",
       "name": "latent-line",
       "tier": "A",
@@ -157,30 +185,6 @@
         "Interactive timeline editor",
         "Real-time model inspection",
         "CI on GitHub Actions"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "humemory",
-      "name": "humemory",
-      "tier": "A",
-      "tagline": "Human-like memory with progressive decay for AI agents",
-      "description": "Memory system for AI agents modeled on human forgetting curves. Implements 5-level trace decay where recall events reinforce memory strength. The system resurfaces relevant context proactively, before you think to ask. Zero runtime dependencies.",
-      "accent": null,
-      "tech": [
-        "TypeScript"
-      ],
-      "repo": "https://github.com/medyll/humemory",
-      "homepage": null,
-      "lastCommit": "2026-07-25",
-      "metrics": {
-        "files": 52,
-        "sizeMB": 0.4
-      },
-      "highlights": [
-        "5-level decay model",
-        "Recall reinforces traces",
-        "Resurfaces before you ask"
       ],
       "featured": false
     },
@@ -223,7 +227,7 @@
       "homepage": null,
       "lastCommit": "2026-07-25",
       "metrics": {
-        "files": 98,
+        "files": 94,
         "sizeMB": 0.6
       },
       "highlights": [
@@ -350,69 +354,15 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/qoolie",
       "homepage": null,
-      "lastCommit": "2026-07-25",
+      "lastCommit": "2026-08-01",
       "metrics": {
-        "files": 135,
+        "files": 136,
         "sizeMB": 0.4
       },
       "highlights": [
         "React, Vue and Svelte adapters + devtools",
         "CLI and benchmark suite",
         "Sync via idae-socket, offline-first by default"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae.api.lan",
-      "name": "idae.api",
-      "tier": "C",
-      "tagline": "PHP/MongoDB REST + IDQL API for the Idae platform",
-      "description": "Lightweight PHP REST API backed by MongoDB, built around a router → API parser → query layer pattern. Exposes a custom IDQL query language for find/group/distinct/parallel operations alongside generic REST endpoints, plus a small Node helper process for sockets and crons. Dockerized with a PHPUnit test suite.",
-      "accent": null,
-      "tech": [
-        "PHP",
-        "MongoDB",
-        "Docker",
-        "Node.js"
-      ],
-      "repo": "https://github.com/medyll/idae.api",
-      "homepage": null,
-      "lastCommit": "2026-07-25",
-      "metrics": {
-        "files": 67,
-        "sizeMB": 0.1
-      },
-      "highlights": [
-        "IDQL query language: find, group, distinct, parallel",
-        "Router → API parser → query layer architecture",
-        "Dockerized with PHPUnit tests"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae-legacy",
-      "name": "Idae Legacy",
-      "tier": "C",
-      "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
-      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a modern MongoDB driver and a Dockerized environment, keeping the original UI and behavior intact while modernizing the internals underneath.",
-      "accent": null,
-      "tech": [
-        "PHP",
-        "Node.js",
-        "MongoDB",
-        "Docker"
-      ],
-      "repo": "https://github.com/medyll/idae-legacy",
-      "homepage": null,
-      "lastCommit": "2026-07-25",
-      "metrics": {
-        "files": 4830,
-        "sizeMB": 674.9
-      },
-      "highlights": [
-        "12-year-old codebase, still in production",
-        "Backward-compatible UI during rewrite",
-        "Dockerized dev environment, PHP 5.6 to 8.2"
       ],
       "featured": false
     },
@@ -429,7 +379,7 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-be",
       "homepage": null,
-      "lastCommit": "2026-07-25",
+      "lastCommit": "2026-08-01",
       "metrics": {
         "files": 53,
         "sizeMB": 0.2
@@ -455,7 +405,7 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-dom-events",
       "homepage": null,
-      "lastCommit": "2026-07-25",
+      "lastCommit": "2026-08-01",
       "metrics": {
         "files": 33,
         "sizeMB": 0.1
@@ -482,7 +432,7 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-router",
       "homepage": null,
-      "lastCommit": "2026-07-25",
+      "lastCommit": "2026-08-01",
       "metrics": {
         "files": 79,
         "sizeMB": 0.4
@@ -507,7 +457,7 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-stator",
       "homepage": null,
-      "lastCommit": "2026-07-25",
+      "lastCommit": "2026-08-01",
       "metrics": {
         "files": 41,
         "sizeMB": 0.1
@@ -532,15 +482,69 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-sync",
       "homepage": null,
-      "lastCommit": "2026-07-25",
+      "lastCommit": "2026-08-01",
       "metrics": {
-        "files": 81,
+        "files": 82,
         "sizeMB": 0.2
       },
       "highlights": [
         "Outbox + circuit breaker + dead letter queue",
         "mobile-first / server-first sync modes per collection",
         "SSE/WebSocket push listeners, pluggable conflict resolution"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae.api.lan",
+      "name": "idae.api",
+      "tier": "C",
+      "tagline": "PHP/MongoDB REST + IDQL API for the Idae platform",
+      "description": "Lightweight PHP REST API backed by MongoDB, built around a router → API parser → query layer pattern. Exposes a custom IDQL query language for find/group/distinct/parallel operations alongside generic REST endpoints, plus a small Node helper process for sockets and crons. Dockerized with a PHPUnit test suite.",
+      "accent": null,
+      "tech": [
+        "PHP",
+        "MongoDB",
+        "Docker",
+        "Node.js"
+      ],
+      "repo": "https://github.com/medyll/idae.api",
+      "homepage": null,
+      "lastCommit": "2026-07-30",
+      "metrics": {
+        "files": 71,
+        "sizeMB": 0.1
+      },
+      "highlights": [
+        "IDQL query language: find, group, distinct, parallel",
+        "Router → API parser → query layer architecture",
+        "Dockerized with PHPUnit tests"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae-legacy",
+      "name": "Idae Legacy",
+      "tier": "C",
+      "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
+      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a modern MongoDB driver and a Dockerized environment, keeping the original UI and behavior intact while modernizing the internals underneath.",
+      "accent": null,
+      "tech": [
+        "PHP",
+        "Node.js",
+        "MongoDB",
+        "Docker"
+      ],
+      "repo": "https://github.com/medyll/idae-legacy",
+      "homepage": null,
+      "lastCommit": "2026-07-30",
+      "metrics": {
+        "files": 4829,
+        "sizeMB": 679.6
+      },
+      "highlights": [
+        "12-year-old codebase, still in production",
+        "Backward-compatible UI during rewrite",
+        "Dockerized dev environment, PHP 5.6 to 8.2"
       ],
       "featured": false
     },

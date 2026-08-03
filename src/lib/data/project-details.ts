@@ -49,10 +49,11 @@ export const projectDetails: Record<string, ProjectDetail> = {
   'css-base': {
     mermaid: `flowchart TD
   P["idea / needs"] --> S["@medyll/css-base"]
-  S --> A["OKLCH color space"]
-  S --> B["CSS @function + attr() coercion"]
-  S --> C["published on npm, zero build"]`,
-    seo: 'css-base is a design system written in plain CSS: OKLCH colors, native @function, and attr() type coercion replace what a preprocessor or JS runtime would otherwise do. No build step, published and used in production.'
+  S --> A["tokens · OKLCH · light-dark()"]
+  S --> B["components · utilities · typed attr()"]
+  S --> C["modular npm exports · zero build"]
+  S --> D["10 token-only demo skins"]`,
+    seo: 'css-base is a modular design system written in plain CSS. Version 0.7.13 combines cascade layers, OKLCH colors, native light-dark(), CSS @function, and typed attr() utilities without a preprocessor or JavaScript runtime, and demonstrates its token architecture through ten interchangeable skins.'
   },
   sive: {
     mermaid: `flowchart TD
@@ -74,10 +75,11 @@ export const projectDetails: Record<string, ProjectDetail> = {
   humemory: {
     mermaid: `flowchart TD
   P["idea / needs"] --> S["humemory"]
-  S --> A["5-level trace decay"]
-  S --> B["recall reinforces memory strength"]
-  S --> C["zero runtime dependencies"]`,
-    seo: 'humemory models an AI agent’s memory on human forgetting curves: traces decay across five levels, and recall events reinforce them. It surfaces relevant context proactively, with no runtime dependencies.'
+  S --> A["retrospective · 5-level decay + inverse search"]
+  S --> B["prospective · time and event cues"]
+  B --> C["open loops · SessionStart + git hooks"]
+  S --> D["CLI + Hono API + React memory palace"]`,
+    seo: 'humemory 0.2.0 gives AI agents both retrospective and prospective memory: traces decay across five levels and strengthen on recall, while time and event cues resurface open loops at the right moment. Claude Code and git hooks connect the Bun/SQLite engine to real development sessions, with a CLI, Hono API, and React memory palace for inspection.'
   },
   domus: {
     mermaid: `flowchart TD
