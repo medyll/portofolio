@@ -36,10 +36,19 @@
     },
     "humemory": {
       "tier": "A",
-      "tagline": "Agent memory that forgets, recalls and resurfaces open loops",
-      "description": "Memory engine for AI agents modeled on human recall. Version 0.2.0 combines five-level trace decay and inverse search with prospective intentions triggered by time, files, branches, or errors. Claude Code and git hooks inject relevant context, preserve open loops, and close them explicitly from commits.",
-      "tech": ["TypeScript", "Bun", "SQLite", "Hono", "React"],
-      "highlights": ["5-level decay + inverse search", "Prospective cues and Zeigarnik-style open loops", "Claude Code hooks · CLI/API · visual memory palace"]
+      "tagline": "Shared agent memory that forgets, dreams and learns routines",
+      "description": "Memory engine for AI agents modeled on human recall. It combines five-level trace decay, prospective open loops, trusted cross-agent provenance, and hybrid semantic search in a shared SQLite store. Its dreamer consolidates recurring knowledge, while cue-triggered cognitive scripts inject reviewed routines into Claude, Codex, Kimi, and OpenCode sessions through hooks or MCP.",
+      "tech": ["TypeScript", "Bun", "SQLite", "MCP", "ONNX", "React"],
+      "metrics": { "files": 128, "sizeMB": 1 },
+      "highlights": ["Retrospective decay + prospective open loops", "Shared MCP memory · provenance · contradiction handling", "Offline vector search + dreamer-mined cognitive scripts"]
+    },
+    "acp-team": {
+      "tier": "B",
+      "name": "acp-team",
+      "tagline": "One MCP interface for delegating work to Kimi and Codex",
+      "description": "MCP server that lets any compatible host delegate coding work to Kimi over the Agent Client Protocol or to Codex through its CLI. Both adapters expose the same response shape, project-scoped conversations, execution modes, cancellation, and per-agent model settings, so an agent can ask for a second opinion or hand off an implementation without leaving its current session.",
+      "tech": ["JavaScript", "Node.js", "MCP", "ACP"],
+      "highlights": ["Uniform Kimi + Codex delegation API", "Persistent sessions scoped by agent and project", "Read-only planning through full execution modes"]
     },
     "domus": {
       "tier": "A",

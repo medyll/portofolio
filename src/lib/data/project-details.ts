@@ -75,11 +75,21 @@ export const projectDetails: Record<string, ProjectDetail> = {
   humemory: {
     mermaid: `flowchart TD
   P["idea / needs"] --> S["humemory"]
-  S --> A["retrospective · 5-level decay + inverse search"]
-  S --> B["prospective · time and event cues"]
-  B --> C["open loops · SessionStart + git hooks"]
-  S --> D["CLI + Hono API + React memory palace"]`,
-    seo: 'humemory 0.2.0 gives AI agents both retrospective and prospective memory: traces decay across five levels and strengthen on recall, while time and event cues resurface open loops at the right moment. Claude Code and git hooks connect the Bun/SQLite engine to real development sessions, with a CLI, Hono API, and React memory palace for inspection.'
+  S --> A["retrospective · decay + hybrid semantic search"]
+  S --> B["prospective · cues + open loops"]
+  S --> C["trusted shared memory · MCP + provenance"]
+  S --> D["dreaming · consolidation + contradictions"]
+  D --> E["cognitive scripts · reviewed routines on cue"]`,
+    seo: 'humemory gives Claude, Codex, Kimi and OpenCode a shared memory that behaves less like a log and more like recall. Traces decay across five levels, semantic and keyword search recover relevant context, prospective cues resurface open loops, and a review-gated dreamer consolidates recurring knowledge into trustworthy memories and cognitive scripts.'
+  },
+  'acp-team': {
+    mermaid: `flowchart LR
+  H["MCP host"] --> S["acp-team"]
+  S --> K["Kimi · ACP / JSON-RPC"]
+  S --> C["Codex · codex exec / JSONL"]
+  K --> R["uniform result + project session"]
+  C --> R`,
+    seo: 'acp-team is a small MCP server that lets Claude Code, Codex, or any other MCP host delegate coding tasks to Kimi and Codex through one interface. It normalizes two different transports, preserves conversations per agent and working directory, and offers explicit read-only, standard, automatic, and unrestricted execution modes.'
   },
   domus: {
     mermaid: `flowchart TD
