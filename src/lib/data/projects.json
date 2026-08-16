@@ -1,6 +1,88 @@
 {
-  "generatedAt": "2026-08-09",
+  "generatedAt": "2026-08-16",
   "projects": [
+    {
+      "slug": "sive",
+      "name": "sive",
+      "tier": "A",
+      "tagline": "AI writing assistant: production since v1.0",
+      "description": "Full-featured writing application with real-time AI suggestions, narrative coherence analysis, and mobile-first design. Built on SvelteKit 5 and Tailwind v4. Production-ready since v1.0 with a clean, distraction-free editor.",
+      "accent": null,
+      "tech": [
+        "SvelteKit",
+        "Svelte 5",
+        "Tailwind v4"
+      ],
+      "repo": "https://github.com/medyll/sive",
+      "homepage": null,
+      "lastCommit": "2026-08-16",
+      "metrics": {
+        "files": 987,
+        "sizeMB": 4.6
+      },
+      "highlights": [
+        "Real-time AI suggestions",
+        "Narrative coherence checks",
+        "Mobile-ready"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "humemory",
+      "name": "humemory",
+      "tier": "A",
+      "tagline": "Shared agent memory that forgets, dreams and learns routines",
+      "description": "Memory engine for AI agents modeled on human recall. It combines five-level trace decay, prospective open loops, trusted cross-agent provenance, and hybrid semantic search in a shared SQLite store. Its dreamer consolidates recurring knowledge, while cue-triggered cognitive scripts inject reviewed routines into Claude, Codex, Kimi, and OpenCode sessions through hooks or MCP.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "Bun",
+        "SQLite",
+        "MCP",
+        "ONNX",
+        "React"
+      ],
+      "repo": "https://github.com/medyll/humemory",
+      "homepage": "https://github.com/medyll/humemory#readme",
+      "lastCommit": "2026-08-15",
+      "metrics": {
+        "files": 128,
+        "sizeMB": 1
+      },
+      "highlights": [
+        "Retrospective decay + prospective open loops",
+        "Shared MCP memory · provenance · contradiction handling",
+        "Offline vector search + dreamer-mined cognitive scripts"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "acp-team",
+      "name": "acp-team",
+      "tier": "A",
+      "tagline": "One MCP interface for delegating work to Kimi and Codex",
+      "description": "MCP server that lets any compatible host delegate coding work to Kimi over the Agent Client Protocol or to Codex through its CLI. Both adapters expose the same response shape, project-scoped conversations, execution modes, cancellation, and per-agent model settings, so an agent can ask for a second opinion or hand off an implementation without leaving its current session.",
+      "accent": null,
+      "tech": [
+        "JavaScript",
+        "Node.js",
+        "MCP",
+        "ACP"
+      ],
+      "repo": "https://github.com/medyll/acp-team",
+      "homepage": null,
+      "lastCommit": "2026-08-15",
+      "metrics": {
+        "files": 87,
+        "sizeMB": 0.3
+      },
+      "highlights": [
+        "Uniform Kimi + Codex delegation API",
+        "Persistent sessions scoped by agent and project",
+        "Read-only planning through full execution modes"
+      ],
+      "featured": true
+    },
     {
       "slug": "idae",
       "name": "Idae",
@@ -18,7 +100,7 @@
       "homepage": null,
       "lastCommit": "2026-08-07",
       "metrics": {
-        "files": 2870,
+        "files": 2875,
         "sizeMB": 59.5
       },
       "highlights": [
@@ -46,7 +128,7 @@
       "homepage": null,
       "lastCommit": "2026-08-03",
       "metrics": {
-        "files": 3462,
+        "files": 3463,
         "sizeMB": 1087.7
       },
       "highlights": [
@@ -84,32 +166,6 @@
       "featured": true
     },
     {
-      "slug": "sive",
-      "name": "sive",
-      "tier": "A",
-      "tagline": "AI writing assistant: production since v1.0",
-      "description": "Full-featured writing application with real-time AI suggestions, narrative coherence analysis, and mobile-first design. Built on SvelteKit 5 and Tailwind v4. Production-ready since v1.0 with a clean, distraction-free editor.",
-      "accent": null,
-      "tech": [
-        "SvelteKit",
-        "Svelte 5",
-        "Tailwind v4"
-      ],
-      "repo": "https://github.com/medyll/sive",
-      "homepage": null,
-      "lastCommit": "2026-05-25",
-      "metrics": {
-        "files": 1181,
-        "sizeMB": 10
-      },
-      "highlights": [
-        "Real-time AI suggestions",
-        "Narrative coherence checks",
-        "Mobile-ready"
-      ],
-      "featured": true
-    },
-    {
       "slug": "domus",
       "name": "domus",
       "tier": "A",
@@ -133,35 +189,6 @@
         "Alpha v0.1.0"
       ],
       "featured": true
-    },
-    {
-      "slug": "humemory",
-      "name": "humemory",
-      "tier": "A",
-      "tagline": "Shared agent memory that forgets, dreams and learns routines",
-      "description": "Memory engine for AI agents modeled on human recall. It combines five-level trace decay, prospective open loops, trusted cross-agent provenance, and hybrid semantic search in a shared SQLite store. Its dreamer consolidates recurring knowledge, while cue-triggered cognitive scripts inject reviewed routines into Claude, Codex, Kimi, and OpenCode sessions through hooks or MCP.",
-      "accent": null,
-      "tech": [
-        "TypeScript",
-        "Bun",
-        "SQLite",
-        "MCP",
-        "ONNX",
-        "React"
-      ],
-      "repo": "https://github.com/medyll/humemory",
-      "homepage": "https://github.com/medyll/humemory#readme",
-      "lastCommit": "2026-08-09",
-      "metrics": {
-        "files": 128,
-        "sizeMB": 1
-      },
-      "highlights": [
-        "Retrospective decay + prospective open loops",
-        "Shared MCP memory · provenance · contradiction handling",
-        "Offline vector search + dreamer-mined cognitive scripts"
-      ],
-      "featured": false
     },
     {
       "slug": "latent-line",
@@ -190,33 +217,6 @@
       "featured": false
     },
     {
-      "slug": "acp-team",
-      "name": "acp-team",
-      "tier": "B",
-      "tagline": "One MCP interface for delegating work to Kimi and Codex",
-      "description": "MCP server that lets any compatible host delegate coding work to Kimi over the Agent Client Protocol or to Codex through its CLI. Both adapters expose the same response shape, project-scoped conversations, execution modes, cancellation, and per-agent model settings, so an agent can ask for a second opinion or hand off an implementation without leaving its current session.",
-      "accent": null,
-      "tech": [
-        "JavaScript",
-        "Node.js",
-        "MCP",
-        "ACP"
-      ],
-      "repo": "https://github.com/medyll/acp-team",
-      "homepage": null,
-      "lastCommit": "2026-08-09",
-      "metrics": {
-        "files": 19,
-        "sizeMB": 0.1
-      },
-      "highlights": [
-        "Uniform Kimi + Codex delegation API",
-        "Persistent sessions scoped by agent and project",
-        "Read-only planning through full execution modes"
-      ],
-      "featured": false
-    },
-    {
       "slug": "protonesk",
       "name": "Protonesk",
       "tier": "B",
@@ -231,7 +231,7 @@
       "homepage": null,
       "lastCommit": "2026-07-25",
       "metrics": {
-        "files": 71,
+        "files": 73,
         "sizeMB": 0.3
       },
       "highlights": [
@@ -381,15 +381,42 @@
       ],
       "repo": "https://github.com/medyll/idae-legacy",
       "homepage": null,
-      "lastCommit": "2026-08-09",
+      "lastCommit": "2026-08-13",
       "metrics": {
-        "files": 7525,
-        "sizeMB": 794.7
+        "files": 7505,
+        "sizeMB": 915.5
       },
       "highlights": [
         "12-year-old codebase, still in production",
         "Backward-compatible UI during rewrite",
         "Dockerized dev environment, PHP 5.6 to 8.2"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae.api.lan",
+      "name": "idae.api",
+      "tier": "C",
+      "tagline": "PHP/MongoDB REST + IDQL API for the Idae platform",
+      "description": "Lightweight PHP REST API backed by MongoDB, built around a router → API parser → query layer pattern. Exposes a custom IDQL query language for find/group/distinct/parallel operations alongside generic REST endpoints, plus a small Node helper process for sockets and crons. Dockerized with a PHPUnit test suite.",
+      "accent": null,
+      "tech": [
+        "PHP",
+        "MongoDB",
+        "Docker",
+        "Node.js"
+      ],
+      "repo": "https://github.com/medyll/idae.api",
+      "homepage": null,
+      "lastCommit": "2026-08-10",
+      "metrics": {
+        "files": 71,
+        "sizeMB": 0.1
+      },
+      "highlights": [
+        "IDQL query language: find, group, distinct, parallel",
+        "Router → API parser → query layer architecture",
+        "Dockerized with PHPUnit tests"
       ],
       "featured": false
     },
@@ -546,33 +573,6 @@
         "Outbox + circuit breaker + dead letter queue",
         "mobile-first / server-first sync modes per collection",
         "SSE/WebSocket push listeners, pluggable conflict resolution"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae.api.lan",
-      "name": "idae.api",
-      "tier": "C",
-      "tagline": "PHP/MongoDB REST + IDQL API for the Idae platform",
-      "description": "Lightweight PHP REST API backed by MongoDB, built around a router → API parser → query layer pattern. Exposes a custom IDQL query language for find/group/distinct/parallel operations alongside generic REST endpoints, plus a small Node helper process for sockets and crons. Dockerized with a PHPUnit test suite.",
-      "accent": null,
-      "tech": [
-        "PHP",
-        "MongoDB",
-        "Docker",
-        "Node.js"
-      ],
-      "repo": "https://github.com/medyll/idae.api",
-      "homepage": null,
-      "lastCommit": "2026-07-30",
-      "metrics": {
-        "files": 71,
-        "sizeMB": 0.1
-      },
-      "highlights": [
-        "IDQL query language: find, group, distinct, parallel",
-        "Router → API parser → query layer architecture",
-        "Dockerized with PHPUnit tests"
       ],
       "featured": false
     },

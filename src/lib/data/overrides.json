@@ -36,6 +36,7 @@
     },
     "humemory": {
       "tier": "A",
+      "featured": true,
       "tagline": "Shared agent memory that forgets, dreams and learns routines",
       "description": "Memory engine for AI agents modeled on human recall. It combines five-level trace decay, prospective open loops, trusted cross-agent provenance, and hybrid semantic search in a shared SQLite store. Its dreamer consolidates recurring knowledge, while cue-triggered cognitive scripts inject reviewed routines into Claude, Codex, Kimi, and OpenCode sessions through hooks or MCP.",
       "tech": ["TypeScript", "Bun", "SQLite", "MCP", "ONNX", "React"],
@@ -43,7 +44,8 @@
       "highlights": ["Retrospective decay + prospective open loops", "Shared MCP memory · provenance · contradiction handling", "Offline vector search + dreamer-mined cognitive scripts"]
     },
     "acp-team": {
-      "tier": "B",
+      "tier": "A",
+      "featured": true,
       "name": "acp-team",
       "tagline": "One MCP interface for delegating work to Kimi and Codex",
       "description": "MCP server that lets any compatible host delegate coding work to Kimi over the Agent Client Protocol or to Codex through its CLI. Both adapters expose the same response shape, project-scoped conversations, execution modes, cancellation, and per-agent model settings, so an agent can ask for a second opinion or hand off an implementation without leaving its current session.",
