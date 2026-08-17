@@ -1,32 +1,6 @@
 {
-  "generatedAt": "2026-08-16",
+  "generatedAt": "2026-08-17",
   "projects": [
-    {
-      "slug": "sive",
-      "name": "sive",
-      "tier": "A",
-      "tagline": "AI writing assistant: production since v1.0",
-      "description": "Full-featured writing application with real-time AI suggestions, narrative coherence analysis, and mobile-first design. Built on SvelteKit 5 and Tailwind v4. Production-ready since v1.0 with a clean, distraction-free editor.",
-      "accent": null,
-      "tech": [
-        "SvelteKit",
-        "Svelte 5",
-        "Tailwind v4"
-      ],
-      "repo": "https://github.com/medyll/sive",
-      "homepage": null,
-      "lastCommit": "2026-08-16",
-      "metrics": {
-        "files": 987,
-        "sizeMB": 4.6
-      },
-      "highlights": [
-        "Real-time AI suggestions",
-        "Narrative coherence checks",
-        "Mobile-ready"
-      ],
-      "featured": true
-    },
     {
       "slug": "humemory",
       "name": "humemory",
@@ -44,7 +18,7 @@
       ],
       "repo": "https://github.com/medyll/humemory",
       "homepage": "https://github.com/medyll/humemory#readme",
-      "lastCommit": "2026-08-15",
+      "lastCommit": "2026-08-17",
       "metrics": {
         "files": 128,
         "sizeMB": 1
@@ -71,7 +45,7 @@
       ],
       "repo": "https://github.com/medyll/acp-team",
       "homepage": null,
-      "lastCommit": "2026-08-15",
+      "lastCommit": "2026-08-17",
       "metrics": {
         "files": 87,
         "sizeMB": 0.3
@@ -80,33 +54,6 @@
         "Uniform Kimi + Codex delegation API",
         "Persistent sessions scoped by agent and project",
         "Read-only planning through full execution modes"
-      ],
-      "featured": true
-    },
-    {
-      "slug": "idae",
-      "name": "Idae",
-      "tier": "A",
-      "tagline": "DDD multi-tenant platform with MongoDB-like query engine",
-      "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend, all typed end-to-end in TypeScript.",
-      "accent": "@medyll/idae-machine",
-      "tech": [
-        "TypeScript",
-        "Svelte 5",
-        "SvelteKit",
-        "pnpm"
-      ],
-      "repo": "https://github.com/medyll/idae",
-      "homepage": null,
-      "lastCommit": "2026-08-07",
-      "metrics": {
-        "files": 2875,
-        "sizeMB": 59.5
-      },
-      "highlights": [
-        "idae-machine · DDD multi-tenant app (v0.136)",
-        "idae-query · MongoDB-like query engine",
-        "idae-socket / idae-stator · sync and state"
       ],
       "featured": true
     },
@@ -126,15 +73,68 @@
       ],
       "repo": "https://github.com/medyll/wollama",
       "homepage": null,
-      "lastCommit": "2026-08-03",
+      "lastCommit": "2026-08-17",
       "metrics": {
-        "files": 3463,
-        "sizeMB": 1087.7
+        "files": 3473,
+        "sizeMB": 1088
       },
       "highlights": [
         "Local inference: no cloud, no telemetry",
         "Web + desktop (Electron) + mobile (Capacitor)",
         "Voice I/O · hooks · web-search agents"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "idae",
+      "name": "Idae",
+      "tier": "A",
+      "tagline": "DDD multi-tenant platform with MongoDB-like query engine",
+      "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend, all typed end-to-end in TypeScript.",
+      "accent": "@medyll/idae-machine",
+      "tech": [
+        "TypeScript",
+        "Svelte 5",
+        "SvelteKit",
+        "pnpm"
+      ],
+      "repo": "https://github.com/medyll/idae",
+      "homepage": null,
+      "lastCommit": "2026-08-16",
+      "metrics": {
+        "files": 2877,
+        "sizeMB": 59.5
+      },
+      "highlights": [
+        "idae-machine · DDD multi-tenant app (v0.136)",
+        "idae-query · MongoDB-like query engine",
+        "idae-socket / idae-stator · sync and state"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "sive",
+      "name": "sive",
+      "tier": "A",
+      "tagline": "AI writing assistant: production since v1.0",
+      "description": "Full-featured writing application with real-time AI suggestions, narrative coherence analysis, and mobile-first design. Built on SvelteKit 5 and Tailwind v4. Production-ready since v1.0 with a clean, distraction-free editor.",
+      "accent": null,
+      "tech": [
+        "SvelteKit",
+        "Svelte 5",
+        "Tailwind v4"
+      ],
+      "repo": "https://github.com/medyll/sive",
+      "homepage": null,
+      "lastCommit": "2026-08-16",
+      "metrics": {
+        "files": 988,
+        "sizeMB": 4.6
+      },
+      "highlights": [
+        "Real-time AI suggestions",
+        "Narrative coherence checks",
+        "Mobile-ready"
       ],
       "featured": true
     },
@@ -204,9 +204,9 @@
       ],
       "repo": "https://github.com/medyll/latent-line",
       "homepage": null,
-      "lastCommit": "2026-07-25",
+      "lastCommit": "2026-08-17",
       "metrics": {
-        "files": 581,
+        "files": 580,
         "sizeMB": 5.4
       },
       "highlights": [
@@ -229,7 +229,7 @@
       ],
       "repo": "https://github.com/medyll/protonesk",
       "homepage": null,
-      "lastCommit": "2026-07-25",
+      "lastCommit": "2026-08-16",
       "metrics": {
         "files": 73,
         "sizeMB": 0.3
@@ -367,6 +367,162 @@
       "featured": false
     },
     {
+      "slug": "qoolie",
+      "name": "Qoolie",
+      "tier": "C",
+      "tagline": "Client-side IndexedDB the easy way, with server sync",
+      "description": "Client database IndexedDB the easy way, add server sync",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "IndexedDB",
+        "React",
+        "Vue",
+        "Svelte"
+      ],
+      "repo": "https://github.com/medyll/idae/tree/main/packages/qoolie",
+      "homepage": null,
+      "lastCommit": "2026-08-16",
+      "metrics": {
+        "files": 136,
+        "sizeMB": 0.4
+      },
+      "highlights": [
+        "React, Vue and Svelte adapters + devtools",
+        "CLI and benchmark suite",
+        "Sync via idae-socket, offline-first by default"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae-be",
+      "name": "@medyll/idae-be",
+      "tier": "C",
+      "tagline": "Callback-based DOM manipulation library, always returns the root",
+      "description": "A DOM walk and manipulation library with a callback-based approach for precise element targeting. Unlike jQuery-style chaining, idae-be always returns the root object, using callbacks to reach into nested matches while keeping the chain consistent.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "DOM"
+      ],
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-be",
+      "homepage": null,
+      "lastCommit": "2026-08-16",
+      "metrics": {
+        "files": 61,
+        "sizeMB": 0.3
+      },
+      "highlights": [
+        "Callback-based targeting, root object always returned",
+        "Traversal, styling, attributes, events in one API",
+        "Timer integration + HTTP content loading"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae-dom-events",
+      "name": "@medyll/idae-dom-events",
+      "tier": "C",
+      "tagline": "CSS and DOM mutation observers for reactive UI code",
+      "description": "Library for observing and reacting to DOM changes: cssDom tracks animations, style changes and resize events, htmlDom.track observes attribute, child-list and character-data mutations. Built for dynamic web applications that need fine-grained change detection.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "DOM",
+        "MutationObserver"
+      ],
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-dom-events",
+      "homepage": null,
+      "lastCommit": "2026-08-16",
+      "metrics": {
+        "files": 33,
+        "sizeMB": 0.1
+      },
+      "highlights": [
+        "cssDom: animation/style/resize tracking",
+        "htmlDom.track: attribute/child-list/character-data mutations",
+        "Flexible callback-based event management"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae-router",
+      "name": "idae-router",
+      "tier": "C",
+      "tagline": "Framework-agnostic SPA router with SWR cache and typed HTTP fetching",
+      "description": "Lightweight, framework-agnostic client-side router: path parameters, query parsing, lifecycle hooks, declarative HTTP data fetching, an in-memory SWR cache, and full TypeScript generics. Supports nested routes and outlets.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "Svelte",
+        "Vitest",
+        "Playwright"
+      ],
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-router",
+      "homepage": null,
+      "lastCommit": "2026-08-16",
+      "metrics": {
+        "files": 79,
+        "sizeMB": 0.4
+      },
+      "highlights": [
+        "Declarative http/http_source fetching into ctx.data",
+        "In-memory SWR cache with hover prefetching",
+        "Nested routes with data-idae-outlet mounting"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae-stator",
+      "name": "@medyll/idae-stator",
+      "tier": "C",
+      "tagline": "Universal deep-reactive state via native Proxy, zero dependencies",
+      "description": "Lightweight, universal, deeply reactive state management library. Uses native Proxy to track mutations at any depth in objects and arrays, and exposes both onchange callbacks and a standard EventTarget API, isomorphic across Browser, Node.js and SSR.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "Proxy"
+      ],
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-stator",
+      "homepage": null,
+      "lastCommit": "2026-08-16",
+      "metrics": {
+        "files": 41,
+        "sizeMB": 0.1
+      },
+      "highlights": [
+        "Deep reactivity via recursive Proxy + WeakMap cache",
+        "Zero dependencies, isomorphic (browser/Node/SSR)",
+        "onchange callback + addEventListener dual API"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "idae-sync",
+      "name": "@medyll/idae-sync",
+      "tier": "C",
+      "tagline": "Offline-first sync engine: outbox, retries, conflict resolution",
+      "description": "Syncs local IndexedDB data to a server automatically, in the background, even offline. Writes are intercepted into an IndexedDB-backed outbox with exponential backoff, circuit breakers, a dead letter queue, and pluggable conflict resolution (last-write-wins, shallow or field-level merge).",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "IndexedDB"
+      ],
+      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-sync",
+      "homepage": null,
+      "lastCommit": "2026-08-16",
+      "metrics": {
+        "files": 82,
+        "sizeMB": 0.2
+      },
+      "highlights": [
+        "Outbox + circuit breaker + dead letter queue",
+        "mobile-first / server-first sync modes per collection",
+        "SSE/WebSocket push listeners, pluggable conflict resolution"
+      ],
+      "featured": false
+    },
+    {
       "slug": "idae-legacy",
       "name": "Idae Legacy",
       "tier": "C",
@@ -384,7 +540,7 @@
       "lastCommit": "2026-08-13",
       "metrics": {
         "files": 7505,
-        "sizeMB": 915.5
+        "sizeMB": 916.4
       },
       "highlights": [
         "12-year-old codebase, still in production",
@@ -417,162 +573,6 @@
         "IDQL query language: find, group, distinct, parallel",
         "Router → API parser → query layer architecture",
         "Dockerized with PHPUnit tests"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "qoolie",
-      "name": "Qoolie",
-      "tier": "C",
-      "tagline": "Client-side IndexedDB the easy way, with server sync",
-      "description": "Client database IndexedDB the easy way, add server sync",
-      "accent": null,
-      "tech": [
-        "TypeScript",
-        "IndexedDB",
-        "React",
-        "Vue",
-        "Svelte"
-      ],
-      "repo": "https://github.com/medyll/idae/tree/main/packages/qoolie",
-      "homepage": null,
-      "lastCommit": "2026-08-07",
-      "metrics": {
-        "files": 136,
-        "sizeMB": 0.4
-      },
-      "highlights": [
-        "React, Vue and Svelte adapters + devtools",
-        "CLI and benchmark suite",
-        "Sync via idae-socket, offline-first by default"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae-be",
-      "name": "@medyll/idae-be",
-      "tier": "C",
-      "tagline": "Callback-based DOM manipulation library, always returns the root",
-      "description": "A DOM walk and manipulation library with a callback-based approach for precise element targeting. Unlike jQuery-style chaining, idae-be always returns the root object, using callbacks to reach into nested matches while keeping the chain consistent.",
-      "accent": null,
-      "tech": [
-        "TypeScript",
-        "DOM"
-      ],
-      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-be",
-      "homepage": null,
-      "lastCommit": "2026-08-07",
-      "metrics": {
-        "files": 61,
-        "sizeMB": 0.3
-      },
-      "highlights": [
-        "Callback-based targeting, root object always returned",
-        "Traversal, styling, attributes, events in one API",
-        "Timer integration + HTTP content loading"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae-dom-events",
-      "name": "@medyll/idae-dom-events",
-      "tier": "C",
-      "tagline": "CSS and DOM mutation observers for reactive UI code",
-      "description": "Library for observing and reacting to DOM changes: cssDom tracks animations, style changes and resize events, htmlDom.track observes attribute, child-list and character-data mutations. Built for dynamic web applications that need fine-grained change detection.",
-      "accent": null,
-      "tech": [
-        "TypeScript",
-        "DOM",
-        "MutationObserver"
-      ],
-      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-dom-events",
-      "homepage": null,
-      "lastCommit": "2026-08-07",
-      "metrics": {
-        "files": 33,
-        "sizeMB": 0.1
-      },
-      "highlights": [
-        "cssDom: animation/style/resize tracking",
-        "htmlDom.track: attribute/child-list/character-data mutations",
-        "Flexible callback-based event management"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae-router",
-      "name": "idae-router",
-      "tier": "C",
-      "tagline": "Framework-agnostic SPA router with SWR cache and typed HTTP fetching",
-      "description": "Lightweight, framework-agnostic client-side router: path parameters, query parsing, lifecycle hooks, declarative HTTP data fetching, an in-memory SWR cache, and full TypeScript generics. Supports nested routes and outlets.",
-      "accent": null,
-      "tech": [
-        "TypeScript",
-        "Svelte",
-        "Vitest",
-        "Playwright"
-      ],
-      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-router",
-      "homepage": null,
-      "lastCommit": "2026-08-07",
-      "metrics": {
-        "files": 79,
-        "sizeMB": 0.4
-      },
-      "highlights": [
-        "Declarative http/http_source fetching into ctx.data",
-        "In-memory SWR cache with hover prefetching",
-        "Nested routes with data-idae-outlet mounting"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae-stator",
-      "name": "@medyll/idae-stator",
-      "tier": "C",
-      "tagline": "Universal deep-reactive state via native Proxy, zero dependencies",
-      "description": "Lightweight, universal, deeply reactive state management library. Uses native Proxy to track mutations at any depth in objects and arrays, and exposes both onchange callbacks and a standard EventTarget API, isomorphic across Browser, Node.js and SSR.",
-      "accent": null,
-      "tech": [
-        "TypeScript",
-        "Proxy"
-      ],
-      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-stator",
-      "homepage": null,
-      "lastCommit": "2026-08-07",
-      "metrics": {
-        "files": 41,
-        "sizeMB": 0.1
-      },
-      "highlights": [
-        "Deep reactivity via recursive Proxy + WeakMap cache",
-        "Zero dependencies, isomorphic (browser/Node/SSR)",
-        "onchange callback + addEventListener dual API"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae-sync",
-      "name": "@medyll/idae-sync",
-      "tier": "C",
-      "tagline": "Offline-first sync engine: outbox, retries, conflict resolution",
-      "description": "Syncs local IndexedDB data to a server automatically, in the background, even offline. Writes are intercepted into an IndexedDB-backed outbox with exponential backoff, circuit breakers, a dead letter queue, and pluggable conflict resolution (last-write-wins, shallow or field-level merge).",
-      "accent": null,
-      "tech": [
-        "TypeScript",
-        "IndexedDB"
-      ],
-      "repo": "https://github.com/medyll/idae/tree/main/packages/idae-sync",
-      "homepage": null,
-      "lastCommit": "2026-08-07",
-      "metrics": {
-        "files": 82,
-        "sizeMB": 0.2
-      },
-      "highlights": [
-        "Outbox + circuit breaker + dead letter queue",
-        "mobile-first / server-first sync modes per collection",
-        "SSE/WebSocket push listeners, pluggable conflict resolution"
       ],
       "featured": false
     },
