@@ -10,6 +10,7 @@ export interface Project {
   tech: string[];
   repo: string | null;
   homepage: string | null;
+  startDate: string | null;
   lastCommit: string | null;
   metrics: { files: number; sizeMB: number };
   highlights: string[];

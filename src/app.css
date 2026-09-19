@@ -242,6 +242,7 @@ h3 {
 
 .accent,
 .title-row,
+.project-dates,
 .tagline,
 .description,
 .highlights,
@@ -266,11 +267,14 @@ h3 {
 .title-row h3 {
   font-size: 1.0625rem;
 }
-.date {
+.project-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
   color: var(--text-muted);
+  font-family: var(--mono);
   font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
-  white-space: nowrap;
 }
 
 .tagline {

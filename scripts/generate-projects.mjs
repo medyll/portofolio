@@ -8,7 +8,7 @@
 
 import { execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
-import { dirname, join, resolve, extname } from 'node:path';
+import { dirname, join, resolve, relative, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -41,6 +41,18 @@ function git(dir, args) {
   } catch {
     return '';
   }
+}
+
+function repositoryDates(dir) {
+  const root = gitRoot(dir);
+  const projectPath = relative(root, resolve(dir)).replaceAll('\\', '/');
+  const pathspec = projectPath ? ['--', projectPath] : [];
+  const history = git(root, ['log', '--reverse', '--format=%cs', ...pathspec]);
+
+  return {
+    startDate: history.split(/\r?\n/).find(Boolean) ?? null,
+    lastCommit: git(root, ['log', '-1', '--format=%cs', ...pathspec]) || null
+  };
 }
 
 function readPkg(dir) {
@@ -113,7 +125,7 @@ for (const [slug, ov] of Object.entries(overrides)) {
 
   const pkg = readPkg(dir);
   const remote = git(dir, ['remote', 'get-url', 'origin']);
-  const lastCommit = git(dir, ['log', '-1', '--format=%cs']) || null;
+  const { startDate, lastCommit } = repositoryDates(dir);
 
   projects.push({
     slug,
@@ -125,6 +137,7 @@ for (const [slug, ov] of Object.entries(overrides)) {
     tech: ov.tech ?? [],
     repo: ov.repo ?? (remote ? remote.replace(/\.git$/, '') : null),
     homepage: ov.homepage ?? pkg?.homepage ?? null,
+    startDate: ov.startDate ?? startDate,
     lastCommit: ov.lastCommit ?? lastCommit,
     metrics: ov.metrics ?? metrics(dir),
     highlights: ov.highlights ?? [],

@@ -75,38 +75,44 @@ export const projectDetails: Record<string, ProjectDetail> = {
   humemory: {
     mermaid: `flowchart TD
   P["idea / needs"] --> S["humemory"]
-  S --> A["retrospective · decay + hybrid semantic search"]
+  S --> A["retrospective · decay + lexical/vector retrieval"]
   S --> B["prospective · cues + open loops"]
   S --> C["trusted shared memory · MCP + provenance"]
-  S --> D["dreaming · consolidation + contradictions"]
-  D --> E["cognitive scripts · reviewed routines on cue"]`,
-    seo: 'humemory gives Claude, Codex, Kimi and OpenCode a shared memory that behaves less like a log and more like recall. Traces decay across five levels, semantic and keyword search recover relevant context, prospective cues resurface open loops, and a review-gated dreamer consolidates recurring knowledge into trustworthy memories and cognitive scripts.'
+  S --> D["off-path maintenance · deterministic fallback"]
+  D --> E["dreaming + reviewed cognitive scripts"]`,
+    seo: 'humemory gives Claude, Codex, Kimi Code and OpenCode a shared SQLite memory that behaves less like a log and more like recall. Decaying traces, lexical and vector retrieval, prospective cues and reviewed cognitive scripts work offline; optional model-assisted maintenance runs outside the agent path, and benchmarks measure retrieval quality and index rebuild cost.'
   },
   'acp-team': {
-    mermaid: `flowchart LR
+    mermaid: `flowchart TD
   H["MCP host"] --> S["acp-team"]
   S --> K["Kimi · ACP / JSON-RPC"]
   S --> C["Codex · codex exec / JSONL"]
-  K --> R["uniform result + project session"]
-  C --> R`,
-    seo: 'acp-team is a small MCP server that lets Claude Code, Codex, or any other MCP host delegate coding tasks to Kimi and Codex through one interface. It normalizes two different transports, preserves conversations per agent and working directory, and offers explicit read-only, standard, automatic, and unrestricted execution modes.'
+  S --> O["OpenCode · host plugin"]
+  S --> L["Ollama · local HTTP"]
+  K --> R["sessions · progress · cancellation · usage"]
+  C --> R
+  O --> R
+  L --> R
+  R --> A["scoped authorization for writes"]`,
+    seo: 'acp-team lets an MCP host delegate work to bundled Kimi, Codex, OpenCode and Ollama adapters through one contract. It normalizes sessions, live progress, cancellation, usage and results across ACP, CLI and HTTP transports, while time-limited authorization tokens constrain write-capable runs by agent, directory, mode and use count.'
   },
   domus: {
     mermaid: `flowchart TD
   P["idea / needs"] --> S["domus"]
-  S --> A["reactive UI framework, Rust"]
-  S --> B["web target: WASM"]
-  S --> C["native desktop target"]`,
-    seo: 'domus is a reactive UI framework written in Rust, compiling to WASM for the web and to native binaries for desktop, with zero JavaScript in the runtime path. Currently alpha (v0.1.0).'
+  S --> A["signals · effects · RSX · scoped CSS"]
+  S --> B["web: WASM + reusable components"]
+  S --> C["desktop: native webviews, no Tauri"]
+  C --> D["CLI scaffolding + portable bundles"]`,
+    seo: 'Domus is an alpha Rust UI framework with fine-grained signals, RSX, routing, context, scoped CSS and reusable WebAssembly components. Its independent desktop runtime uses native webviews without Tauri, and its CLI scaffolds projects and packages portable desktop applications.'
   },
   wollama: {
     mermaid: `flowchart TD
   P["idea / needs"] --> S["wollama"]
-  S --> A["Ollama: local inference, no cloud"]
+  S --> A["Ollama + model-provider boundary"]
   S --> B["web + Electron + Capacitor"]
-  S --> C["voice I/O, RxDB<->PouchDB sync"]
-  S --> D["hooks system + web-search agents"]`,
-    seo: 'wollama is a local-first AI chat client for Ollama, shipping the same codebase to the browser, Electron desktop, and mobile via Capacitor. Voice input/output, offline sync, and a hooks system round out the runtime.'
+  S --> C["offline RxDB <-> PouchDB sync"]
+  S --> D["voice · RAG · skills · hooks · web agents"]`,
+    seo: 'Wollama is a local-first AI chat client for Ollama that ships to the browser, Electron desktop and Capacitor mobile from one codebase. Conversations and companions work offline and later sync through RxDB and PouchDB; voice input/output, RAG, skills, hooks and web agents sit above a model-provider boundary.'
   },
   'svelte-5-documentor': {
     mermaid: `flowchart TD
@@ -161,8 +167,9 @@ export const projectDetails: Record<string, ProjectDetail> = {
   P["idea / needs"] --> S["Idae Legacy"]
   S --> A["PHP 5.6 -> PHP 8.2"]
   S --> B["modern MongoDB driver"]
-  S --> C["Dockerized dev env, original UI intact"]`,
-    seo: 'Idae Legacy is a live migration of a 2014 PHP/Node.js/MongoDB CMS onto PHP 8.2 and a current MongoDB driver, kept running in production with its original UI and behavior unchanged during the rewrite.'
+  S --> C["Phase 2 · CRUD + sessions + database internals"]
+  S --> D["one supervised image · Apache/PHP + Socket.IO"]`,
+    seo: 'Idae Legacy is a live migration of a 2014 PHP, Node.js and MongoDB CMS onto PHP 8.2 and a current MongoDB driver. Phase 2 rewrites CRUD, sessions and database internals without changing the production UI; Apache/PHP and Socket.IO now share one supervised Docker image.'
   },
   'idae-be': {
     parent: 'idae',

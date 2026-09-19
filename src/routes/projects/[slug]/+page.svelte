@@ -39,6 +39,16 @@
   {/if}
   <h1>{project.name}</h1>
   <p class="lead">{project.tagline}</p>
+  {#if project.startDate || project.lastCommit}
+    <p class="project-dates">
+      {#if project.startDate}
+        <span>Started <time datetime={project.startDate}>{project.startDate}</time></span>
+      {/if}
+      {#if project.lastCommit}
+        <span>Last update <time datetime={project.lastCommit}>{project.lastCommit}</time></span>
+      {/if}
+    </p>
+  {/if}
 </section>
 
 {#if seo}
@@ -133,6 +143,16 @@
     color: var(--text-muted);
     font-size: 1.0625rem;
     margin-top: var(--gap-sm);
+  }
+  .project-dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sm);
+    margin: var(--gap-sm) 0 0;
+    color: var(--text-muted);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
   }
 
   .seo {

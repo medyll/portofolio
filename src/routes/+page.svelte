@@ -54,10 +54,18 @@
 
             <div class="title-row">
               <h3><a class="title-link" href="{base}/projects/{p.slug}">{p.name}</a></h3>
-              {#if p.lastCommit}
-                <span class="date">{p.lastCommit}</span>
-              {/if}
             </div>
+
+            {#if p.startDate || p.lastCommit}
+              <div class="project-dates">
+                {#if p.startDate}
+                  <span>Started <time datetime={p.startDate}>{p.startDate}</time></span>
+                {/if}
+                {#if p.lastCommit}
+                  <span>Updated <time datetime={p.lastCommit}>{p.lastCommit}</time></span>
+                {/if}
+              </div>
+            {/if}
 
             <p class="tagline">{p.tagline}</p>
 

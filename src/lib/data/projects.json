@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-17",
+  "generatedAt": "2026-09-19",
   "projects": [
     {
       "slug": "humemory",
       "name": "humemory",
       "tier": "A",
-      "tagline": "Shared agent memory that forgets, dreams and learns routines",
-      "description": "Memory engine for AI agents modeled on human recall. It combines five-level trace decay, prospective open loops, trusted cross-agent provenance, and hybrid semantic search in a shared SQLite store. Its dreamer consolidates recurring knowledge, while cue-triggered cognitive scripts inject reviewed routines into Claude, Codex, Kimi, and OpenCode sessions through hooks or MCP.",
+      "tagline": "Shared agent memory with decay, cues and reviewed routines",
+      "description": "Memory engine for AI agents modeled on human recall. It keeps decaying traces, open intentions, provenance and reviewed cognitive scripts in SQLite, then retrieves them through lexical and vector search. Claude hooks plus explicit Codex, Kimi Code and OpenCode importers feed one MCP store; background maintenance stays off the agent path and falls back to deterministic local processing when no model is available.",
       "accent": null,
       "tech": [
         "TypeScript",
@@ -18,15 +18,16 @@
       ],
       "repo": "https://github.com/medyll/humemory",
       "homepage": "https://github.com/medyll/humemory#readme",
-      "lastCommit": "2026-08-17",
+      "startDate": "2026-05-03",
+      "lastCommit": "2026-09-08",
       "metrics": {
-        "files": 128,
-        "sizeMB": 1
+        "files": 196,
+        "sizeMB": 1.5
       },
       "highlights": [
-        "Retrospective decay + prospective open loops",
-        "Shared MCP memory · provenance · contradiction handling",
-        "Offline vector search + dreamer-mined cognitive scripts"
+        "Offline core with optional model-assisted maintenance",
+        "Shared MCP store · provenance · contradiction handling",
+        "Measured retrieval quality and index rebuild cost"
       ],
       "featured": true
     },
@@ -34,26 +35,28 @@
       "slug": "acp-team",
       "name": "acp-team",
       "tier": "A",
-      "tagline": "One MCP interface for delegating work to Kimi and Codex",
-      "description": "MCP server that lets any compatible host delegate coding work to Kimi over the Agent Client Protocol or to Codex through its CLI. Both adapters expose the same response shape, project-scoped conversations, execution modes, cancellation, and per-agent model settings, so an agent can ask for a second opinion or hand off an implementation without leaving its current session.",
+      "tagline": "One MCP control plane for Kimi, Codex, OpenCode and Ollama",
+      "description": "Extensible MCP control plane that puts ACP, CLI and HTTP-backed agents behind one supervised interface. Bundled adapters cover Kimi, Codex, OpenCode and Ollama; sessions, live progress, cancellation, usage and results follow one contract. Write-capable runs use authorization tokens scoped to the agent, working directory, mode, lifetime and use count.",
       "accent": null,
       "tech": [
         "JavaScript",
         "Node.js",
         "MCP",
-        "ACP"
+        "ACP",
+        "Ollama"
       ],
       "repo": "https://github.com/medyll/acp-team",
       "homepage": null,
-      "lastCommit": "2026-08-17",
+      "startDate": "2026-08-08",
+      "lastCommit": "2026-09-06",
       "metrics": {
-        "files": 87,
-        "sizeMB": 0.3
+        "files": 95,
+        "sizeMB": 0.4
       },
       "highlights": [
-        "Uniform Kimi + Codex delegation API",
-        "Persistent sessions scoped by agent and project",
-        "Read-only planning through full execution modes"
+        "Kimi · Codex · OpenCode · Ollama adapters",
+        "Live progress, cancellation and normalized usage",
+        "Scoped authorization for write-capable runs"
       ],
       "featured": true
     },
@@ -62,7 +65,7 @@
       "name": "wollama-monorepo",
       "tier": "A",
       "tagline": "Local-first AI chat: web, desktop and mobile with Ollama",
-      "description": "Cross-platform AI chat application powered by Ollama for fully local, private inference. Supports text and voice (STT/TTS), real-time RxDB↔PouchDB sync, an extensible hooks system, and web agents. Runs in-browser, as an Electron desktop app, and on mobile via Capacitor.",
+      "description": "Cross-platform AI chat application powered by Ollama for local, private inference. Conversations, companions and settings remain available offline, then RxDB syncs them with PouchDB when the server returns. Voice I/O, RAG, skills, hooks and web agents run in the browser, Electron desktop app and Capacitor mobile app; a provider registry now isolates model backends from conversation orchestration.",
       "accent": null,
       "tech": [
         "Svelte 5",
@@ -73,15 +76,42 @@
       ],
       "repo": "https://github.com/medyll/wollama",
       "homepage": null,
-      "lastCommit": "2026-08-17",
+      "startDate": "2023-12-04",
+      "lastCommit": "2026-09-06",
       "metrics": {
-        "files": 3473,
-        "sizeMB": 1088
+        "files": 546,
+        "sizeMB": 9.1
       },
       "highlights": [
-        "Local inference: no cloud, no telemetry",
-        "Web + desktop (Electron) + mobile (Capacitor)",
-        "Voice I/O · hooks · web-search agents"
+        "Offline conversations and RxDB↔PouchDB sync",
+        "Web + Electron desktop + Capacitor mobile",
+        "Voice · RAG · skills · hooks · web agents"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "domus",
+      "name": "domus",
+      "tier": "A",
+      "tagline": "Rust UI framework for reactive web and native desktop apps",
+      "description": "Alpha Rust UI framework with signal/effect reactivity, RSX macros, scoped CSS, keyed lists, routing, context and a growing component library for WebAssembly apps. Its independent desktop runtime uses native webviews without Tauri, and the CLI can scaffold projects and assemble portable desktop bundles.",
+      "accent": null,
+      "tech": [
+        "Rust",
+        "WASM"
+      ],
+      "repo": "https://github.com/medyll/domus",
+      "homepage": null,
+      "startDate": "2026-03-19",
+      "lastCommit": "2026-08-26",
+      "metrics": {
+        "files": 470,
+        "sizeMB": 14.2
+      },
+      "highlights": [
+        "Fine-grained signals, effects and automatic disposal",
+        "RSX · routing · scoped CSS · reusable components",
+        "Independent desktop runtime and portable bundles"
       ],
       "featured": true
     },
@@ -100,10 +130,11 @@
       ],
       "repo": "https://github.com/medyll/idae",
       "homepage": null,
+      "startDate": "2022-01-31",
       "lastCommit": "2026-08-16",
       "metrics": {
-        "files": 2877,
-        "sizeMB": 59.5
+        "files": 2680,
+        "sizeMB": 35.1
       },
       "highlights": [
         "idae-machine · DDD multi-tenant app (v0.136)",
@@ -126,6 +157,7 @@
       ],
       "repo": "https://github.com/medyll/sive",
       "homepage": null,
+      "startDate": "2026-02-26",
       "lastCommit": "2026-08-16",
       "metrics": {
         "files": 988,
@@ -153,6 +185,7 @@
       ],
       "repo": "https://github.com/medyll/css-base",
       "homepage": "https://github.com/medyll/css-base#readme",
+      "startDate": "2026-03-20",
       "lastCommit": "2026-08-01",
       "metrics": {
         "files": 92,
@@ -162,31 +195,6 @@
         "v0.7.13 published on npm",
         "Modular exports · cascade layers · native dark mode",
         "10 skins from token overrides only"
-      ],
-      "featured": true
-    },
-    {
-      "slug": "domus",
-      "name": "domus",
-      "tier": "A",
-      "tagline": "Reactive UI framework in Rust: web + desktop, zero JS",
-      "description": "Reactive UI framework written entirely in Rust, targeting both web (WASM) and native desktop with zero JavaScript overhead. Alpha stage (v0.1.0), a bet on Rust as the future of cross-platform UI.",
-      "accent": null,
-      "tech": [
-        "Rust",
-        "WASM"
-      ],
-      "repo": "https://github.com/medyll/domus",
-      "homepage": null,
-      "lastCommit": "2026-05-25",
-      "metrics": {
-        "files": 189,
-        "sizeMB": 1
-      },
-      "highlights": [
-        "Zero JavaScript overhead",
-        "Web (WASM) + native desktop",
-        "Alpha v0.1.0"
       ],
       "featured": true
     },
@@ -204,6 +212,7 @@
       ],
       "repo": "https://github.com/medyll/latent-line",
       "homepage": null,
+      "startDate": "2026-02-21",
       "lastCommit": "2026-08-17",
       "metrics": {
         "files": 580,
@@ -213,6 +222,59 @@
         "Interactive timeline editor",
         "Real-time model inspection",
         "CI on GitHub Actions"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "svelte-5-documentor",
+      "name": "@medyll/svelte-5-documentor",
+      "tier": "B",
+      "tagline": "AST-based metadata extractor for Svelte 5 components",
+      "description": "Parses Svelte 5 component source via AST to extract props, exports, generics, and JSDoc comments, generating structured documentation without invoking the compiler. Drop-in for any TypeScript toolchain.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "Svelte 5"
+      ],
+      "repo": "https://github.com/medyll/svelte-5-documentor",
+      "homepage": null,
+      "startDate": "2024-10-13",
+      "lastCommit": "2026-08-23",
+      "metrics": {
+        "files": 55,
+        "sizeMB": 0.4
+      },
+      "highlights": [
+        "AST analysis, no compiler",
+        "Props, exports, generics, JSDoc",
+        "TypeScript toolchain integration"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "registry-mind",
+      "name": "Registry Mind",
+      "tier": "B",
+      "tagline": "Android on-device OCR sensor synced over Tailscale",
+      "description": "Android screen-capture sensor for Oppo Find X9. Triggers via Snap Key, runs on-device OCR with ML Kit, and syncs results to an OpenClaw desktop instance over Tailscale, replacing Oppo's proprietary AI Mind Space with a fully self-hosted pipeline.",
+      "accent": null,
+      "tech": [
+        "Kotlin",
+        "Android",
+        "ML Kit"
+      ],
+      "repo": "https://github.com/medyll/registry-mind",
+      "homepage": null,
+      "startDate": "2026-04-21",
+      "lastCommit": "2026-08-23",
+      "metrics": {
+        "files": 120,
+        "sizeMB": 0.6
+      },
+      "highlights": [
+        "On-device OCR via ML Kit, no cloud",
+        "Sync to desktop over Tailscale",
+        "Replaces proprietary AI Mind Space"
       ],
       "featured": false
     },
@@ -229,6 +291,7 @@
       ],
       "repo": "https://github.com/medyll/protonesk",
       "homepage": null,
+      "startDate": "2026-05-08",
       "lastCommit": "2026-08-16",
       "metrics": {
         "files": 73,
@@ -253,9 +316,10 @@
       ],
       "repo": "https://github.com/medyll/jobber",
       "homepage": null,
+      "startDate": "2026-06-15",
       "lastCommit": "2026-07-25",
       "metrics": {
-        "files": 98,
+        "files": 99,
         "sizeMB": 0.6
       },
       "highlights": [
@@ -278,6 +342,7 @@
       ],
       "repo": "https://github.com/medyll/pseudo-html-stack",
       "homepage": null,
+      "startDate": "2026-03-01",
       "lastCommit": "2026-05-25",
       "metrics": {
         "files": 351,
@@ -303,9 +368,10 @@
       ],
       "repo": "https://github.com/medyll/singleton-notepad",
       "homepage": null,
+      "startDate": "2026-04-25",
       "lastCommit": "2026-05-25",
       "metrics": {
-        "files": 201,
+        "files": 202,
         "sizeMB": 7
       },
       "highlights": [
@@ -316,53 +382,58 @@
       "featured": false
     },
     {
-      "slug": "registry-mind",
-      "name": "Registry Mind",
-      "tier": "B",
-      "tagline": "Android on-device OCR sensor synced over Tailscale",
-      "description": "Android screen-capture sensor for Oppo Find X9. Triggers via Snap Key, runs on-device OCR with ML Kit, and syncs results to an OpenClaw desktop instance over Tailscale, replacing Oppo's proprietary AI Mind Space with a fully self-hosted pipeline.",
+      "slug": "idae-legacy",
+      "name": "Idae Legacy",
+      "tier": "C",
+      "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
+      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a current MongoDB driver and a Dockerized environment. The original UI and behavior stay intact while Phase 2 rewrites CRUD, session and database internals; Apache/PHP and Socket.IO now run together in one supervised application image.",
       "accent": null,
       "tech": [
-        "Kotlin",
-        "Android",
-        "ML Kit"
+        "PHP",
+        "Node.js",
+        "MongoDB",
+        "Docker"
       ],
-      "repo": "https://github.com/medyll/registry-mind",
+      "repo": "https://github.com/medyll/idae-legacy",
       "homepage": null,
-      "lastCommit": "2026-05-25",
+      "startDate": "2021-05-25",
+      "lastCommit": "2026-09-12",
       "metrics": {
-        "files": 134,
-        "sizeMB": 1293.4
+        "files": 2682,
+        "sizeMB": 47.8
       },
       "highlights": [
-        "On-device OCR via ML Kit, no cloud",
-        "Sync to desktop over Tailscale",
-        "Replaces proprietary AI Mind Space"
+        "12-year-old codebase, still in production",
+        "Backward-compatible Phase 2 rewrite",
+        "One supervised image for Apache/PHP + Socket.IO"
       ],
       "featured": false
     },
     {
-      "slug": "svelte-5-documentor",
-      "name": "@medyll/svelte-5-documentor",
-      "tier": "B",
-      "tagline": "AST-based metadata extractor for Svelte 5 components",
-      "description": "Parses Svelte 5 component source via AST to extract props, exports, generics, and JSDoc comments, generating structured documentation without invoking the compiler. Drop-in for any TypeScript toolchain.",
+      "slug": "idae.api.lan",
+      "name": "idae.api",
+      "tier": "C",
+      "tagline": "PHP/MongoDB REST + IDQL API for the Idae platform",
+      "description": "Lightweight PHP REST API backed by MongoDB, built around a router → API parser → query layer pattern. Exposes a custom IDQL query language for find/group/distinct/parallel operations alongside generic REST endpoints, plus a small Node helper process for sockets and crons. Dockerized with a PHPUnit test suite.",
       "accent": null,
       "tech": [
-        "TypeScript",
-        "Svelte 5"
+        "PHP",
+        "MongoDB",
+        "Docker",
+        "Node.js"
       ],
-      "repo": "https://github.com/medyll/svelte-5-documentor",
+      "repo": "https://github.com/medyll/idae.api",
       "homepage": null,
-      "lastCommit": "2026-03-14",
+      "startDate": "2019-01-05",
+      "lastCommit": "2026-08-10",
       "metrics": {
-        "files": 173,
-        "sizeMB": 0.8
+        "files": 71,
+        "sizeMB": 0.1
       },
       "highlights": [
-        "AST analysis, no compiler",
-        "Props, exports, generics, JSDoc",
-        "TypeScript toolchain integration"
+        "IDQL query language: find, group, distinct, parallel",
+        "Router → API parser → query layer architecture",
+        "Dockerized with PHPUnit tests"
       ],
       "featured": false
     },
@@ -382,7 +453,8 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/qoolie",
       "homepage": null,
-      "lastCommit": "2026-08-16",
+      "startDate": "2026-03-28",
+      "lastCommit": "2026-08-07",
       "metrics": {
         "files": 136,
         "sizeMB": 0.4
@@ -407,7 +479,8 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-be",
       "homepage": null,
-      "lastCommit": "2026-08-16",
+      "startDate": "2024-07-10",
+      "lastCommit": "2026-08-07",
       "metrics": {
         "files": 61,
         "sizeMB": 0.3
@@ -433,7 +506,8 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-dom-events",
       "homepage": null,
-      "lastCommit": "2026-08-16",
+      "startDate": "2024-08-13",
+      "lastCommit": "2026-08-01",
       "metrics": {
         "files": 33,
         "sizeMB": 0.1
@@ -460,7 +534,8 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-router",
       "homepage": null,
-      "lastCommit": "2026-08-16",
+      "startDate": "2026-02-16",
+      "lastCommit": "2026-08-01",
       "metrics": {
         "files": 79,
         "sizeMB": 0.4
@@ -485,7 +560,8 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-stator",
       "homepage": null,
-      "lastCommit": "2026-08-16",
+      "startDate": "2024-07-11",
+      "lastCommit": "2026-08-01",
       "metrics": {
         "files": 41,
         "sizeMB": 0.1
@@ -510,7 +586,8 @@
       ],
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-sync",
       "homepage": null,
-      "lastCommit": "2026-08-16",
+      "startDate": "2026-03-13",
+      "lastCommit": "2026-08-01",
       "metrics": {
         "files": 82,
         "sizeMB": 0.2
@@ -519,60 +596,6 @@
         "Outbox + circuit breaker + dead letter queue",
         "mobile-first / server-first sync modes per collection",
         "SSE/WebSocket push listeners, pluggable conflict resolution"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae-legacy",
-      "name": "Idae Legacy",
-      "tier": "C",
-      "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
-      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a modern MongoDB driver and a Dockerized environment, keeping the original UI and behavior intact while modernizing the internals underneath.",
-      "accent": null,
-      "tech": [
-        "PHP",
-        "Node.js",
-        "MongoDB",
-        "Docker"
-      ],
-      "repo": "https://github.com/medyll/idae-legacy",
-      "homepage": null,
-      "lastCommit": "2026-08-13",
-      "metrics": {
-        "files": 7505,
-        "sizeMB": 916.4
-      },
-      "highlights": [
-        "12-year-old codebase, still in production",
-        "Backward-compatible UI during rewrite",
-        "Dockerized dev environment, PHP 5.6 to 8.2"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "idae.api.lan",
-      "name": "idae.api",
-      "tier": "C",
-      "tagline": "PHP/MongoDB REST + IDQL API for the Idae platform",
-      "description": "Lightweight PHP REST API backed by MongoDB, built around a router → API parser → query layer pattern. Exposes a custom IDQL query language for find/group/distinct/parallel operations alongside generic REST endpoints, plus a small Node helper process for sockets and crons. Dockerized with a PHPUnit test suite.",
-      "accent": null,
-      "tech": [
-        "PHP",
-        "MongoDB",
-        "Docker",
-        "Node.js"
-      ],
-      "repo": "https://github.com/medyll/idae.api",
-      "homepage": null,
-      "lastCommit": "2026-08-10",
-      "metrics": {
-        "files": 71,
-        "sizeMB": 0.1
-      },
-      "highlights": [
-        "IDQL query language: find, group, distinct, parallel",
-        "Router → API parser → query layer architecture",
-        "Dockerized with PHPUnit tests"
       ],
       "featured": false
     },
@@ -592,6 +615,7 @@
       ],
       "repo": "https://github.com/medyll/infra-ansible-legacy",
       "homepage": null,
+      "startDate": "2026-07-25",
       "lastCommit": "2026-07-25",
       "metrics": {
         "files": 19,
@@ -618,6 +642,7 @@
       ],
       "repo": "https://github.com/medyll/ferule-core",
       "homepage": null,
+      "startDate": "2026-07-01",
       "lastCommit": "2026-07-01",
       "metrics": {
         "files": 231,

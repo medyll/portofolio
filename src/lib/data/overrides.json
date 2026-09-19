@@ -9,6 +9,7 @@
       "tagline": "DDD multi-tenant platform with MongoDB-like query engine",
       "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend, all typed end-to-end in TypeScript.",
       "tech": ["TypeScript", "Svelte 5", "SvelteKit", "pnpm"],
+      "metrics": { "files": 2680, "sizeMB": 35.1 },
       "highlights": ["idae-machine · DDD multi-tenant app (v0.136)", "idae-query · MongoDB-like query engine", "idae-socket / idae-stator · sync and state"]
     },
     "css-base": {
@@ -37,36 +38,37 @@
     "humemory": {
       "tier": "A",
       "featured": true,
-      "tagline": "Shared agent memory that forgets, dreams and learns routines",
-      "description": "Memory engine for AI agents modeled on human recall. It combines five-level trace decay, prospective open loops, trusted cross-agent provenance, and hybrid semantic search in a shared SQLite store. Its dreamer consolidates recurring knowledge, while cue-triggered cognitive scripts inject reviewed routines into Claude, Codex, Kimi, and OpenCode sessions through hooks or MCP.",
+      "tagline": "Shared agent memory with decay, cues and reviewed routines",
+      "description": "Memory engine for AI agents modeled on human recall. It keeps decaying traces, open intentions, provenance and reviewed cognitive scripts in SQLite, then retrieves them through lexical and vector search. Claude hooks plus explicit Codex, Kimi Code and OpenCode importers feed one MCP store; background maintenance stays off the agent path and falls back to deterministic local processing when no model is available.",
       "tech": ["TypeScript", "Bun", "SQLite", "MCP", "ONNX", "React"],
-      "metrics": { "files": 128, "sizeMB": 1 },
-      "highlights": ["Retrospective decay + prospective open loops", "Shared MCP memory · provenance · contradiction handling", "Offline vector search + dreamer-mined cognitive scripts"]
+      "metrics": { "files": 196, "sizeMB": 1.5 },
+      "highlights": ["Offline core with optional model-assisted maintenance", "Shared MCP store · provenance · contradiction handling", "Measured retrieval quality and index rebuild cost"]
     },
     "acp-team": {
       "tier": "A",
       "featured": true,
       "name": "acp-team",
-      "tagline": "One MCP interface for delegating work to Kimi and Codex",
-      "description": "MCP server that lets any compatible host delegate coding work to Kimi over the Agent Client Protocol or to Codex through its CLI. Both adapters expose the same response shape, project-scoped conversations, execution modes, cancellation, and per-agent model settings, so an agent can ask for a second opinion or hand off an implementation without leaving its current session.",
-      "tech": ["JavaScript", "Node.js", "MCP", "ACP"],
-      "highlights": ["Uniform Kimi + Codex delegation API", "Persistent sessions scoped by agent and project", "Read-only planning through full execution modes"]
+      "tagline": "One MCP control plane for Kimi, Codex, OpenCode and Ollama",
+      "description": "Extensible MCP control plane that puts ACP, CLI and HTTP-backed agents behind one supervised interface. Bundled adapters cover Kimi, Codex, OpenCode and Ollama; sessions, live progress, cancellation, usage and results follow one contract. Write-capable runs use authorization tokens scoped to the agent, working directory, mode, lifetime and use count.",
+      "tech": ["JavaScript", "Node.js", "MCP", "ACP", "Ollama"],
+      "highlights": ["Kimi · Codex · OpenCode · Ollama adapters", "Live progress, cancellation and normalized usage", "Scoped authorization for write-capable runs"]
     },
     "domus": {
       "tier": "A",
       "featured": true,
-      "tagline": "Reactive UI framework in Rust: web + desktop, zero JS",
-      "description": "Reactive UI framework written entirely in Rust, targeting both web (WASM) and native desktop with zero JavaScript overhead. Alpha stage (v0.1.0), a bet on Rust as the future of cross-platform UI.",
+      "tagline": "Rust UI framework for reactive web and native desktop apps",
+      "description": "Alpha Rust UI framework with signal/effect reactivity, RSX macros, scoped CSS, keyed lists, routing, context and a growing component library for WebAssembly apps. Its independent desktop runtime uses native webviews without Tauri, and the CLI can scaffold projects and assemble portable desktop bundles.",
       "tech": ["Rust", "WASM"],
-      "highlights": ["Zero JavaScript overhead", "Web (WASM) + native desktop", "Alpha v0.1.0"]
+      "highlights": ["Fine-grained signals, effects and automatic disposal", "RSX · routing · scoped CSS · reusable components", "Independent desktop runtime and portable bundles"]
     },
     "wollama": {
       "tier": "A",
       "featured": true,
       "tagline": "Local-first AI chat: web, desktop and mobile with Ollama",
-      "description": "Cross-platform AI chat application powered by Ollama for fully local, private inference. Supports text and voice (STT/TTS), real-time RxDB↔PouchDB sync, an extensible hooks system, and web agents. Runs in-browser, as an Electron desktop app, and on mobile via Capacitor.",
+      "description": "Cross-platform AI chat application powered by Ollama for local, private inference. Conversations, companions and settings remain available offline, then RxDB syncs them with PouchDB when the server returns. Voice I/O, RAG, skills, hooks and web agents run in the browser, Electron desktop app and Capacitor mobile app; a provider registry now isolates model backends from conversation orchestration.",
       "tech": ["Svelte 5", "Electron", "Capacitor", "Node.js", "RxDB"],
-      "highlights": ["Local inference: no cloud, no telemetry", "Web + desktop (Electron) + mobile (Capacitor)", "Voice I/O · hooks · web-search agents"]
+      "metrics": { "files": 546, "sizeMB": 9.1 },
+      "highlights": ["Offline conversations and RxDB↔PouchDB sync", "Web + Electron desktop + Capacitor mobile", "Voice · RAG · skills · hooks · web agents"]
     },
     "svelte-5-documentor": {
       "tier": "B",
@@ -113,6 +115,7 @@
       "tagline": "Android on-device OCR sensor synced over Tailscale",
       "description": "Android screen-capture sensor for Oppo Find X9. Triggers via Snap Key, runs on-device OCR with ML Kit, and syncs results to an OpenClaw desktop instance over Tailscale, replacing Oppo's proprietary AI Mind Space with a fully self-hosted pipeline.",
       "tech": ["Kotlin", "Android", "ML Kit"],
+      "metrics": { "files": 120, "sizeMB": 0.6 },
       "highlights": ["On-device OCR via ML Kit, no cloud", "Sync to desktop over Tailscale", "Replaces proprietary AI Mind Space"]
     },
     "qoolie": {
@@ -145,9 +148,10 @@
       "tier": "C",
       "name": "Idae Legacy",
       "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
-      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a modern MongoDB driver and a Dockerized environment, keeping the original UI and behavior intact while modernizing the internals underneath.",
+      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a current MongoDB driver and a Dockerized environment. The original UI and behavior stay intact while Phase 2 rewrites CRUD, session and database internals; Apache/PHP and Socket.IO now run together in one supervised application image.",
       "tech": ["PHP", "Node.js", "MongoDB", "Docker"],
-      "highlights": ["12-year-old codebase, still in production", "Backward-compatible UI during rewrite", "Dockerized dev environment, PHP 5.6 to 8.2"]
+      "metrics": { "files": 2682, "sizeMB": 47.8 },
+      "highlights": ["12-year-old codebase, still in production", "Backward-compatible Phase 2 rewrite", "One supervised image for Apache/PHP + Socket.IO"]
     },
     "idae-be": {
       "tier": "C",
