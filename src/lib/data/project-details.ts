@@ -80,7 +80,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   S --> C["trusted shared memory · MCP + provenance"]
   S --> D["off-path maintenance · deterministic fallback"]
   D --> E["dreaming + reviewed cognitive scripts"]`,
-    seo: 'humemory gives Claude, Codex, Kimi Code and OpenCode a shared SQLite memory that behaves less like a log and more like recall. Decaying traces, lexical and vector retrieval, prospective cues and reviewed cognitive scripts work offline; optional model-assisted maintenance runs outside the agent path, and benchmarks measure retrieval quality and index rebuild cost.'
+    seo: 'humemory gives Claude, Codex, Kimi Code and OpenCode a shared SQLite memory that behaves less like a log and more like recall. Decaying traces, lexical and vector retrieval, prospective cues and reviewed cognitive scripts work offline; JEV can shadow-qualify candidate routines, while optional model-assisted maintenance runs outside the agent path.'
   },
   'acp-team': {
     mermaid: `flowchart TD
@@ -94,7 +94,17 @@ export const projectDetails: Record<string, ProjectDetail> = {
   O --> R
   L --> R
   R --> A["scoped authorization for writes"]`,
-    seo: 'acp-team lets an MCP host delegate work to bundled Kimi, Codex, OpenCode and Ollama adapters through one contract. It normalizes sessions, live progress, cancellation, usage and results across ACP, CLI and HTTP transports, while time-limited authorization tokens constrain write-capable runs by agent, directory, mode and use count.'
+    seo: 'acp-team lets an MCP host delegate work to bundled Kimi, Codex, OpenCode and Ollama adapters through one contract. It normalizes sessions, live progress, cancellation, usage and results across ACP, CLI and HTTP transports; JEV can evaluate routing choices in shadow mode, while time-limited authorization tokens constrain write-capable runs by agent, directory, mode and use count.'
+  },
+  mailboard: {
+    mermaid: `flowchart TD
+  M["Gmail connector · browser mail"] --> R["collection runs"]
+  R --> O["cycle orchestrator"]
+  O --> I["deduplication · JEV matching"]
+  I --> J["append-only JSONL store"]
+  J --> D["local searchable dashboard"]
+  O --> N["notification decision"]`,
+    seo: 'Mailboard is a local job-search mail tracker that turns scheduled Gmail and browser-mail collection runs into a searchable dashboard. It stores messages, bodies and run history in append-only JSONL files, enriches matches with optional JEV evaluation, and decides when a notification is useful.'
   },
   domus: {
     mermaid: `flowchart TD
