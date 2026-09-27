@@ -2,17 +2,22 @@
 
 Objectif : **ne jamais rédiger le portfolio à la main**. Le contenu est dérivé des repos, stocké en JSON, et ré-enrichissable par IA à volonté.
 
+Les agents de code suivent [AGENTS.md](./AGENTS.md). Une annonce comme
+« humemory a été mis à jour » ou « nouveau repo acp-team » déclenche le workflow
+complet : inspection du repo local, mise à jour éditoriale, génération et
+validation. Ce n'est pas une information à simplement acquitter.
+
 ## Principe
 
 ```
 D:\development\*           scan lecture seule
    │  README, package.json, git, manifestes
    ▼
-generate-projects.(ts|ps1)     ───►  src/lib/data/projects.json   ◄── source de vérité du site
+scripts/generate-projects.mjs  ───►  src/lib/data/projects.json   ◄── source de vérité du site
    │                                          │
    │  (optionnel)                             ▼
    ▼                                  SvelteKit build (adapter-static)
-enrich-ai.ts (Claude API)                     │
+scripts/enrich-ai.mjs (Claude API)             │
    │  réécrit blurb/tags/highlights           ▼
    └──────────────────────────────►   GitHub Pages
 ```
@@ -83,12 +88,14 @@ Trois options, du plus simple au plus auto :
 - Workflow `.github/workflows/deploy.yml` : build → upload artifact → `actions/deploy-pages`.
 - Domaine possible plus tard : `mydde.fr` (repo existant) en CNAME.
 
-## Fichiers à créer (au moment du code)
+## Fichiers actuels
 
 ```
 portofolio/
-├─ scripts/generate-projects.ts     # étape 1
-├─ scripts/enrich-ai.ts             # étape 2
+├─ AGENTS.md                        # protocole pour les agents de code
+├─ CLAUDE.md                        # relais Claude Code vers AGENTS.md
+├─ scripts/generate-projects.mjs    # étape 1
+├─ scripts/enrich-ai.mjs            # étape 2
 ├─ src/lib/data/projects.json       # sortie générée
 ├─ src/lib/data/overrides.json      # tiers + inclusions manuelles
 ├─ src/routes/+page.svelte          # grille de projets

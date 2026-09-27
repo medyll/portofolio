@@ -4,6 +4,8 @@ Live: https://medyll.github.io/portofolio/
 
 Static portfolio site (SvelteKit + vanilla CSS), deployable to GitHub Pages.
 Content is **generated**, not hand-written — see [AUTOMATION.md](./AUTOMATION.md).
+Coding agents must also follow [AGENTS.md](./AGENTS.md), especially when a user
+announces that a project changed or that a new repository exists.
 
 ## Stack
 - SvelteKit (Svelte 5 runes) + Vite
@@ -28,6 +30,7 @@ Push to `main` → `.github/workflows/deploy.yml` builds and publishes to Pages.
 Enable Pages → Source: **GitHub Actions** in repo settings.
 
 ## Docs
+- [AGENTS.md](./AGENTS.md) — required workflow for project update announcements
 - [RAPPORT.md](./RAPPORT.md) — tech choice, methodology, repo selection
 - [INVENTAIRE.md](./INVENTAIRE.md) — full repo inventory
 - [AUTOMATION.md](./AUTOMATION.md) — content generation pipeline
