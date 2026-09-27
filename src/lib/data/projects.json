@@ -1,6 +1,89 @@
 {
-  "generatedAt": "2026-09-22",
+  "generatedAt": "2026-09-27",
   "projects": [
+    {
+      "slug": "idae",
+      "name": "Idae",
+      "tier": "A",
+      "tagline": "DDD multi-tenant platform with MongoDB-like query engine",
+      "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend, all typed end-to-end in TypeScript.",
+      "accent": "@medyll/idae-machine",
+      "tech": [
+        "TypeScript",
+        "Svelte 5",
+        "SvelteKit",
+        "pnpm"
+      ],
+      "repo": "https://github.com/medyll/idae",
+      "homepage": null,
+      "startDate": "2022-01-31",
+      "lastCommit": "2026-09-27",
+      "metrics": {
+        "files": 2680,
+        "sizeMB": 35.1
+      },
+      "highlights": [
+        "idae-machine · DDD multi-tenant app (v0.136)",
+        "idae-query · MongoDB-like query engine",
+        "idae-socket / idae-stator · sync and state"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "css-base",
+      "name": "@medyll/css-base",
+      "tier": "A",
+      "tagline": "Native CSS design system: modular, themeable, zero build",
+      "description": "Published CSS design system built entirely on native platform features: cascade layers, OKLCH, light-dark(), CSS @function, and typed attr(). Version 0.7.13 ships modular entry points, reusable components and utilities, plus ten token-only demo skins—with no preprocessor, build step, or JavaScript runtime.",
+      "accent": null,
+      "tech": [
+        "CSS",
+        "OKLCH",
+        "@function",
+        "attr()"
+      ],
+      "repo": "https://github.com/medyll/css-base",
+      "homepage": "https://github.com/medyll/css-base#readme",
+      "startDate": "2026-03-20",
+      "lastCommit": "2026-09-27",
+      "metrics": {
+        "files": 92,
+        "sizeMB": 5.6
+      },
+      "highlights": [
+        "v0.7.13 published on npm",
+        "Modular exports · cascade layers · native dark mode",
+        "10 skins from token overrides only"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "sive",
+      "name": "sive",
+      "tier": "A",
+      "tagline": "AI writing assistant: production since v1.0",
+      "description": "Full-featured writing application with real-time AI suggestions, narrative coherence analysis, and mobile-first design. Built on SvelteKit 5 and Tailwind v4. Production-ready since v1.0 with a clean, distraction-free editor.",
+      "accent": null,
+      "tech": [
+        "SvelteKit",
+        "Svelte 5",
+        "Tailwind v4"
+      ],
+      "repo": "https://github.com/medyll/sive",
+      "homepage": null,
+      "startDate": "2026-02-26",
+      "lastCommit": "2026-09-27",
+      "metrics": {
+        "files": 1124,
+        "sizeMB": 9.8
+      },
+      "highlights": [
+        "Real-time AI suggestions",
+        "Narrative coherence checks",
+        "Mobile-ready"
+      ],
+      "featured": true
+    },
     {
       "slug": "humemory",
       "name": "humemory",
@@ -19,7 +102,7 @@
       "repo": "https://github.com/medyll/humemory",
       "homepage": "https://github.com/medyll/humemory#readme",
       "startDate": "2026-05-03",
-      "lastCommit": "2026-09-20",
+      "lastCommit": "2026-09-27",
       "metrics": {
         "files": 196,
         "sizeMB": 1.5
@@ -48,7 +131,7 @@
       "repo": "https://github.com/medyll/acp-team",
       "homepage": null,
       "startDate": "2026-08-08",
-      "lastCommit": "2026-09-20",
+      "lastCommit": "2026-09-27",
       "metrics": {
         "files": 104,
         "sizeMB": 0.5
@@ -74,7 +157,7 @@
       "repo": "https://github.com/medyll/domus",
       "homepage": null,
       "startDate": "2026-03-19",
-      "lastCommit": "2026-09-20",
+      "lastCommit": "2026-09-27",
       "metrics": {
         "files": 383,
         "sizeMB": 13.5
@@ -103,7 +186,7 @@
       "repo": "https://github.com/medyll/wollama",
       "homepage": null,
       "startDate": "2023-12-04",
-      "lastCommit": "2026-09-20",
+      "lastCommit": "2026-09-27",
       "metrics": {
         "files": 546,
         "sizeMB": 9.1
@@ -112,89 +195,6 @@
         "Offline conversations and RxDB↔PouchDB sync",
         "Web + Electron desktop + Capacitor mobile",
         "Voice · RAG · skills · hooks · web agents"
-      ],
-      "featured": true
-    },
-    {
-      "slug": "idae",
-      "name": "Idae",
-      "tier": "A",
-      "tagline": "DDD multi-tenant platform with MongoDB-like query engine",
-      "description": "Full-stack monorepo powering Idae-Machine, a domain-driven multi-tenant SvelteKit application. Ships a MongoDB-like query engine, real-time socket layer, reactive state management, and a pluggable API backend, all typed end-to-end in TypeScript.",
-      "accent": "@medyll/idae-machine",
-      "tech": [
-        "TypeScript",
-        "Svelte 5",
-        "SvelteKit",
-        "pnpm"
-      ],
-      "repo": "https://github.com/medyll/idae",
-      "homepage": null,
-      "startDate": "2022-01-31",
-      "lastCommit": "2026-08-16",
-      "metrics": {
-        "files": 2680,
-        "sizeMB": 35.1
-      },
-      "highlights": [
-        "idae-machine · DDD multi-tenant app (v0.136)",
-        "idae-query · MongoDB-like query engine",
-        "idae-socket / idae-stator · sync and state"
-      ],
-      "featured": true
-    },
-    {
-      "slug": "sive",
-      "name": "sive",
-      "tier": "A",
-      "tagline": "AI writing assistant: production since v1.0",
-      "description": "Full-featured writing application with real-time AI suggestions, narrative coherence analysis, and mobile-first design. Built on SvelteKit 5 and Tailwind v4. Production-ready since v1.0 with a clean, distraction-free editor.",
-      "accent": null,
-      "tech": [
-        "SvelteKit",
-        "Svelte 5",
-        "Tailwind v4"
-      ],
-      "repo": "https://github.com/medyll/sive",
-      "homepage": null,
-      "startDate": "2026-02-26",
-      "lastCommit": "2026-08-16",
-      "metrics": {
-        "files": 988,
-        "sizeMB": 4.6
-      },
-      "highlights": [
-        "Real-time AI suggestions",
-        "Narrative coherence checks",
-        "Mobile-ready"
-      ],
-      "featured": true
-    },
-    {
-      "slug": "css-base",
-      "name": "@medyll/css-base",
-      "tier": "A",
-      "tagline": "Native CSS design system: modular, themeable, zero build",
-      "description": "Published CSS design system built entirely on native platform features: cascade layers, OKLCH, light-dark(), CSS @function, and typed attr(). Version 0.7.13 ships modular entry points, reusable components and utilities, plus ten token-only demo skins—with no preprocessor, build step, or JavaScript runtime.",
-      "accent": null,
-      "tech": [
-        "CSS",
-        "OKLCH",
-        "@function",
-        "attr()"
-      ],
-      "repo": "https://github.com/medyll/css-base",
-      "homepage": "https://github.com/medyll/css-base#readme",
-      "startDate": "2026-03-20",
-      "lastCommit": "2026-08-01",
-      "metrics": {
-        "files": 92,
-        "sizeMB": 5.6
-      },
-      "highlights": [
-        "v0.7.13 published on npm",
-        "Modular exports · cascade layers · native dark mode",
-        "10 skins from token overrides only"
       ],
       "featured": true
     },
@@ -213,7 +213,7 @@
       "repo": "https://github.com/medyll/latent-line",
       "homepage": null,
       "startDate": "2026-02-21",
-      "lastCommit": "2026-09-20",
+      "lastCommit": "2026-09-27",
       "metrics": {
         "files": 582,
         "sizeMB": 5.5
@@ -222,35 +222,6 @@
         "Interactive timeline editor",
         "Real-time model inspection",
         "CI on GitHub Actions"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "mailboard",
-      "name": "Mailboard",
-      "tier": "B",
-      "tagline": "Local job-search inbox with a generated mail dashboard",
-      "description": "A local-first job-search tracker that collects mail runs, deduplicates and enriches messages, and builds a searchable dashboard without a database or build step. Append-only JSONL files keep message metadata, bodies and run history; a cycle orchestrator coordinates Gmail and browser-based mail channels, optional JEV matching and notifications.",
-      "accent": null,
-      "tech": [
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Node.js",
-        "JSONL"
-      ],
-      "repo": "https://github.com/medyll/mailboard",
-      "homepage": null,
-      "startDate": "2026-09-22",
-      "lastCommit": "2026-09-22",
-      "metrics": {
-        "files": 79,
-        "sizeMB": 1.5
-      },
-      "highlights": [
-        "Local dashboard opens directly from file://",
-        "Append-only JSONL store with lazy-loaded mail bodies",
-        "Scheduled collection · deduplication · optional JEV matching"
       ],
       "featured": false
     },
@@ -268,7 +239,7 @@
       "repo": "https://github.com/medyll/svelte-5-documentor",
       "homepage": null,
       "startDate": "2024-10-13",
-      "lastCommit": "2026-08-23",
+      "lastCommit": "2026-09-27",
       "metrics": {
         "files": 55,
         "sizeMB": 0.4
@@ -277,6 +248,117 @@
         "AST analysis, no compiler",
         "Props, exports, generics, JSDoc",
         "TypeScript toolchain integration"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "pseudo-html-stack",
+      "name": "pseudo-stack",
+      "tier": "B",
+      "tagline": "Vanilla HTML component system: 7.7 KB, zero dependencies",
+      "description": "Zero-dependency vanilla HTML component system at 7.7 KB gzip. Provides a structured tag taxonomy, display-hint suffixes, and WCAG 2.2 AA accessibility out of the box, no build step, no framework, no lock-in.",
+      "accent": null,
+      "tech": [
+        "HTML",
+        "JavaScript"
+      ],
+      "repo": "https://github.com/medyll/pseudo-html-stack",
+      "homepage": null,
+      "startDate": "2026-03-01",
+      "lastCommit": "2026-09-27",
+      "metrics": {
+        "files": 351,
+        "sizeMB": 3.3
+      },
+      "highlights": [
+        "WCAG 2.2 AA out of the box",
+        "7.7 KB gzip total",
+        "Zero dependencies, zero build"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "protonesk",
+      "name": "Protonesk",
+      "tier": "B",
+      "tagline": "ProtonMail via IMAP/SMTP/CardDAV: MCP bridge over hydroxide",
+      "description": "MCP server that bridges ProtonMail's encrypted ecosystem to any standard mail client. Built on top of hydroxide, it exposes IMAP, SMTP, and CardDAV endpoints. Ships with Windows auto-start and zero-config setup.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "MCP"
+      ],
+      "repo": "https://github.com/medyll/protonesk",
+      "homepage": null,
+      "startDate": "2026-05-08",
+      "lastCommit": "2026-09-27",
+      "metrics": {
+        "files": 73,
+        "sizeMB": 0.3
+      },
+      "highlights": [
+        "ProtonMail in any mail client",
+        "IMAP / SMTP / CardDAV",
+        "Windows auto-start"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "singleton-notepad",
+      "name": "SingletonNotepad",
+      "tier": "B",
+      "tagline": "Windows 11 notepad backed by a single Markdown file",
+      "description": "Minimal WinUI 3 notepad that persists everything in one Markdown file. Auto-saves every 2 seconds with optional LLM normalization to keep notes structured. Single binary, no sync service, no account.",
+      "accent": null,
+      "tech": [
+        "C#",
+        "WinUI 3"
+      ],
+      "repo": "https://github.com/medyll/singleton-notepad",
+      "homepage": null,
+      "startDate": "2026-04-25",
+      "lastCommit": "2026-09-27",
+      "metrics": {
+        "files": 202,
+        "sizeMB": 7
+      },
+      "highlights": [
+        "One Markdown file, no database",
+        "2-second auto-save",
+        "Optional LLM normalization"
+      ],
+      "featured": false
+    },
+    {
+      "slug": "mailboard",
+      "name": "Mailboard",
+      "tier": "B",
+      "tagline": "Local job-mail tracking with a CLI, TypeScript API and MCP server",
+      "description": "Published as @medyll/jobmailboard, Mailboard turns Gmail connector and browser-mail collection runs into a searchable local dashboard backed by append-only JSONL files. Its CLI, JavaScript/TypeScript API and stdio MCP server expose message search, ingestion and cycle orchestration. Optional JEV enrichment supports backfilling stored messages and comparing evaluations with human labels.",
+      "accent": null,
+      "tech": [
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "MCP",
+        "Zod",
+        "JSONL",
+        "HTML",
+        "CSS"
+      ],
+      "repo": "https://github.com/medyll/mailboard",
+      "homepage": "https://github.com/medyll/mailboard#readme",
+      "startDate": "2026-09-22",
+      "lastCommit": "2026-09-27",
+      "metrics": {
+        "files": 94,
+        "sizeMB": 0.4
+      },
+      "highlights": [
+        "npm package with CLI and JavaScript/TypeScript API",
+        "Eight MCP tools + settings resource over stdio",
+        "Searchable JSONL dashboard opens directly from file://",
+        "Optional JEV enrichment, backfill and human-label agreement reports"
       ],
       "featured": false
     },
@@ -308,32 +390,6 @@
       "featured": false
     },
     {
-      "slug": "protonesk",
-      "name": "Protonesk",
-      "tier": "B",
-      "tagline": "ProtonMail via IMAP/SMTP/CardDAV: MCP bridge over hydroxide",
-      "description": "MCP server that bridges ProtonMail's encrypted ecosystem to any standard mail client. Built on top of hydroxide, it exposes IMAP, SMTP, and CardDAV endpoints. Ships with Windows auto-start and zero-config setup.",
-      "accent": null,
-      "tech": [
-        "TypeScript",
-        "MCP"
-      ],
-      "repo": "https://github.com/medyll/protonesk",
-      "homepage": null,
-      "startDate": "2026-05-08",
-      "lastCommit": "2026-08-16",
-      "metrics": {
-        "files": 73,
-        "sizeMB": 0.3
-      },
-      "highlights": [
-        "ProtonMail in any mail client",
-        "IMAP / SMTP / CardDAV",
-        "Windows auto-start"
-      ],
-      "featured": false
-    },
-    {
       "slug": "jobber",
       "name": "jobber",
       "tier": "B",
@@ -359,54 +415,30 @@
       "featured": false
     },
     {
-      "slug": "pseudo-html-stack",
-      "name": "pseudo-stack",
-      "tier": "B",
-      "tagline": "Vanilla HTML component system: 7.7 KB, zero dependencies",
-      "description": "Zero-dependency vanilla HTML component system at 7.7 KB gzip. Provides a structured tag taxonomy, display-hint suffixes, and WCAG 2.2 AA accessibility out of the box, no build step, no framework, no lock-in.",
+      "slug": "idae-legacy",
+      "name": "Idae Legacy",
+      "tier": "C",
+      "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
+      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a current MongoDB driver and a Dockerized environment. The original UI and behavior stay intact while Phase 2 rewrites CRUD, session and database internals; Apache/PHP and Socket.IO now run together in one supervised application image.",
       "accent": null,
       "tech": [
-        "HTML",
-        "JavaScript"
+        "PHP",
+        "Node.js",
+        "MongoDB",
+        "Docker"
       ],
-      "repo": "https://github.com/medyll/pseudo-html-stack",
+      "repo": "https://github.com/medyll/idae-legacy",
       "homepage": null,
-      "startDate": "2026-03-01",
-      "lastCommit": "2026-05-25",
+      "startDate": "2021-05-25",
+      "lastCommit": "2026-09-27",
       "metrics": {
-        "files": 351,
-        "sizeMB": 3.3
+        "files": 2682,
+        "sizeMB": 47.8
       },
       "highlights": [
-        "WCAG 2.2 AA out of the box",
-        "7.7 KB gzip total",
-        "Zero dependencies, zero build"
-      ],
-      "featured": false
-    },
-    {
-      "slug": "singleton-notepad",
-      "name": "SingletonNotepad",
-      "tier": "B",
-      "tagline": "Windows 11 notepad backed by a single Markdown file",
-      "description": "Minimal WinUI 3 notepad that persists everything in one Markdown file. Auto-saves every 2 seconds with optional LLM normalization to keep notes structured. Single binary, no sync service, no account.",
-      "accent": null,
-      "tech": [
-        "C#",
-        "WinUI 3"
-      ],
-      "repo": "https://github.com/medyll/singleton-notepad",
-      "homepage": null,
-      "startDate": "2026-04-25",
-      "lastCommit": "2026-05-25",
-      "metrics": {
-        "files": 202,
-        "sizeMB": 7
-      },
-      "highlights": [
-        "One Markdown file, no database",
-        "2-second auto-save",
-        "Optional LLM normalization"
+        "12-year-old codebase, still in production",
+        "Backward-compatible Phase 2 rewrite",
+        "One supervised image for Apache/PHP + Socket.IO"
       ],
       "featured": false
     },
@@ -439,34 +471,6 @@
       "featured": false
     },
     {
-      "slug": "idae-legacy",
-      "name": "Idae Legacy",
-      "tier": "C",
-      "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
-      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a current MongoDB driver and a Dockerized environment. The original UI and behavior stay intact while Phase 2 rewrites CRUD, session and database internals; Apache/PHP and Socket.IO now run together in one supervised application image.",
-      "accent": null,
-      "tech": [
-        "PHP",
-        "Node.js",
-        "MongoDB",
-        "Docker"
-      ],
-      "repo": "https://github.com/medyll/idae-legacy",
-      "homepage": null,
-      "startDate": "2021-05-25",
-      "lastCommit": "2026-09-12",
-      "metrics": {
-        "files": 2682,
-        "sizeMB": 47.8
-      },
-      "highlights": [
-        "12-year-old codebase, still in production",
-        "Backward-compatible Phase 2 rewrite",
-        "One supervised image for Apache/PHP + Socket.IO"
-      ],
-      "featured": false
-    },
-    {
       "slug": "qoolie",
       "name": "Qoolie",
       "tier": "C",
@@ -483,7 +487,7 @@
       "repo": "https://github.com/medyll/idae/tree/main/packages/qoolie",
       "homepage": null,
       "startDate": "2026-03-28",
-      "lastCommit": "2026-08-07",
+      "lastCommit": "2026-08-16",
       "metrics": {
         "files": 136,
         "sizeMB": 0.4
@@ -509,7 +513,7 @@
       "repo": "https://github.com/medyll/idae/tree/main/packages/idae-be",
       "homepage": null,
       "startDate": "2024-07-10",
-      "lastCommit": "2026-08-07",
+      "lastCommit": "2026-08-16",
       "metrics": {
         "files": 61,
         "sizeMB": 0.3

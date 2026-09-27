@@ -139,10 +139,11 @@
     "mailboard": {
       "tier": "B",
       "name": "Mailboard",
-      "tagline": "Local job-search inbox with a generated mail dashboard",
-      "description": "A local-first job-search tracker that collects mail runs, deduplicates and enriches messages, and builds a searchable dashboard without a database or build step. Append-only JSONL files keep message metadata, bodies and run history; a cycle orchestrator coordinates Gmail and browser-based mail channels, optional JEV matching and notifications.",
-      "tech": ["JavaScript", "HTML", "CSS", "Node.js", "JSONL"],
-      "highlights": ["Local dashboard opens directly from file://", "Append-only JSONL store with lazy-loaded mail bodies", "Scheduled collection · deduplication · optional JEV matching"]
+      "tagline": "Local job-mail tracking with a CLI, TypeScript API and MCP server",
+      "description": "Published as @medyll/jobmailboard, Mailboard turns Gmail connector and browser-mail collection runs into a searchable local dashboard backed by append-only JSONL files. Its CLI, JavaScript/TypeScript API and stdio MCP server expose message search, ingestion and cycle orchestration. Optional JEV enrichment supports backfilling stored messages and comparing evaluations with human labels.",
+      "tech": ["TypeScript", "JavaScript", "Node.js", "MCP", "Zod", "JSONL", "HTML", "CSS"],
+      "metrics": { "files": 94, "sizeMB": 0.4 },
+      "highlights": ["npm package with CLI and JavaScript/TypeScript API", "Eight MCP tools + settings resource over stdio", "Searchable JSONL dashboard opens directly from file://", "Optional JEV enrichment, backfill and human-label agreement reports"]
     },
     "ferule-core": {
       "tier": "C",

@@ -98,13 +98,21 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   mailboard: {
     mermaid: `flowchart TD
-  M["Gmail connector · browser mail"] --> R["collection runs"]
-  R --> O["cycle orchestrator"]
-  O --> I["deduplication · JEV matching"]
+  C["CLI · JavaScript/TypeScript API"] --> S["Mailboard services"]
+  A["MCP host"] --> P["stdio MCP: eight tools + settings resource"]
+  P --> S
+  M["Gmail connector · browser collector"] --> R["collection runs"]
+  S --> O["cycle orchestrator"]
+  O --> I["ingest runs · deduplicate · optional JEV"]
+  R --> I
   I --> J["append-only JSONL store"]
-  J --> D["local searchable dashboard"]
+  S --> Q["message search · body backfill queries"]
+  J --> Q
+  J --> D["searchable dashboard: file or localhost"]
+  S --> E["JEV backfill · human-label agreement"]
+  E --> J
   O --> N["notification decision"]`,
-    seo: 'Mailboard is a local job-search mail tracker that turns scheduled Gmail and browser-mail collection runs into a searchable dashboard. It stores messages, bodies and run history in append-only JSONL files, enriches matches with optional JEV evaluation, and decides when a notification is useful.'
+    seo: 'Mailboard, published on npm as @medyll/jobmailboard, tracks job-related mail in local append-only JSONL files. A CLI and JavaScript/TypeScript API share services with a stdio MCP server exposing eight tools and a settings resource, so agents can search messages, inspect missing bodies, ingest collection runs and execute notification cycles. Gmail connectors and a browser-mail collector supply the runs; optional JEV enrichment can re-evaluate stored messages and compare answers with human labels. The searchable dashboard opens directly from disk, while a localhost server enables settings edits.'
   },
   domus: {
     mermaid: `flowchart TD
