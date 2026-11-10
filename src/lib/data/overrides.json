@@ -64,11 +64,11 @@
     "wollama": {
       "tier": "A",
       "featured": true,
-      "tagline": "Local-first AI chat: web, desktop and mobile with Ollama",
-      "description": "Cross-platform AI chat application powered by Ollama for local, private inference. Conversations, companions and settings remain available offline, then RxDB syncs them with PouchDB when the server returns. Voice I/O, RAG, skills, hooks and web agents run in the browser, Electron desktop app and Capacitor mobile app; a provider registry now isolates model backends from conversation orchestration.",
+      "tagline": "Local-first AI chat with Ollama and optional CLI providers",
+      "description": "Wollama runs on the web, on desktop through Electron and on mobile through Capacitor. Ollama is the default for local inference, and installed Codex, Claude Code and Kimi Code CLIs can handle text chat through their own services. Conversations, companions and settings stay available offline and sync through RxDB and PouchDB when the server returns.",
       "tech": ["Svelte 5", "Electron", "Capacitor", "Node.js", "RxDB"],
-      "metrics": { "files": 546, "sizeMB": 9.1 },
-      "highlights": ["Offline conversations and RxDB↔PouchDB sync", "Web + Electron desktop + Capacitor mobile", "Voice · RAG · skills · hooks · web agents"]
+      "metrics": { "files": 550, "sizeMB": 9.1 },
+      "highlights": ["Ollama by default · Codex, Claude Code and Kimi Code for text chat", "Offline conversations and RxDB↔PouchDB sync", "Voice · RAG · skills · hooks · web agents"]
     },
     "svelte-5-documentor": {
       "tier": "B",
@@ -140,10 +140,19 @@
       "tier": "B",
       "name": "Mailboard",
       "tagline": "Local job-mail tracking with a CLI, TypeScript API and MCP server",
-      "description": "Published as @medyll/jobmailboard, Mailboard turns Gmail connector and browser-mail collection runs into a searchable local dashboard backed by append-only JSONL files. Its CLI, JavaScript/TypeScript API and stdio MCP server expose message search, ingestion and cycle orchestration. Optional JEV enrichment supports backfilling stored messages and comparing evaluations with human labels.",
-      "tech": ["TypeScript", "JavaScript", "Node.js", "MCP", "Zod", "JSONL", "HTML", "CSS"],
-      "metrics": { "files": 94, "sizeMB": 0.4 },
-      "highlights": ["npm package with CLI and JavaScript/TypeScript API", "Eight MCP tools + settings resource over stdio", "Searchable JSONL dashboard opens directly from file://", "Optional JEV enrichment, backfill and human-label agreement reports"]
+      "description": "Mailboard brings job-related messages from Gmail, browser mail and Proton Mail into a searchable local dashboard backed by append-only JSONL files. Proton collection uses read-only IMAP through Proton Mail Bridge. The @medyll/jobmailboard package exposes message search, ingestion and cycle orchestration through a CLI, a JavaScript/TypeScript API and a stdio MCP server.",
+      "tech": ["TypeScript", "JavaScript", "Node.js", "MCP", "IMAP", "JSONL", "HTML", "CSS"],
+      "metrics": { "files": 104, "sizeMB": 0.5 },
+      "highlights": ["Gmail, browser mail and read-only Proton Mail Bridge collection", "CLI, JavaScript/TypeScript API and stdio MCP server", "Searchable JSONL dashboard opens directly from disk", "Optional JEV enrichment, backfill and human-label agreement reports"]
+    },
+    "randos": {
+      "tier": "B",
+      "name": "Randos",
+      "tagline": "Hiking catalogue and valley event calendar for the Alpes-Maritimes",
+      "description": "Browse 221 hikes by valley, elevation gain and route features, then check what's on in the area on your chosen date. Each route has a GPS trace and an elevation profile. The static site keeps its catalogue, filters and traces available offline, with online OpenStreetMap tiles for the zoomable map.",
+      "tech": ["JavaScript", "HTML", "CSS", "Leaflet", "OpenStreetMap"],
+      "metrics": { "files": 22, "sizeMB": 33.8 },
+      "highlights": ["221 routes with GPS traces and elevation profiles", "Filters and dates survive in shareable URLs", "Valley events by day or week", "Offline catalogue and route traces"]
     },
     "ferule-core": {
       "tier": "C",
@@ -157,10 +166,10 @@
       "tier": "C",
       "name": "Idae Legacy",
       "tagline": "Migrating a 2014 PHP/MongoDB CMS to a 2026 stack",
-      "description": "Live migration of a legacy PHP 5.6, Node.js and MongoDB CMS onto PHP 8.2, a current MongoDB driver and a Dockerized environment. The original UI and behavior stay intact while Phase 2 rewrites CRUD, session and database internals; Apache/PHP and Socket.IO now run together in one supervised application image.",
-      "tech": ["PHP", "Node.js", "MongoDB", "Docker"],
-      "metrics": { "files": 2682, "sizeMB": 47.8 },
-      "highlights": ["12-year-old codebase, still in production", "Backward-compatible Phase 2 rewrite", "One supervised image for Apache/PHP + Socket.IO"]
+      "description": "Idae Legacy moves a 2014 PHP 5.6, Node.js and MongoDB CMS to PHP 8.2 while keeping the original interface. Apache/PHP and Socket.IO share a supervised Docker image. The migration updates Smarty for PHP 8 and checks rendering and MongoDB aggregation behavior in CI.",
+      "tech": ["PHP", "Node.js", "MongoDB", "Docker", "Smarty"],
+      "metrics": { "files": 2693, "sizeMB": 47.7 },
+      "highlights": ["PHP 8.2 and an updated Smarty renderer", "Compatibility tests against an isolated MongoDB instance", "One supervised image for Apache/PHP + Socket.IO"]
     },
     "idae-be": {
       "tier": "C",

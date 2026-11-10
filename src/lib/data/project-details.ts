@@ -99,9 +99,10 @@ export const projectDetails: Record<string, ProjectDetail> = {
   mailboard: {
     mermaid: `flowchart TD
   C["CLI · JavaScript/TypeScript API"] --> S["Mailboard services"]
-  A["MCP host"] --> P["stdio MCP: eight tools + settings resource"]
+  A["MCP host"] --> P["stdio MCP tools + settings resource"]
   P --> S
   M["Gmail connector · browser collector"] --> R["collection runs"]
+  B["Proton Mail Bridge · read-only IMAP"] --> R
   S --> O["cycle orchestrator"]
   O --> I["ingest runs · deduplicate · optional JEV"]
   R --> I
@@ -112,7 +113,18 @@ export const projectDetails: Record<string, ProjectDetail> = {
   S --> E["JEV backfill · human-label agreement"]
   E --> J
   O --> N["notification decision"]`,
-    seo: 'Mailboard, published on npm as @medyll/jobmailboard, tracks job-related mail in local append-only JSONL files. A CLI and JavaScript/TypeScript API share services with a stdio MCP server exposing eight tools and a settings resource, so agents can search messages, inspect missing bodies, ingest collection runs and execute notification cycles. Gmail connectors and a browser-mail collector supply the runs; optional JEV enrichment can re-evaluate stored messages and compare answers with human labels. The searchable dashboard opens directly from disk, while a localhost server enables settings edits.'
+    seo: 'Mailboard collects job-related messages from Gmail connectors, browser mail and Proton Mail Bridge. The Proton collector reads mail over IMAP and feeds the same append-only JSONL store as the other sources. The @medyll/jobmailboard CLI, JavaScript/TypeScript API and stdio MCP server share search, ingestion and notification services. The dashboard opens directly from disk, and optional JEV enrichment can re-evaluate stored messages against human labels.'
+  },
+  randos: {
+    mermaid: `flowchart TD
+  R["Route data · GPS geometry"] --> C["Static hiking catalogue"]
+  E["Valley event data"] --> C
+  C --> F["Route filters · shareable URL"]
+  F --> D["Route details · GPS trace and elevation profile"]
+  C --> A["Valley events by day or week"]
+  D --> M["Leaflet map"]
+  T["Online OpenStreetMap tiles"] --> M`,
+    seo: 'Randos is a static hiking catalogue for the Alpes-Maritimes with 221 day hikes and multi-day routes. Search by route name or filter by valley, elevation gain and landmarks, then check the event calendar for the selected day or week. Route details include locally stored GPS traces and elevation profiles, with an interactive Leaflet map that loads its background tiles from OpenStreetMap.'
   },
   domus: {
     mermaid: `flowchart TD
@@ -126,11 +138,13 @@ export const projectDetails: Record<string, ProjectDetail> = {
   wollama: {
     mermaid: `flowchart TD
   P["idea / needs"] --> S["wollama"]
-  S --> A["Ollama + model-provider boundary"]
+  S --> A["Model provider registry"]
+  A --> O["Ollama · default local inference"]
+  A --> L["Codex · Claude Code · Kimi Code CLI text chat"]
   S --> B["web + Electron + Capacitor"]
   S --> C["offline RxDB <-> PouchDB sync"]
   S --> D["voice · RAG · skills · hooks · web agents"]`,
-    seo: 'Wollama is a local-first AI chat client for Ollama that ships to the browser, Electron desktop and Capacitor mobile from one codebase. Conversations and companions work offline and later sync through RxDB and PouchDB; voice input/output, RAG, skills, hooks and web agents sit above a model-provider boundary.'
+    seo: 'Wollama runs on the web, on Electron desktop and on Capacitor mobile. It uses Ollama by default for local inference, voice and retrieval features. For text chat, its server can also call installed Codex, Claude Code or Kimi Code CLIs using their existing sign-ins. Conversations and companions remain accessible offline and sync through RxDB and PouchDB.'
   },
   'svelte-5-documentor': {
     mermaid: `flowchart TD
@@ -186,8 +200,9 @@ export const projectDetails: Record<string, ProjectDetail> = {
   S --> A["PHP 5.6 -> PHP 8.2"]
   S --> B["modern MongoDB driver"]
   S --> C["Phase 2 · CRUD + sessions + database internals"]
-  S --> D["one supervised image · Apache/PHP + Socket.IO"]`,
-    seo: 'Idae Legacy is a live migration of a 2014 PHP, Node.js and MongoDB CMS onto PHP 8.2 and a current MongoDB driver. Phase 2 rewrites CRUD, sessions and database internals without changing the production UI; Apache/PHP and Socket.IO now share one supervised Docker image.'
+  S --> D["one supervised image · Apache/PHP + Socket.IO"]
+  S --> E["CI · Smarty rendering and isolated MongoDB"]`,
+    seo: 'Idae Legacy migrates a 2014 PHP, Node.js and MongoDB CMS to PHP 8.2 and a current MongoDB driver while preserving the original interface. The project updates Smarty templates and checks rendering and aggregation behavior in CI against an isolated MongoDB instance. Apache/PHP and Socket.IO run together in a supervised Docker image.'
   },
   'idae-be': {
     parent: 'idae',
