@@ -25,7 +25,7 @@
   <p class="lead">
     I build frameworks and use others.
     <br />
-    Case studies across TypeScript, Svelte 5, Rust, Go, Python and AI tooling, exploration over finished product.
+    Case studies across TypeScript, React, Svelte 5, Rust, Go, Python and AI tooling, exploration over finished product.
   </p>
 </section>
 
