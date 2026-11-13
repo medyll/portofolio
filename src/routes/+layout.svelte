@@ -25,6 +25,7 @@
   <header class="topbar">
     <a class="brand" href="{base}/">medyll</a>
     <div class="spacer"></div>
+    <a class="nav-link" href="{base}/">Projects</a>
     <a class="nav-link" href="{base}/roles-and-capabilities">Capabilities</a>
     <a class="nav-link" href="{base}/profile">Profile</a>
     <button class="theme-toggle" aria-label="Toggle theme" onclick={toggle}>
