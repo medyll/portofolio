@@ -111,6 +111,15 @@ h3 {
   color: var(--primary);
 }
 
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-muted);
+}
+.icon-link:hover {
+  color: var(--primary);
+}
+
 .theme-toggle {
   cursor: pointer;
   width: 2.25rem;
